@@ -1,0 +1,81 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id          String    @id @default(cuid())
+  phone       String    @unique
+  displayName String
+  createdAt   DateTime  @default(now())
+  sessions   Session[]
+  battles    Battle[]
+}
+
+model Session {
+  id        String   @id @default(cuid())
+  token     String   @unique
+  expiresAt DateTime
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model Battle {
+  id          String   @id @default(cuid())
+  title       String
+  seed        String
+  status      String   @default("active")
+  currentTurn Int      @default(0)
+  maxTurns    Int
+  columns     Int
+  rows        Int
+  version     Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  ownerId     String
+  owner       User     @relation(fields: [ownerId], references: [id], onDelete: Cascade)
+  agents      Agent[]
+  turns       Turn[]
+  events      Event[]
+}
+
+model Agent {
+  id       String  @id @default(cuid())
+  agentKey String
+  name     String
+  color    String
+  strategy String
+  active   Boolean @default(true)
+  battleId String
+  battle   Battle  @relation(fields: [battleId], references: [id], onDelete: Cascade)
+
+  @@unique([battleId, agentKey])
+}
+
+model Turn {
+  id        String   @id @default(cuid())
+  number    Int
+  stateJson String
+  createdAt DateTime @default(now())
+  battleId  String
+  battle    Battle   @relation(fields: [battleId], references: [id], onDelete: Cascade)
+
+  @@unique([battleId, number])
+}
+
+model Event {
+  id          String   @id @default(cuid())
+  turnNumber  Int
+  sequence    Int
+  type        String
+  payloadJson String
+  createdAt   DateTime @default(now())
+  battleId    String
+  battle      Battle   @relation(fields: [battleId], references: [id], onDelete: Cascade)
+
+  @@unique([battleId, turnNumber, sequence])
+}
