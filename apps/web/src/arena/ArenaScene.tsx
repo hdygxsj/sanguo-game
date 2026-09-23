@@ -3,9 +3,13 @@ import { Canvas, useFrame } from '@react-three/fiber';
 import { Suspense, useMemo, useRef, useState } from 'react';
 import type { Group, Object3D } from 'three';
 import type { BattleState, CityState, DomainEvent } from '../types';
-import { buildingForCity, cityWorldPosition, TILE_SPACING } from './arenaLogic';
-
-const MODEL_URL = '/models/agent-arena/arena-kit.glb';
+import {
+  ARENA_DRACO_DECODER_PATH,
+  ARENA_MODEL_URL,
+  buildingForCity,
+  cityWorldPosition,
+  TILE_SPACING,
+} from './arenaLogic';
 
 function supportsWebGL() {
   try {
@@ -17,7 +21,7 @@ function supportsWebGL() {
 }
 
 function SceneAsset({ name, scale = 0.68 }: { name: string; scale?: number }) {
-  const { scene } = useGLTF(MODEL_URL);
+  const { scene } = useGLTF(ARENA_MODEL_URL, ARENA_DRACO_DECODER_PATH);
   const object = useMemo(() => {
     const source = scene.getObjectByName(name);
     return source?.clone(true) ?? null;
@@ -148,4 +152,4 @@ export function ArenaScene({ state, events }: { state: BattleState; events: Doma
   );
 }
 
-useGLTF.preload(MODEL_URL);
+useGLTF.preload(ARENA_MODEL_URL, ARENA_DRACO_DECODER_PATH);
