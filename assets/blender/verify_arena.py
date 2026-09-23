@@ -75,7 +75,7 @@ for root_name in REQUIRED_ROOTS:
         triangles += sum(max(0, len(polygon.vertices) - 2) for polygon in mesh.polygons)
         evaluated.to_mesh_clear()
         material_names.update(slot.material.name for slot in child.material_slots if slot.material)
-        world_corners.extend(child.matrix_world @ Vector(corner) for corner in child.bound_box)
+        world_corners.extend(child.matrix_world @ vertex.co for vertex in child.data.vertices)
 
     if triangles < MIN_TRIANGLES[root_name]:
         fail(f"{root_name} needs {MIN_TRIANGLES[root_name]} triangles, found {triangles}")

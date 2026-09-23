@@ -14,3 +14,4 @@ fi
 "$BLENDER_BIN" --background --factory-startup --python-exit-code 1 --python assets/blender/build_arena.py
 "$BLENDER_BIN" --background assets/blender/arena-kit.blend --python-exit-code 1 --python assets/blender/verify_arena.py
 "$BLENDER_BIN" --background --factory-startup --python-exit-code 1 --python assets/blender/render_preview.py
+"$BLENDER_BIN" --background --factory-startup --python-exit-code 1 --python assets/blender/render_catalog.py

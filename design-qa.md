@@ -28,11 +28,33 @@
 5. **P2 — persistent controls could clip at short desktop heights.** Reworked workspace sizing and the replay/action rows; the 1280 × 720 capture shows all critical controls.
 6. **P2 — mobile secondary panels competed with the playfield.** Reordered the responsive layout so the battle title, connection state, arena, and replay remain visible in the first 390 × 844 viewport.
 
+## Refined model set
+
+- Editable source: `assets/blender/arena-kit.blend`
+- Runtime kit: `apps/web/public/models/agent-arena/arena-kit.glb`
+- Hero render: `apps/web/public/images/arena-fallback.png`
+- Eight-model catalog: `qa-evidence/arena-model-catalog.png`
+- Deterministic generator: `assets/blender/build_arena.py`
+
+The 1920 × 1080 catalog confirms distinct silhouettes for two villages, fort, citadel, stronghold, imperial palace, mountain, and grove. Roof ribs, upturned corners, timber frames, lattice windows, stairs, walls, crenellations, towers, banners, lanterns, courtyard props, vegetation, and rock details remain legible from the strategy camera.
+
+| Model check | Result | Budget |
+| --- | ---: | ---: |
+| Runtime roots | 8 | exactly 8 |
+| Shared materials | 11 | exactly 11 |
+| Exported mesh batches | 58 | at most 88 |
+| Total triangles | 67,042 | 25,000–120,000 |
+| Draco GLB | 737 KB | below 4 MB |
+| Blender source | 4.3 MB | below 25 MB |
+| Image textures | 0 | 0 |
+
+`pnpm assets:build` passed the Blender build, quality gate, hero render, and catalog render. `pnpm verify` passed 18 API tests, 8 web tests, type checking, production builds, GLB contract verification, and database setup. A production browser smoke test reached one active WebGL canvas with the fallback hidden and displayed the refined city models. The first navigation retained an obsolete JavaScript chunk URL from the prior local server; reloading the current production shell resolved that preview-session cache condition.
+
 ## Final gate
 
 - P0 remaining: 0
 - P1 remaining: 0
 - P2 remaining: 0
-- Expected console noise: the anonymous bootstrap probe returns HTTP 401 before demo login; no uncaught JavaScript or asset errors were observed.
+- Expected console noise: the anonymous bootstrap probe returns HTTP 401 before demo login; no uncaught JavaScript or asset errors were observed after loading the current production shell.
 
 final result: passed

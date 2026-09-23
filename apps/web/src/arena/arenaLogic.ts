@@ -1,5 +1,7 @@
 import type { CityState } from '../types';
 
+export const ARENA_MODEL_URL = '/models/agent-arena/arena-kit.glb';
+export const ARENA_DRACO_DECODER_PATH = '/draco/';
 export const TILE_SPACING = 2.4;
 
 export function buildingForCity(city: CityState): string {

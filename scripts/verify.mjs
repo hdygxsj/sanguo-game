@@ -7,6 +7,11 @@ const blendPath = path.join(root, 'assets/blender/arena-kit.blend');
 const glbPath = path.join(root, 'apps/web/public/models/agent-arena/arena-kit.glb');
 const distIndex = path.join(root, 'apps/web/dist/index.html');
 const fallbackImage = path.join(root, 'apps/web/public/images/arena-fallback.png');
+const dracoFiles = [
+  'apps/web/public/draco/draco_decoder.js',
+  'apps/web/public/draco/draco_decoder.wasm',
+  'apps/web/public/draco/draco_wasm_wrapper.js',
+].map((file) => path.join(root, file));
 const requiredRoots = ['village-a', 'village-b', 'fort', 'citadel', 'stronghold', 'imperial', 'mountain', 'grove'];
 const requiredMaterials = ['Cedar beams', 'Glazed slate jade', 'Ivory plaster', 'Pine foliage', 'Recessed doorways', 'Roof tile edges', 'Sunlit foliage', 'Weathered limestone', 'Imperial amber glaze', 'Mountain moss', 'Mountain slate'];
 
@@ -15,7 +20,7 @@ function fail(message) {
   process.exit(1);
 }
 
-for (const file of [blendPath, glbPath, fallbackImage, distIndex]) {
+for (const file of [blendPath, glbPath, fallbackImage, distIndex, ...dracoFiles]) {
   if (!existsSync(file)) fail(`missing ${path.relative(root, file)}`);
 }
 
@@ -36,5 +41,6 @@ if (glb.length > 4 * 1024 * 1024) fail(`GLB exceeds 4MB budget: ${Math.round(glb
 if ((document.meshes ?? []).length > 88) fail(`GLB exceeds 88 mesh budget: ${(document.meshes ?? []).length}`);
 if ((document.materials ?? []).length !== 11) fail(`expected 11 materials, found ${(document.materials ?? []).length}`);
 if ((document.images ?? []).length > 0 || (document.textures ?? []).length > 0) fail('GLB must not contain texture payloads');
+if (!(document.extensionsUsed ?? []).includes('KHR_draco_mesh_compression')) fail('GLB must use Draco mesh compression');
 
 console.log(`VERIFY_OK roots=${requiredRoots.length} materials=${requiredMaterials.length} meshes=${(document.meshes ?? []).length} glb=${Math.round(glb.length / 1024)}KB`);

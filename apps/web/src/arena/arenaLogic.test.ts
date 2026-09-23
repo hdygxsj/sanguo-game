@@ -1,6 +1,11 @@
 import { describe, expect, it } from 'vitest';
 import type { CityState } from '../types';
-import { buildingForCity, cityWorldPosition } from './arenaLogic';
+import {
+  ARENA_DRACO_DECODER_PATH,
+  ARENA_MODEL_URL,
+  buildingForCity,
+  cityWorldPosition,
+} from './arenaLogic';
 
 const city = (overrides: Partial<CityState> = {}): CityState => ({
   id: 0,
@@ -20,6 +25,12 @@ const city = (overrides: Partial<CityState> = {}): CityState => ({
 });
 
 describe('arena scene mapping', () => {
+  it('ships the refined arena kit and Draco decoder from local assets', () => {
+    expect(ARENA_MODEL_URL).toBe('/models/agent-arena/arena-kit.glb');
+    expect(ARENA_DRACO_DECODER_PATH).toBe('/draco/');
+    expect(ARENA_DRACO_DECODER_PATH).not.toMatch(/^https?:/);
+  });
+
   it('maps strategic state to the expected Blender root', () => {
     expect(buildingForCity(city({ terrain: 'blocked' }))).toBe('mountain');
     expect(buildingForCity(city({ imperial: true, level: 4 }))).toBe('imperial');
