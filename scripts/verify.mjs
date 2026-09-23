@@ -32,5 +32,9 @@ const nodeNames = new Set((document.nodes ?? []).map((node) => node.name));
 const materialNames = new Set((document.materials ?? []).map((material) => material.name));
 for (const name of requiredRoots) if (!nodeNames.has(name)) fail(`GLB root missing: ${name}`);
 for (const name of requiredMaterials) if (!materialNames.has(name)) fail(`GLB material missing: ${name}`);
+if (glb.length > 4 * 1024 * 1024) fail(`GLB exceeds 4MB budget: ${Math.round(glb.length / 1024)}KB`);
+if ((document.meshes ?? []).length > 88) fail(`GLB exceeds 88 mesh budget: ${(document.meshes ?? []).length}`);
+if ((document.materials ?? []).length !== 11) fail(`expected 11 materials, found ${(document.materials ?? []).length}`);
+if ((document.images ?? []).length > 0 || (document.textures ?? []).length > 0) fail('GLB must not contain texture payloads');
 
-console.log(`VERIFY_OK roots=${requiredRoots.length} materials=${requiredMaterials.length} glb=${Math.round(glb.length / 1024)}KB`);
+console.log(`VERIFY_OK roots=${requiredRoots.length} materials=${requiredMaterials.length} meshes=${(document.meshes ?? []).length} glb=${Math.round(glb.length / 1024)}KB`);
