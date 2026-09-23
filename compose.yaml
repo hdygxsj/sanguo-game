@@ -1,0 +1,14 @@
+services:
+  arena:
+    build: .
+    ports:
+      - "8787:8787"
+    environment:
+      DATABASE_URL: file:/data/agent-arena.db
+      PORT: 8787
+    volumes:
+      - agent-arena-data:/data
+    restart: unless-stopped
+
+volumes:
+  agent-arena-data:

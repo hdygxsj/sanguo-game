@@ -2,8 +2,9 @@
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
     "outDir": "dist",
-    "rootDir": ".",
+    "rootDir": "src",
     "types": ["node", "vitest/globals"]
   },
-  "include": ["src", "prisma"]
+  "include": ["src"],
+  "exclude": ["src/**/*.test.ts"]
 }

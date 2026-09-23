@@ -1,15 +1,19 @@
 {
   "name": "agent-arena-clone",
   "private": true,
+  "engines": {
+    "node": ">=20.19.0"
+  },
   "packageManager": "pnpm@8.15.8",
   "scripts": {
     "dev": "concurrently -n api,web -c magenta,cyan \"pnpm --filter @agent-arena/api dev\" \"pnpm --filter @agent-arena/web dev\"",
     "build": "pnpm -r build",
+    "start": "pnpm --filter @agent-arena/api start",
     "test": "pnpm -r test",
     "typecheck": "pnpm -r typecheck",
     "db:setup": "pnpm --filter @agent-arena/api db:setup",
     "assets:build": "bash scripts/build-assets.sh",
-    "verify": "node scripts/verify.mjs"
+    "verify": "pnpm test && pnpm typecheck && pnpm build && node scripts/verify.mjs && pnpm db:setup"
   },
   "devDependencies": {
     "concurrently": "9.2.1"

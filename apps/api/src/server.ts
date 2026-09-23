@@ -1,6 +1,10 @@
 import cookie from '@fastify/cookie';
 import cors from '@fastify/cors';
+import fastifyStatic from '@fastify/static';
 import Fastify, { type FastifyReply, type FastifyRequest } from 'fastify';
+import { existsSync } from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { z } from 'zod';
 import { getUserForToken, loginWithCode } from './auth/service.js';
 import { prisma } from './db.js';
@@ -41,7 +45,7 @@ export function buildServer() {
 
   void app.register(cookie);
   void app.register(cors, { origin: true, credentials: true });
-  void registerRealtimeGateway(app);
+  void app.register(registerRealtimeGateway);
 
   app.setErrorHandler((error, _request, reply) => {
     const code = error instanceof z.ZodError ? 'VALIDATION_ERROR' : error.message;
@@ -106,6 +110,17 @@ export function buildServer() {
     const turn = z.coerce.number().int().min(0).parse(request.query.turn ?? '0');
     return battles.replay(user.id, request.params.id, turn);
   });
+
+  const webRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../../web/dist');
+  if (existsSync(webRoot)) {
+    void app.register(fastifyStatic, { root: webRoot });
+    app.setNotFoundHandler((request, reply) => {
+      if (request.url.startsWith('/api/') || request.url.startsWith('/ws')) {
+        return reply.code(404).send({ error: { code: 'NOT_FOUND', message: '接口不存在' } });
+      }
+      return reply.sendFile('index.html');
+    });
+  }
 
   return app;
 }

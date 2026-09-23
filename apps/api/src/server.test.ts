@@ -14,6 +14,12 @@ beforeEach(async () => {
 });
 
 afterAll(async () => {
+  await prisma.event.deleteMany();
+  await prisma.turn.deleteMany();
+  await prisma.agent.deleteMany();
+  await prisma.battle.deleteMany();
+  await prisma.session.deleteMany();
+  await prisma.user.deleteMany();
   await app.close();
   await prisma.$disconnect();
 });
