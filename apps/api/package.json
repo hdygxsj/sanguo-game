@@ -7,10 +7,10 @@
     "dev": "tsx watch src/index.ts",
     "build": "tsc -p tsconfig.json",
     "start": "node dist/index.js",
-    "test": "vitest run",
+    "test": "DATABASE_URL=file:./test.db node prisma/ensure-db.mjs && DATABASE_URL=file:./test.db prisma db push --skip-generate && DATABASE_URL=file:./test.db vitest run",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "db:generate": "prisma generate",
-    "db:setup": "prisma generate && DATABASE_URL=${DATABASE_URL:-file:./dev.db} RUST_LOG=info prisma db push && DATABASE_URL=${DATABASE_URL:-file:./dev.db} tsx prisma/seed.ts"
+    "db:setup": "prisma generate && DATABASE_URL=${DATABASE_URL:-file:./dev.db} node prisma/ensure-db.mjs && DATABASE_URL=${DATABASE_URL:-file:./dev.db} RUST_LOG=info prisma db push && DATABASE_URL=${DATABASE_URL:-file:./dev.db} tsx prisma/seed.ts"
   },
   "dependencies": {
     "@fastify/cookie": "11.0.2",

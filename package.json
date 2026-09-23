@@ -7,10 +7,10 @@
   "packageManager": "pnpm@8.15.8",
   "scripts": {
     "dev": "concurrently -n api,web -c magenta,cyan \"pnpm --filter @agent-arena/api dev\" \"pnpm --filter @agent-arena/web dev\"",
-    "build": "pnpm -r build",
+    "build": "pnpm --filter @agent-arena/api db:generate && pnpm -r build",
     "start": "pnpm --filter @agent-arena/api start",
-    "test": "pnpm -r test",
-    "typecheck": "pnpm -r typecheck",
+    "test": "pnpm --filter @agent-arena/api db:generate && pnpm -r test",
+    "typecheck": "pnpm --filter @agent-arena/api db:generate && pnpm -r typecheck",
     "db:setup": "pnpm --filter @agent-arena/api db:setup",
     "assets:build": "bash scripts/build-assets.sh",
     "verify": "pnpm test && pnpm typecheck && pnpm build && node scripts/verify.mjs && pnpm db:setup"
