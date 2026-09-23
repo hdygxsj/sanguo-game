@@ -112,4 +112,4 @@ if triangles < MIN_TRIANGLES[root_name]:
 - [x] Run `pnpm verify` with the bundled Node runtime and confirm all API/web tests, type checks, builds, Blender headers, and GLB checks pass.
 - [x] Start production mode, enter the seeded battle, and inspect all root types through the arena/fallback without console errors.
 - [x] Capture a final browser screenshot and update `design-qa.md` with model evidence, budgets, and remaining P3 notes only.
-- [ ] Run `git diff --check`, commit the final QA evidence, and merge the branch into `main`.
+- [x] Run `git diff --check`, commit the final QA evidence, and merge the branch into `main`.
