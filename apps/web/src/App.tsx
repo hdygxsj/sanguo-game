@@ -13,29 +13,33 @@ import { lazy, Suspense, useEffect, useState } from 'react';
 import { api, ApiError } from './api';
 import type { BattleSummary, CreateBattleInput, User } from './types';
 import './styles.css';
+import './campaign-ui.css';
+import { TrainingPanel } from './TrainingPanel';
+import {WorkspaceBoundary} from './WorkspaceBoundary';
+import {NewCampaign} from './NewCampaign';
 
 const BattleWorkspace = lazy(() => import('./BattleWorkspace').then((module) => ({ default: module.BattleWorkspace })));
 
 type LoadState = 'loading' | 'guest' | 'ready';
 
 const DEFAULT_BATTLE: CreateBattleInput = {
-  title: '群雄逐鹿',
+  title: '汉末山河 · 群雄逐鹿',
   columns: 7,
   rows: 5,
-  agentCount: 4,
-  maxTurns: 30,
+  agentCount: 16,
+  maxTurns: 0,
 };
 
 function Brand() {
   return (
     <div className="brand-lockup">
-      <div className="brand-overline"><span>MODEL DATA PLUS</span><i /><span>EXPERIMENTS</span></div>
+      <div className="brand-overline"><span>汉末山河</span><i /><span>群雄逐鹿</span></div>
       <div className="brand-title-row">
         <button className="icon-button" aria-label="返回"><ArrowLeftOutlined /></button>
         <div className="brand-mark"><SafetyCertificateOutlined /><ThunderboltFilled /></div>
         <div>
-          <h1>Agent 竞技场</h1>
-          <p>多智能体策略对抗实验场</p>
+          <h1>汉末山河</h1>
+          <p>执掌一方，问鼎天下</p>
         </div>
       </div>
     </div>
@@ -46,13 +50,13 @@ function RulesDialog({ onClose }: { onClose: () => void }) {
   return (
     <div className="modal-backdrop" onMouseDown={onClose}>
       <section className="modal-card rules-card" role="dialog" aria-modal="true" aria-label="竞技场规则" onMouseDown={(event) => event.stopPropagation()}>
-        <div className="modal-kicker"><BookOutlined /> RULEBOOK 01</div>
+        <div className="modal-kicker"><BookOutlined /> 征战指南</div>
         <h2>竞技场规则</h2>
-        <p>每一位 Agent 都拥有独立策略与资源判断，并在同一张动态沙盘上争夺城池。</p>
+        <p>可扮演一方君主经营天下，也可观看 AI 群雄推演。新剧本包含 16 支汉末势力，领地为游戏化配置。</p>
         <ol className="rule-list">
-          <li><b>统一回合结算</b><span>所有 Agent 同时提交行动，服务端按固定序列确定移动、建设与战斗结果。</span></li>
-          <li><b>城市与资源</b><span>农田提高补给，矿脉强化建设；等级更高的城池拥有更坚固的防线。</span></li>
-          <li><b>占领帝都</b><span>控制地图中心的帝都，或在最大回合数到达时拥有最高综合势力，即可获胜。</span></li>
+          <li><b>统一回合结算</b><span>开局选择君主或观战。点击己方城池可征兵、建设或出征，每回合一道指令；确认下令后各方同时行动。战斗自动结算，无需操作士兵。</span></li>
+          <li><b>城市与资源</b><span>征募每兵耗资 3，升级耗资为当前等级 × 20。资源县提高税收，驻军与行军兵团都须支付军饷，城池也有维护费；欠饷会导致逃兵。</span></li>
+          <li><b>郡县争夺</b><span>没有回合上限，消灭其他势力方可获胜。军队沿道路按距离跨回合行军，途中可能遭遇敌军；野战和攻城自动结算。仍有行军兵团的势力不会因丢失最后一城立刻出局。</span></li>
         </ol>
         <button className="primary-button wide" onClick={onClose}>明白了</button>
       </section>
@@ -67,9 +71,9 @@ function LoginPanel({ busy, onDemo }: { busy: boolean; onDemo: () => void }) {
       <div className="guest-orbit orbit-two" />
       <section className="guest-card">
         <div className="guest-emblem"><SafetyCertificateOutlined /><ThunderboltFilled /></div>
-        <div className="eyebrow"><span /> AGENT ARENA <span /></div>
+        <div className="eyebrow"><span /> 群雄逐鹿 <span /></div>
         <h2>登录后开启你的战局</h2>
-        <p>部署不同策略的智能体，在实时 3D 沙盘上观察扩张、交锋与联盟瓦解。</p>
+        <p>从一方诸侯起步，整军经武、招贤纳士，在乱世中建立你的霸业。</p>
         <button className="primary-button" onClick={onDemo} disabled={busy} aria-label="体验完整战局">
           <ExperimentOutlined /> {busy ? '正在部署…' : '体验完整战局'}
         </button>
@@ -83,8 +87,8 @@ function EmptyLobby({ onCreate, busy }: { onCreate: () => void; busy: boolean })
   return (
     <section className="empty-lobby">
       <div className="empty-icon"><TrophyOutlined /></div>
-      <h3>第一场对决，等待开局</h3>
-      <p>创建战局后，四位策略 Agent 将在随机生成的山河城池间自主博弈。</p>
+      <h3>乱世已至，静候君临</h3>
+      <p>从十六位君主中选择一位，或旁观群雄争霸。</p>
       <button className="primary-button" onClick={onCreate} disabled={busy} aria-label="创建战局"><PlusOutlined /> 创建战局</button>
     </section>
   );
@@ -103,10 +107,10 @@ function BattleCard({ battle, onOpen }: { battle: BattleSummary; onOpen: () => v
         {battle.agents.map((agent) => <i key={agent.id} style={{ background: agent.color }} title={agent.name} />)}
       </div>
       <div className="battle-stats">
-        <span><b>{battle.currentTurn}</b> / {battle.maxTurns} 回合</span>
-        <span>{battle.columns} × {battle.rows} 城域</span>
+        <span>第 <b>{battle.currentTurn}</b> 回合</span>
+        <span>{battle.agents.filter(a=>a.active).length} 方势力</span>
       </div>
-      <div className="card-action">进入沙盘 <span>↗</span></div>
+      <div className="card-action">继续征途 <span>↗</span></div>
     </button>
   );
 }
@@ -115,6 +119,7 @@ function Lobby({ user, onLogout, onOpenBattle }: { user: User; onLogout: () => v
   const [battles, setBattles] = useState<BattleSummary[]>([]);
   const [loading, setLoading] = useState(true);
   const [creating, setCreating] = useState(false);
+  const [newGame,setNewGame]=useState(false);
   const [error, setError] = useState('');
 
   useEffect(() => {
@@ -124,11 +129,11 @@ function Lobby({ user, onLogout, onOpenBattle }: { user: User; onLogout: () => v
       .finally(() => setLoading(false));
   }, []);
 
-  const createBattle = async () => {
+  const createBattle = async (playerAgentId?:string) => {
     setCreating(true);
     setError('');
     try {
-      const { battle } = await api.createBattle(DEFAULT_BATTLE);
+      const { battle } = await api.createBattle({...DEFAULT_BATTLE,playerAgentId});
       onOpenBattle(battle.id);
     } catch (reason) {
       setError(reason instanceof Error ? reason.message : '创建失败');
@@ -140,21 +145,23 @@ function Lobby({ user, onLogout, onOpenBattle }: { user: User; onLogout: () => v
   return (
     <main className="lobby-shell">
       <section className="lobby-heading">
-        <div><div className="eyebrow left">COMMAND CENTER</div><h2>我的战局</h2><p>选择一局继续推演，或开启一场新的 Agent 对抗实验。</p></div>
+        <div><div className="eyebrow left">山河待定</div><h2>我的战局</h2><p>继续未竟的霸业，或开启一段新的征途。</p></div>
         <div className="lobby-actions">
           <span className="user-pill">{user.displayName}</span>
           <button className="ghost-button" onClick={onLogout} aria-label="退出登录"><LogoutOutlined /></button>
-          <button className="primary-button compact" onClick={createBattle} disabled={creating} aria-label="创建战局"><PlusOutlined /> 创建战局</button>
+          <button className="primary-button compact" onClick={()=>setNewGame(true)} disabled={creating} aria-label="创建战局"><PlusOutlined /> 开始游戏</button>
         </div>
       </section>
       {error && <div className="error-banner">{error}</div>}
+      {newGame&&<NewCampaign busy={creating} onStart={id=>void createBattle(id)} onClose={()=>setNewGame(false)}/>}
       {loading ? <div className="loading-grid"><i /><i /><i /></div> : battles.length === 0 ? (
-        <EmptyLobby onCreate={createBattle} busy={creating} />
+        <EmptyLobby onCreate={()=>setNewGame(true)} busy={creating} />
       ) : (
         <section className="battle-grid">
           {battles.map((battle) => <BattleCard key={battle.id} battle={battle} onOpen={() => onOpenBattle(battle.id)} />)}
         </section>
       )}
+      <details className="lab-disclosure"><summary>开发与训练工具</summary><TrainingPanel /></details>
     </main>
   );
 }
@@ -196,17 +203,19 @@ export function App() {
         <button className="rule-button" onClick={() => setRulesOpen(true)} aria-label="查看规则"><BookOutlined /> 竞技规则</button>
       </header>
       {selectedBattle ? (
-        <Suspense fallback={<main className="workspace-loading"><div className="loader-mark"><ThunderboltFilled /></div><span>装载 3D 沙盘…</span></main>}>
-          <BattleWorkspace battleId={selectedBattle} onBack={() => setSelectedBattle(null)} />
+        <WorkspaceBoundary onReload={()=>window.location.reload()}>
+        <Suspense fallback={<main className="workspace-loading"><div className="loader-mark"><ThunderboltFilled /></div><span>正在进入天下…</span></main>}>
+          <BattleWorkspace battleId={selectedBattle} onBack={() => setSelectedBattle(null)} onRules={()=>setRulesOpen(true)} />
         </Suspense>
+        </WorkspaceBoundary>
       ) : loadState === 'loading' ? (
-        <main className="loading-stage"><div className="loader-mark"><ThunderboltFilled /></div><span>LOADING ARENA</span></main>
+        <main className="loading-stage"><div className="loader-mark"><ThunderboltFilled /></div><span>正在读取征途…</span></main>
       ) : loadState === 'guest' ? (
         <LoginPanel busy={loginBusy} onDemo={demoLogin} />
       ) : user ? (
         <Lobby user={user} onLogout={logout} onOpenBattle={setSelectedBattle} />
       ) : null}
-      <footer className="site-footer"><span>MDP LABS / 2026</span><i /><span>SIMULATION ONLINE</span></footer>
+      <footer className="site-footer"><span>汉末山河</span><i /><span>群雄逐鹿</span></footer>
       {rulesOpen && <RulesDialog onClose={() => setRulesOpen(false)} />}
     </div>
   );

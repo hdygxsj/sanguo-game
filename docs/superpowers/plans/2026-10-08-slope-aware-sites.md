@@ -1,0 +1,9 @@
+# Slope-aware settlement footprints
+
+**Experiment rejected after browser verification. No footprint scaling change retained.**
+
+Implementation passed 264 tests/build and was inspected at the identical 西陵縣 17.9x view. Absolute platform area reduced, but proportional platform height remained conspicuous and existing fixed flag offsets now looked detached from smaller buildings. This is not a faithful visual improvement. Removed the experimental helper, wiring and test; rebuilding original behavior. Next direction: actual settlement terrain grading with a smooth surrounding embankment, coordinated with protected river corridors and existing shared terrain sampling. Do not repeat footprint shrink or unsupported skirt-height clipping as a solution.
+
+Observed browser issue: riverbank foundations span large terrain height differences. Preserve all map coordinates and heights and complete support under buildings. Use existing spacing/level-based width as preferred footprint, retaining it on gentle terrain. On steep terrain search the largest width with foundation span <= .018, but never shrink below 65% of preferred width. This bounded compromise reduces overlarge terrain-spanning platforms without making mountainside cities disappear; it does not solve all terracing or achieve final visual fidelity. No arbitrary skirt-height clamp (which causes floating).
+
+Test before implementation: synthetic sloped and flat fields demonstrate reduced span, bounded shrink, unchanged flat scale, source data unchanged, and support coverage. Implement a pure helper wrapping existing exact triangle clipping; wire only site creation. Verify tests/build, then inspect the same 西陵縣 view before claiming visual improvement. The map, rivers, resources, combat and county selection coordinates stay unchanged.

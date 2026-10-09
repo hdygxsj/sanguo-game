@@ -25,8 +25,11 @@ const city = (overrides: Partial<CityState> = {}): CityState => ({
 });
 
 describe('arena scene mapping', () => {
+  it('keeps resource estates visually distinct from fortified cities after upgrades',()=>{
+    for(const siteKind of ['farm','mine','horse'] as const)expect(buildingForCity(city({siteKind,level:4,owner:'agent-1'}))).toBe('village-a');
+  });
   it('ships the refined arena kit and Draco decoder from local assets', () => {
-    expect(ARENA_MODEL_URL).toBe('/models/agent-arena/arena-kit.glb');
+    expect(ARENA_MODEL_URL).toBe('/models/agent-arena/arena-kit.glb?v=20261008-masonry');
     expect(ARENA_DRACO_DECODER_PATH).toBe('/draco/');
     expect(ARENA_DRACO_DECODER_PATH).not.toMatch(/^https?:/);
   });

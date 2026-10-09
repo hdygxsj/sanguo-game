@@ -69,9 +69,9 @@ camera.data.type = "ORTHO"
 camera.data.ortho_scale = 17.2
 bpy.context.scene.camera = camera
 for location, energy, size, color in (
-    ((-5.0, -6.0, 14.0), 1850, 8.0, (1.0, 0.67, 0.40)),
-    ((8.0, 2.0, 10.0), 1350, 7.0, (0.28, 0.48, 1.0)),
-    ((0.0, 9.0, 8.0), 900, 6.0, (0.30, 0.88, 0.78)),
+    ((-5.0, -6.0, 14.0), 1850, 8.0, (1.0, 0.94, 0.85)),
+    ((8.0, 2.0, 10.0), 1350, 7.0, (0.82, 0.89, 1.0)),
+    ((0.0, 9.0, 8.0), 900, 6.0, (0.94, 1.0, 0.95)),
 ):
     bpy.ops.object.light_add(type="AREA", location=location)
     light = bpy.context.object

@@ -1,0 +1,2283 @@
+{
+  "seed": 208,
+  "episodes": 32,
+  "horizon": 600,
+  "evaluationHorizon": 500,
+  "evaluationGames": 48,
+  "curriculum": {
+    "episodes": 11,
+    "resolved": 11,
+    "wins": 5
+  },
+  "policy": {
+    "version": 4,
+    "algorithm": "Linear greedy-target tree backup / self-play (24-step, gamma 0.98)",
+    "weights": [
+      13.051952651303788,
+      -0.2669929435319607,
+      1.7597380992137166,
+      0.0831664512741849,
+      -0.7653814565581528,
+      0.0877007861439168,
+      1.08029599641847,
+      0.12297237988289689,
+      5.345461064249376,
+      -4.372276023952741,
+      2.042580281106851,
+      -0.4294436093828967,
+      -0.20182729853514297,
+      0.39451775324467186,
+      0.0510283691084667,
+      0.9330150964847659,
+      -2.8050328331087395,
+      -0.5599732030583103,
+      0.3265552837696679,
+      1.5052325771093276,
+      -0.31611900363267253,
+      0.16312469348939349,
+      -1.278064268219543
+    ],
+    "episodes": 574,
+    "trainedAt": "2026-10-08T12:49:38.573Z",
+    "evaluation": {
+      "games": 48,
+      "horizon": 500,
+      "factions": 16,
+      "protocol": "paired-world-seat-v2",
+      "trials": [
+        {
+          "seed": "evaluation-world-0",
+          "seat": 0,
+          "trained": true,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 146,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-0",
+          "seat": 0,
+          "trained": false,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 40,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-0",
+          "seat": 1,
+          "trained": true,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 96,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-0",
+          "seat": 1,
+          "trained": false,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 88,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-0",
+          "seat": 2,
+          "trained": true,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 70,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-0",
+          "seat": 2,
+          "trained": false,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 66,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-0",
+          "seat": 3,
+          "trained": true,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 51,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-0",
+          "seat": 3,
+          "trained": false,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 30,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-0",
+          "seat": 4,
+          "trained": true,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 129,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-0",
+          "seat": 4,
+          "trained": false,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 49,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-0",
+          "seat": 5,
+          "trained": true,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 113,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-0",
+          "seat": 5,
+          "trained": false,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 53,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-0",
+          "seat": 6,
+          "trained": true,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 76,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-0",
+          "seat": 6,
+          "trained": false,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 47,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-0",
+          "seat": 7,
+          "trained": true,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 109,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-0",
+          "seat": 7,
+          "trained": false,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 43,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-0",
+          "seat": 8,
+          "trained": true,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 127,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-0",
+          "seat": 8,
+          "trained": false,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 41,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-0",
+          "seat": 9,
+          "trained": true,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 98,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-0",
+          "seat": 9,
+          "trained": false,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 134,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-0",
+          "seat": 10,
+          "trained": true,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 168,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-0",
+          "seat": 10,
+          "trained": false,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 43,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-0",
+          "seat": 11,
+          "trained": true,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 169,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-0",
+          "seat": 11,
+          "trained": false,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 73,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-0",
+          "seat": 12,
+          "trained": true,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 121,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-0",
+          "seat": 12,
+          "trained": false,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 91,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-0",
+          "seat": 13,
+          "trained": true,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 67,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-0",
+          "seat": 13,
+          "trained": false,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 69,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-0",
+          "seat": 14,
+          "trained": true,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 154,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-0",
+          "seat": 14,
+          "trained": false,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 50,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-0",
+          "seat": 15,
+          "trained": true,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 101,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-0",
+          "seat": 15,
+          "trained": false,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 35,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-1",
+          "seat": 0,
+          "trained": true,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 67,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-1",
+          "seat": 0,
+          "trained": false,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 31,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-1",
+          "seat": 1,
+          "trained": true,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 68,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-1",
+          "seat": 1,
+          "trained": false,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 86,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-1",
+          "seat": 2,
+          "trained": true,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 73,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-1",
+          "seat": 2,
+          "trained": false,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 81,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-1",
+          "seat": 3,
+          "trained": true,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 145,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-1",
+          "seat": 3,
+          "trained": false,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 52,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-1",
+          "seat": 4,
+          "trained": true,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 132,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-1",
+          "seat": 4,
+          "trained": false,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 38,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-1",
+          "seat": 5,
+          "trained": true,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 132,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-1",
+          "seat": 5,
+          "trained": false,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 61,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-1",
+          "seat": 6,
+          "trained": true,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 134,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-1",
+          "seat": 6,
+          "trained": false,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 155,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-1",
+          "seat": 7,
+          "trained": true,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 162,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-1",
+          "seat": 7,
+          "trained": false,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 48,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-1",
+          "seat": 8,
+          "trained": true,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 130,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-1",
+          "seat": 8,
+          "trained": false,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 109,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-1",
+          "seat": 9,
+          "trained": true,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 172,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-1",
+          "seat": 9,
+          "trained": false,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 88,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-1",
+          "seat": 10,
+          "trained": true,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 63,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-1",
+          "seat": 10,
+          "trained": false,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 18,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-1",
+          "seat": 11,
+          "trained": true,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 136,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-1",
+          "seat": 11,
+          "trained": false,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 19,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-1",
+          "seat": 12,
+          "trained": true,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 129,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-1",
+          "seat": 12,
+          "trained": false,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 86,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-1",
+          "seat": 13,
+          "trained": true,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 90,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-1",
+          "seat": 13,
+          "trained": false,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 47,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-1",
+          "seat": 14,
+          "trained": true,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 128,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-1",
+          "seat": 14,
+          "trained": false,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 38,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-1",
+          "seat": 15,
+          "trained": true,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 104,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-1",
+          "seat": 15,
+          "trained": false,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 32,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-2",
+          "seat": 0,
+          "trained": true,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 73,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-2",
+          "seat": 0,
+          "trained": false,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 77,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-2",
+          "seat": 1,
+          "trained": true,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 72,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-2",
+          "seat": 1,
+          "trained": false,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 70,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-2",
+          "seat": 2,
+          "trained": true,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 88,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-2",
+          "seat": 2,
+          "trained": false,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 8,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-2",
+          "seat": 3,
+          "trained": true,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 55,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-2",
+          "seat": 3,
+          "trained": false,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 30,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-2",
+          "seat": 4,
+          "trained": true,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 139,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-2",
+          "seat": 4,
+          "trained": false,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 35,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-2",
+          "seat": 5,
+          "trained": true,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 162,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-2",
+          "seat": 5,
+          "trained": false,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 55,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-2",
+          "seat": 6,
+          "trained": true,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 107,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-2",
+          "seat": 6,
+          "trained": false,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 106,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-2",
+          "seat": 7,
+          "trained": true,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 152,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-2",
+          "seat": 7,
+          "trained": false,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 35,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-2",
+          "seat": 8,
+          "trained": true,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 95,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-2",
+          "seat": 8,
+          "trained": false,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 54,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-2",
+          "seat": 9,
+          "trained": true,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 122,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-2",
+          "seat": 9,
+          "trained": false,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 76,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-2",
+          "seat": 10,
+          "trained": true,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 97,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-2",
+          "seat": 10,
+          "trained": false,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 37,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-2",
+          "seat": 11,
+          "trained": true,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 29,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-2",
+          "seat": 11,
+          "trained": false,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 15,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-2",
+          "seat": 12,
+          "trained": true,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 32,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-2",
+          "seat": 12,
+          "trained": false,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 64,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-2",
+          "seat": 13,
+          "trained": true,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 122,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-2",
+          "seat": 13,
+          "trained": false,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 95,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-2",
+          "seat": 14,
+          "trained": true,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 139,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-2",
+          "seat": 14,
+          "trained": false,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 70,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-2",
+          "seat": 15,
+          "trained": true,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 21,
+          "survived": true
+        },
+        {
+          "seed": "evaluation-world-2",
+          "seat": 15,
+          "trained": false,
+          "turns": 500,
+          "status": "active",
+          "winner": null,
+          "counties": 42,
+          "survived": true
+        }
+      ],
+      "winRate": 0,
+      "baselineWinRate": 0,
+      "meanCounties": 107.60416666666667,
+      "unresolvedRate": 1,
+      "bySeat": [
+        {
+          "seat": 0,
+          "faction": "曹操",
+          "games": 3,
+          "wins": 0,
+          "unresolved": 3,
+          "meanCounties": 95.33333333333333,
+          "survivalRate": 1
+        },
+        {
+          "seat": 1,
+          "faction": "刘备",
+          "games": 3,
+          "wins": 0,
+          "unresolved": 3,
+          "meanCounties": 78.66666666666667,
+          "survivalRate": 1
+        },
+        {
+          "seat": 2,
+          "faction": "孙坚",
+          "games": 3,
+          "wins": 0,
+          "unresolved": 3,
+          "meanCounties": 77,
+          "survivalRate": 1
+        },
+        {
+          "seat": 3,
+          "faction": "袁绍",
+          "games": 3,
+          "wins": 0,
+          "unresolved": 3,
+          "meanCounties": 83.66666666666667,
+          "survivalRate": 1
+        },
+        {
+          "seat": 4,
+          "faction": "袁术",
+          "games": 3,
+          "wins": 0,
+          "unresolved": 3,
+          "meanCounties": 133.33333333333334,
+          "survivalRate": 1
+        },
+        {
+          "seat": 5,
+          "faction": "董卓",
+          "games": 3,
+          "wins": 0,
+          "unresolved": 3,
+          "meanCounties": 135.66666666666666,
+          "survivalRate": 1
+        },
+        {
+          "seat": 6,
+          "faction": "刘表",
+          "games": 3,
+          "wins": 0,
+          "unresolved": 3,
+          "meanCounties": 105.66666666666667,
+          "survivalRate": 1
+        },
+        {
+          "seat": 7,
+          "faction": "刘焉",
+          "games": 3,
+          "wins": 0,
+          "unresolved": 3,
+          "meanCounties": 141,
+          "survivalRate": 1
+        },
+        {
+          "seat": 8,
+          "faction": "马腾",
+          "games": 3,
+          "wins": 0,
+          "unresolved": 3,
+          "meanCounties": 117.33333333333333,
+          "survivalRate": 1
+        },
+        {
+          "seat": 9,
+          "faction": "公孙瓒",
+          "games": 3,
+          "wins": 0,
+          "unresolved": 3,
+          "meanCounties": 130.66666666666666,
+          "survivalRate": 1
+        },
+        {
+          "seat": 10,
+          "faction": "孔融",
+          "games": 3,
+          "wins": 0,
+          "unresolved": 3,
+          "meanCounties": 109.33333333333333,
+          "survivalRate": 1
+        },
+        {
+          "seat": 11,
+          "faction": "张燕",
+          "games": 3,
+          "wins": 0,
+          "unresolved": 3,
+          "meanCounties": 111.33333333333333,
+          "survivalRate": 1
+        },
+        {
+          "seat": 12,
+          "faction": "陶谦",
+          "games": 3,
+          "wins": 0,
+          "unresolved": 3,
+          "meanCounties": 94,
+          "survivalRate": 1
+        },
+        {
+          "seat": 13,
+          "faction": "刘繇",
+          "games": 3,
+          "wins": 0,
+          "unresolved": 3,
+          "meanCounties": 93,
+          "survivalRate": 1
+        },
+        {
+          "seat": 14,
+          "faction": "张鲁",
+          "games": 3,
+          "wins": 0,
+          "unresolved": 3,
+          "meanCounties": 140.33333333333334,
+          "survivalRate": 1
+        },
+        {
+          "seat": 15,
+          "faction": "士燮",
+          "games": 3,
+          "wins": 0,
+          "unresolved": 3,
+          "meanCounties": 75.33333333333333,
+          "survivalRate": 1
+        }
+      ]
+    }
+  },
+  "incumbentEvaluation": {
+    "games": 48,
+    "horizon": 500,
+    "factions": 16,
+    "protocol": "paired-world-seat-v2",
+    "trials": [
+      {
+        "seed": "evaluation-world-0",
+        "seat": 0,
+        "trained": true,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 176,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-0",
+        "seat": 0,
+        "trained": false,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 40,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-0",
+        "seat": 1,
+        "trained": true,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 103,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-0",
+        "seat": 1,
+        "trained": false,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 88,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-0",
+        "seat": 2,
+        "trained": true,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 204,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-0",
+        "seat": 2,
+        "trained": false,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 66,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-0",
+        "seat": 3,
+        "trained": true,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 162,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-0",
+        "seat": 3,
+        "trained": false,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 30,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-0",
+        "seat": 4,
+        "trained": true,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 209,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-0",
+        "seat": 4,
+        "trained": false,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 49,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-0",
+        "seat": 5,
+        "trained": true,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 181,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-0",
+        "seat": 5,
+        "trained": false,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 53,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-0",
+        "seat": 6,
+        "trained": true,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 110,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-0",
+        "seat": 6,
+        "trained": false,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 47,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-0",
+        "seat": 7,
+        "trained": true,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 183,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-0",
+        "seat": 7,
+        "trained": false,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 43,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-0",
+        "seat": 8,
+        "trained": true,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 204,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-0",
+        "seat": 8,
+        "trained": false,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 41,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-0",
+        "seat": 9,
+        "trained": true,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 172,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-0",
+        "seat": 9,
+        "trained": false,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 134,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-0",
+        "seat": 10,
+        "trained": true,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 163,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-0",
+        "seat": 10,
+        "trained": false,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 43,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-0",
+        "seat": 11,
+        "trained": true,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 214,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-0",
+        "seat": 11,
+        "trained": false,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 73,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-0",
+        "seat": 12,
+        "trained": true,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 175,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-0",
+        "seat": 12,
+        "trained": false,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 91,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-0",
+        "seat": 13,
+        "trained": true,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 187,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-0",
+        "seat": 13,
+        "trained": false,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 69,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-0",
+        "seat": 14,
+        "trained": true,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 199,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-0",
+        "seat": 14,
+        "trained": false,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 50,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-0",
+        "seat": 15,
+        "trained": true,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 69,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-0",
+        "seat": 15,
+        "trained": false,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 35,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-1",
+        "seat": 0,
+        "trained": true,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 157,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-1",
+        "seat": 0,
+        "trained": false,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 31,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-1",
+        "seat": 1,
+        "trained": true,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 191,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-1",
+        "seat": 1,
+        "trained": false,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 86,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-1",
+        "seat": 2,
+        "trained": true,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 191,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-1",
+        "seat": 2,
+        "trained": false,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 81,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-1",
+        "seat": 3,
+        "trained": true,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 175,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-1",
+        "seat": 3,
+        "trained": false,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 52,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-1",
+        "seat": 4,
+        "trained": true,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 176,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-1",
+        "seat": 4,
+        "trained": false,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 38,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-1",
+        "seat": 5,
+        "trained": true,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 177,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-1",
+        "seat": 5,
+        "trained": false,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 61,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-1",
+        "seat": 6,
+        "trained": true,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 190,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-1",
+        "seat": 6,
+        "trained": false,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 155,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-1",
+        "seat": 7,
+        "trained": true,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 224,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-1",
+        "seat": 7,
+        "trained": false,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 48,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-1",
+        "seat": 8,
+        "trained": true,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 229,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-1",
+        "seat": 8,
+        "trained": false,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 109,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-1",
+        "seat": 9,
+        "trained": true,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 182,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-1",
+        "seat": 9,
+        "trained": false,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 88,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-1",
+        "seat": 10,
+        "trained": true,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 139,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-1",
+        "seat": 10,
+        "trained": false,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 18,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-1",
+        "seat": 11,
+        "trained": true,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 184,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-1",
+        "seat": 11,
+        "trained": false,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 19,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-1",
+        "seat": 12,
+        "trained": true,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 234,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-1",
+        "seat": 12,
+        "trained": false,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 86,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-1",
+        "seat": 13,
+        "trained": true,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 208,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-1",
+        "seat": 13,
+        "trained": false,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 47,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-1",
+        "seat": 14,
+        "trained": true,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 168,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-1",
+        "seat": 14,
+        "trained": false,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 38,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-1",
+        "seat": 15,
+        "trained": true,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 144,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-1",
+        "seat": 15,
+        "trained": false,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 32,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-2",
+        "seat": 0,
+        "trained": true,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 163,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-2",
+        "seat": 0,
+        "trained": false,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 77,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-2",
+        "seat": 1,
+        "trained": true,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 153,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-2",
+        "seat": 1,
+        "trained": false,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 70,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-2",
+        "seat": 2,
+        "trained": true,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 196,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-2",
+        "seat": 2,
+        "trained": false,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 8,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-2",
+        "seat": 3,
+        "trained": true,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 172,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-2",
+        "seat": 3,
+        "trained": false,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 30,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-2",
+        "seat": 4,
+        "trained": true,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 232,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-2",
+        "seat": 4,
+        "trained": false,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 35,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-2",
+        "seat": 5,
+        "trained": true,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 198,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-2",
+        "seat": 5,
+        "trained": false,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 55,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-2",
+        "seat": 6,
+        "trained": true,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 201,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-2",
+        "seat": 6,
+        "trained": false,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 106,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-2",
+        "seat": 7,
+        "trained": true,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 221,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-2",
+        "seat": 7,
+        "trained": false,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 35,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-2",
+        "seat": 8,
+        "trained": true,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 170,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-2",
+        "seat": 8,
+        "trained": false,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 54,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-2",
+        "seat": 9,
+        "trained": true,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 178,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-2",
+        "seat": 9,
+        "trained": false,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 76,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-2",
+        "seat": 10,
+        "trained": true,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 163,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-2",
+        "seat": 10,
+        "trained": false,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 37,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-2",
+        "seat": 11,
+        "trained": true,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 139,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-2",
+        "seat": 11,
+        "trained": false,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 15,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-2",
+        "seat": 12,
+        "trained": true,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 161,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-2",
+        "seat": 12,
+        "trained": false,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 64,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-2",
+        "seat": 13,
+        "trained": true,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 156,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-2",
+        "seat": 13,
+        "trained": false,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 95,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-2",
+        "seat": 14,
+        "trained": true,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 156,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-2",
+        "seat": 14,
+        "trained": false,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 70,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-2",
+        "seat": 15,
+        "trained": true,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 173,
+        "survived": true
+      },
+      {
+        "seed": "evaluation-world-2",
+        "seat": 15,
+        "trained": false,
+        "turns": 500,
+        "status": "active",
+        "winner": null,
+        "counties": 42,
+        "survived": true
+      }
+    ],
+    "winRate": 0,
+    "baselineWinRate": 0,
+    "meanCounties": 177.33333333333334,
+    "unresolvedRate": 1,
+    "bySeat": [
+      {
+        "seat": 0,
+        "faction": "曹操",
+        "games": 3,
+        "wins": 0,
+        "unresolved": 3,
+        "meanCounties": 165.33333333333334,
+        "survivalRate": 1
+      },
+      {
+        "seat": 1,
+        "faction": "刘备",
+        "games": 3,
+        "wins": 0,
+        "unresolved": 3,
+        "meanCounties": 149,
+        "survivalRate": 1
+      },
+      {
+        "seat": 2,
+        "faction": "孙坚",
+        "games": 3,
+        "wins": 0,
+        "unresolved": 3,
+        "meanCounties": 197,
+        "survivalRate": 1
+      },
+      {
+        "seat": 3,
+        "faction": "袁绍",
+        "games": 3,
+        "wins": 0,
+        "unresolved": 3,
+        "meanCounties": 169.66666666666666,
+        "survivalRate": 1
+      },
+      {
+        "seat": 4,
+        "faction": "袁术",
+        "games": 3,
+        "wins": 0,
+        "unresolved": 3,
+        "meanCounties": 205.66666666666666,
+        "survivalRate": 1
+      },
+      {
+        "seat": 5,
+        "faction": "董卓",
+        "games": 3,
+        "wins": 0,
+        "unresolved": 3,
+        "meanCounties": 185.33333333333334,
+        "survivalRate": 1
+      },
+      {
+        "seat": 6,
+        "faction": "刘表",
+        "games": 3,
+        "wins": 0,
+        "unresolved": 3,
+        "meanCounties": 167,
+        "survivalRate": 1
+      },
+      {
+        "seat": 7,
+        "faction": "刘焉",
+        "games": 3,
+        "wins": 0,
+        "unresolved": 3,
+        "meanCounties": 209.33333333333334,
+        "survivalRate": 1
+      },
+      {
+        "seat": 8,
+        "faction": "马腾",
+        "games": 3,
+        "wins": 0,
+        "unresolved": 3,
+        "meanCounties": 201,
+        "survivalRate": 1
+      },
+      {
+        "seat": 9,
+        "faction": "公孙瓒",
+        "games": 3,
+        "wins": 0,
+        "unresolved": 3,
+        "meanCounties": 177.33333333333334,
+        "survivalRate": 1
+      },
+      {
+        "seat": 10,
+        "faction": "孔融",
+        "games": 3,
+        "wins": 0,
+        "unresolved": 3,
+        "meanCounties": 155,
+        "survivalRate": 1
+      },
+      {
+        "seat": 11,
+        "faction": "张燕",
+        "games": 3,
+        "wins": 0,
+        "unresolved": 3,
+        "meanCounties": 179,
+        "survivalRate": 1
+      },
+      {
+        "seat": 12,
+        "faction": "陶谦",
+        "games": 3,
+        "wins": 0,
+        "unresolved": 3,
+        "meanCounties": 190,
+        "survivalRate": 1
+      },
+      {
+        "seat": 13,
+        "faction": "刘繇",
+        "games": 3,
+        "wins": 0,
+        "unresolved": 3,
+        "meanCounties": 183.66666666666666,
+        "survivalRate": 1
+      },
+      {
+        "seat": 14,
+        "faction": "张鲁",
+        "games": 3,
+        "wins": 0,
+        "unresolved": 3,
+        "meanCounties": 174.33333333333334,
+        "survivalRate": 1
+      },
+      {
+        "seat": 15,
+        "faction": "士燮",
+        "games": 3,
+        "wins": 0,
+        "unresolved": 3,
+        "meanCounties": 128.66666666666666,
+        "survivalRate": 1
+      }
+    ]
+  },
+  "promotion": {
+    "promoted": false,
+    "reason": "territorial-regression"
+  }
+}

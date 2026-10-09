@@ -16,6 +16,7 @@
     "verify": "pnpm test && pnpm typecheck && pnpm build && node scripts/verify.mjs && pnpm db:setup"
   },
   "devDependencies": {
+    "@gltf-transform/cli": "4.2.1",
     "concurrently": "9.2.1"
   }
 }

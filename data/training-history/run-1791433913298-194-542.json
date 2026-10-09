@@ -1,0 +1,251 @@
+{
+  "seed": 194,
+  "episodes": 32,
+  "policy": {
+    "version": 3,
+    "algorithm": "Linear n-step Q-learning / self-play (8-step)",
+    "weights": [
+      8.350849232014514,
+      0.5733468729497025,
+      0.5928754434590155,
+      0.31246987108449714,
+      0.0120603565882612,
+      -0.27114270247120403,
+      0.07522872449584217,
+      0.8194051348453837,
+      2.1260977054063988,
+      -1.1425235926646167,
+      0.3184065291663802,
+      1.1247661011861112,
+      -0.04074618403045603,
+      0.3373726615287657,
+      -0.11391393333449847,
+      -0.17284127961575485,
+      0.03665779973801824,
+      0.011938216504369067,
+      -0.060494447865514195,
+      -0.05099736262877198,
+      -0.02398510412501201
+    ],
+    "episodes": 542,
+    "trainedAt": "2026-10-08T04:30:14.313Z",
+    "evaluation": {
+      "games": 16,
+      "horizon": 120,
+      "factions": 16,
+      "winRate": 0,
+      "baselineWinRate": 0,
+      "meanCounties": 55.9375,
+      "unresolvedRate": 1,
+      "bySeat": [
+        {
+          "seat": 0,
+          "games": 1,
+          "wins": 0,
+          "unresolved": 1
+        },
+        {
+          "seat": 1,
+          "games": 1,
+          "wins": 0,
+          "unresolved": 1
+        },
+        {
+          "seat": 2,
+          "games": 1,
+          "wins": 0,
+          "unresolved": 1
+        },
+        {
+          "seat": 3,
+          "games": 1,
+          "wins": 0,
+          "unresolved": 1
+        },
+        {
+          "seat": 4,
+          "games": 1,
+          "wins": 0,
+          "unresolved": 1
+        },
+        {
+          "seat": 5,
+          "games": 1,
+          "wins": 0,
+          "unresolved": 1
+        },
+        {
+          "seat": 6,
+          "games": 1,
+          "wins": 0,
+          "unresolved": 1
+        },
+        {
+          "seat": 7,
+          "games": 1,
+          "wins": 0,
+          "unresolved": 1
+        },
+        {
+          "seat": 8,
+          "games": 1,
+          "wins": 0,
+          "unresolved": 1
+        },
+        {
+          "seat": 9,
+          "games": 1,
+          "wins": 0,
+          "unresolved": 1
+        },
+        {
+          "seat": 10,
+          "games": 1,
+          "wins": 0,
+          "unresolved": 1
+        },
+        {
+          "seat": 11,
+          "games": 1,
+          "wins": 0,
+          "unresolved": 1
+        },
+        {
+          "seat": 12,
+          "games": 1,
+          "wins": 0,
+          "unresolved": 1
+        },
+        {
+          "seat": 13,
+          "games": 1,
+          "wins": 0,
+          "unresolved": 1
+        },
+        {
+          "seat": 14,
+          "games": 1,
+          "wins": 0,
+          "unresolved": 1
+        },
+        {
+          "seat": 15,
+          "games": 1,
+          "wins": 0,
+          "unresolved": 1
+        }
+      ]
+    }
+  },
+  "incumbentEvaluation": {
+    "games": 16,
+    "horizon": 120,
+    "factions": 16,
+    "winRate": 0,
+    "baselineWinRate": 0,
+    "meanCounties": 45.4375,
+    "unresolvedRate": 1,
+    "bySeat": [
+      {
+        "seat": 0,
+        "games": 1,
+        "wins": 0,
+        "unresolved": 1
+      },
+      {
+        "seat": 1,
+        "games": 1,
+        "wins": 0,
+        "unresolved": 1
+      },
+      {
+        "seat": 2,
+        "games": 1,
+        "wins": 0,
+        "unresolved": 1
+      },
+      {
+        "seat": 3,
+        "games": 1,
+        "wins": 0,
+        "unresolved": 1
+      },
+      {
+        "seat": 4,
+        "games": 1,
+        "wins": 0,
+        "unresolved": 1
+      },
+      {
+        "seat": 5,
+        "games": 1,
+        "wins": 0,
+        "unresolved": 1
+      },
+      {
+        "seat": 6,
+        "games": 1,
+        "wins": 0,
+        "unresolved": 1
+      },
+      {
+        "seat": 7,
+        "games": 1,
+        "wins": 0,
+        "unresolved": 1
+      },
+      {
+        "seat": 8,
+        "games": 1,
+        "wins": 0,
+        "unresolved": 1
+      },
+      {
+        "seat": 9,
+        "games": 1,
+        "wins": 0,
+        "unresolved": 1
+      },
+      {
+        "seat": 10,
+        "games": 1,
+        "wins": 0,
+        "unresolved": 1
+      },
+      {
+        "seat": 11,
+        "games": 1,
+        "wins": 0,
+        "unresolved": 1
+      },
+      {
+        "seat": 12,
+        "games": 1,
+        "wins": 0,
+        "unresolved": 1
+      },
+      {
+        "seat": 13,
+        "games": 1,
+        "wins": 0,
+        "unresolved": 1
+      },
+      {
+        "seat": 14,
+        "games": 1,
+        "wins": 0,
+        "unresolved": 1
+      },
+      {
+        "seat": 15,
+        "games": 1,
+        "wins": 0,
+        "unresolved": 1
+      }
+    ]
+  },
+  "promotion": {
+    "promoted": true,
+    "reason": "territorial-improvement"
+  }
+}

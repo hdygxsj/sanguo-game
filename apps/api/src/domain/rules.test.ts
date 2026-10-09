@@ -16,7 +16,7 @@ describe('validateAction', () => {
     expect(result).toEqual({ ok: false, code: 'NOT_OWNER' });
   });
 
-  it('rejects movement to a non-adjacent city', () => {
+  it('rejects a friendly-transfer order to a non-friendly destination even with a road route', () => {
     const state = generateBattle('rules-adjacent', 7, 5, 2);
     const source = state.cities.find((city) => city.owner === state.agents[0]?.id)!;
     const target = state.cities.find(
@@ -30,7 +30,7 @@ describe('validateAction', () => {
         toCityId: target.id,
         troops: 2,
       }),
-    ).toEqual({ ok: false, code: 'NOT_ADJACENT' });
+    ).toEqual({ ok: false, code: 'NOT_FRIENDLY' });
   });
 
   it('accepts a hold action for an active agent', () => {

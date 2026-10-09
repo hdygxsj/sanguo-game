@@ -22,6 +22,7 @@ REQUIRED_MATERIALS = {
     "Roof tile edges",
     "Sunlit foliage",
     "Weathered limestone",
+    "Dressed wall stone",
     "Imperial amber glaze",
     "Mountain moss",
     "Mountain slate",
@@ -53,6 +54,15 @@ if missing_roots:
 missing_materials = REQUIRED_MATERIALS.difference(bpy.data.materials.keys())
 if missing_materials:
     fail(f"missing materials: {sorted(missing_materials)}")
+
+for name in ("Glazed slate jade", "Roof tile edges", "Imperial amber glaze"):
+    shader = bpy.data.materials[name].node_tree.nodes.get("Principled BSDF")
+    if shader.inputs["Roughness"].default_value < 0.65:
+        fail(f"{name} must use a restrained rough ceramic finish")
+    if shader.inputs["Metallic"].default_value > 0.01:
+        fail(f"{name} must not look metallic")
+    if shader.inputs["Emission Strength"].default_value > 0.001:
+        fail(f"{name} must not emit light")
 
 for root_name in REQUIRED_ROOTS:
     root = bpy.data.objects[root_name]

@@ -37,6 +37,14 @@ const nodeNames = new Set((document.nodes ?? []).map((node) => node.name));
 const materialNames = new Set((document.materials ?? []).map((material) => material.name));
 for (const name of requiredRoots) if (!nodeNames.has(name)) fail(`GLB root missing: ${name}`);
 for (const name of requiredMaterials) if (!materialNames.has(name)) fail(`GLB material missing: ${name}`);
+for (const name of ['Glazed slate jade', 'Roof tile edges', 'Imperial amber glaze']) {
+  const material = document.materials.find((value) => value.name === name);
+  const pbr = material.pbrMetallicRoughness ?? {};
+  if ((pbr.roughnessFactor ?? 1) < 0.65 || (pbr.metallicFactor ?? 1) > 0.01) {
+    fail(`GLB roof finish must be rough nonmetal ceramic: ${name}`);
+  }
+  if ((material.emissiveFactor ?? []).some((value) => value > 0.001)) fail(`GLB roof must not glow: ${name}`);
+}
 if (glb.length > 4 * 1024 * 1024) fail(`GLB exceeds 4MB budget: ${Math.round(glb.length / 1024)}KB`);
 if ((document.meshes ?? []).length > 88) fail(`GLB exceeds 88 mesh budget: ${(document.meshes ?? []).length}`);
 if ((document.materials ?? []).length !== 11) fail(`expected 11 materials, found ${(document.materials ?? []).length}`);

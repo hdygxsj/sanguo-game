@@ -12,7 +12,7 @@ describe('Agent Arena shell', () => {
 
     render(<App />);
 
-    expect(screen.getByText('Agent 竞技场')).toBeInTheDocument();
+    expect(screen.getByRole('heading',{name:'汉末山河'})).toBeInTheDocument();
     expect(await screen.findByText('登录后开启你的战局')).toBeInTheDocument();
     expect(screen.getByRole('button', { name: '体验完整战局' })).toBeInTheDocument();
   });
@@ -44,5 +44,7 @@ describe('Agent Arena shell', () => {
     fireEvent.click(screen.getByRole('button', { name: '查看规则' }));
     expect(screen.getByRole('dialog', { name: '竞技场规则' })).toBeInTheDocument();
     expect(screen.getByText('统一回合结算')).toBeInTheDocument();
+    expect(screen.queryByText(/回合上限时/)).not.toBeInTheDocument();
+    expect(screen.getByText(/没有回合上限/)).toBeInTheDocument();
   });
 });

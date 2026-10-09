@@ -1,0 +1,5504 @@
+{"progress":100,"horizon":2000,"survivors":16,"largestRealm":81}
+{"progress":200,"horizon":2000,"survivors":16,"largestRealm":93}
+{"progress":300,"horizon":2000,"survivors":15,"largestRealm":129}
+{"progress":400,"horizon":2000,"survivors":14,"largestRealm":143}
+{"progress":500,"horizon":2000,"survivors":14,"largestRealm":163}
+{"progress":600,"horizon":2000,"survivors":12,"largestRealm":191}
+{"progress":700,"horizon":2000,"survivors":12,"largestRealm":193}
+{"progress":800,"horizon":2000,"survivors":12,"largestRealm":200}
+{"progress":900,"horizon":2000,"survivors":12,"largestRealm":223}
+{"progress":1000,"horizon":2000,"survivors":12,"largestRealm":238}
+{"progress":1100,"horizon":2000,"survivors":12,"largestRealm":251}
+{"progress":1200,"horizon":2000,"survivors":12,"largestRealm":244}
+{"progress":1300,"horizon":2000,"survivors":11,"largestRealm":227}
+{"progress":1400,"horizon":2000,"survivors":11,"largestRealm":273}
+{"progress":1500,"horizon":2000,"survivors":11,"largestRealm":313}
+{"progress":1600,"horizon":2000,"survivors":11,"largestRealm":362}
+{"progress":1700,"horizon":2000,"survivors":10,"largestRealm":402}
+{"progress":1800,"horizon":2000,"survivors":10,"largestRealm":438}
+{"progress":1900,"horizon":2000,"survivors":6,"largestRealm":479}
+{"progress":2000,"horizon":2000,"survivors":6,"largestRealm":487}
+{
+  "seed": "evaluation-world-0",
+  "checkpointEpisodes": 542,
+  "turn": 2000,
+  "status": "active",
+  "winner": null,
+  "tally": {
+    "attack": 8113,
+    "recruit": 6323,
+    "diplomacy:peace": 127,
+    "hold": 1848,
+    "develop:farm": 1348,
+    "move": 3315,
+    "diplomacy:trade": 56,
+    "appoint-governor": 797,
+    "appoint-court": 127,
+    "buy-equipment": 23,
+    "form-union": 35,
+    "recruit-character": 406,
+    "recruit-captive": 578,
+    "equip-equipment": 23,
+    "diplomacy:war": 39,
+    "diplomacy:alliance": 45,
+    "develop:market": 254,
+    "recall-army": 18,
+    "reward-character": 611
+  },
+  "events": {
+    "turn-start": 2000,
+    "march": 11442,
+    "recruit": 6323,
+    "diplomacy": 277,
+    "personnel": 27738,
+    "income": 24076,
+    "upkeep": 24076,
+    "turn-end": 2000,
+    "hold": 1848,
+    "develop": 3204,
+    "attack": 8114,
+    "capture": 7782,
+    "arrival": 11083,
+    "trade-income": 23719,
+    "equipment": 46,
+    "family": 661,
+    "invalid-action": 244,
+    "captive": 880,
+    "field-battle": 8,
+    "desertion": 121
+  },
+  "combat": {
+    "captures": 7782,
+    "recapturedWithin10Turns": 880
+  },
+  "holdSamples": [
+    {
+      "turn": 1,
+      "faction": "公孙瓒",
+      "money": 78,
+      "counts": {
+        "hold": 1,
+        "recruit": 16,
+        "move": 3,
+        "develop": 16
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 1078,
+            "unitType": "sword",
+            "amount": 4
+          },
+          "score": 8.827719903833794
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 1078,
+            "unitType": "spear",
+            "amount": 6
+          },
+          "score": 8.794794829526252
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 1078,
+            "unitType": "archer",
+            "amount": 4
+          },
+          "score": 8.677291038879371
+        }
+      ]
+    },
+    {
+      "turn": 2,
+      "faction": "袁绍",
+      "money": 24,
+      "counts": {
+        "hold": 1,
+        "recruit": 15,
+        "move": 7,
+        "develop": 7
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 297,
+            "unitType": "sword",
+            "amount": 1
+          },
+          "score": 8.58145040771967
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 297,
+            "unitType": "spear",
+            "amount": 1
+          },
+          "score": 8.548164382756811
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 297,
+            "unitType": "archer",
+            "amount": 1
+          },
+          "score": 8.543843191481065
+        }
+      ]
+    },
+    {
+      "turn": 2,
+      "faction": "袁术",
+      "money": 38,
+      "counts": {
+        "hold": 1,
+        "recruit": 16,
+        "move": 36,
+        "develop": 73
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 513,
+            "unitType": "sword",
+            "amount": 4
+          },
+          "score": 8.847175397592967
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 513,
+            "unitType": "spear",
+            "amount": 6
+          },
+          "score": 8.81540084711782
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 513,
+            "unitType": "archer",
+            "amount": 4
+          },
+          "score": 8.696746532638544
+        }
+      ]
+    },
+    {
+      "turn": 4,
+      "faction": "孙坚",
+      "money": 35,
+      "counts": {
+        "hold": 1,
+        "recruit": 16,
+        "move": 11,
+        "develop": 25
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 617,
+            "unitType": "spear",
+            "amount": 5
+          },
+          "score": 8.801098630514042
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 617,
+            "unitType": "sword",
+            "amount": 3
+          },
+          "score": 8.799953063695169
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 617,
+            "unitType": "archer",
+            "amount": 3
+          },
+          "score": 8.687131414979351
+        }
+      ]
+    },
+    {
+      "turn": 4,
+      "faction": "刘繇",
+      "money": 32,
+      "counts": {
+        "hold": 1,
+        "recruit": 16,
+        "move": 14,
+        "develop": 31
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 644,
+            "unitType": "sword",
+            "amount": 3
+          },
+          "score": 8.780362632123722
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 644,
+            "unitType": "spear",
+            "amount": 4
+          },
+          "score": 8.731843692352964
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 644,
+            "unitType": "archer",
+            "amount": 3
+          },
+          "score": 8.667540983407905
+        }
+      ]
+    },
+    {
+      "turn": 4,
+      "faction": "张鲁",
+      "money": 26,
+      "counts": {
+        "hold": 1,
+        "recruit": 18,
+        "move": 8,
+        "develop": 8
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 723,
+            "unitType": "spear",
+            "amount": 2
+          },
+          "score": 8.570788482420383
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 723,
+            "unitType": "sword",
+            "amount": 1
+          },
+          "score": 8.553008621675614
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 723,
+            "unitType": "archer",
+            "amount": 1
+          },
+          "score": 8.515401405437009
+        }
+      ]
+    },
+    {
+      "turn": 4,
+      "faction": "士燮",
+      "money": 26,
+      "counts": {
+        "hold": 1,
+        "recruit": 12,
+        "move": 11,
+        "develop": 11
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 1162,
+            "unitType": "spear",
+            "amount": 2
+          },
+          "score": 8.632166492811981
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 1162,
+            "unitType": "sword",
+            "amount": 1
+          },
+          "score": 8.614386632067212
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 1162,
+            "unitType": "archer",
+            "amount": 1
+          },
+          "score": 8.576779415828607
+        }
+      ]
+    },
+    {
+      "turn": 110,
+      "faction": "刘表",
+      "money": 33,
+      "counts": {
+        "hold": 1,
+        "recruit": 56,
+        "move": 24,
+        "develop": 81
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 660,
+            "unitType": "sword",
+            "amount": 3
+          },
+          "score": 8.789526520712625
+        },
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 660,
+            "toCityId": 567,
+            "troops": 72
+          },
+          "score": 8.774054727080628
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 661,
+            "unitType": "sword",
+            "amount": 3
+          },
+          "score": 8.756051414362448
+        }
+      ]
+    },
+    {
+      "turn": 143,
+      "faction": "士燮",
+      "money": 1143,
+      "counts": {
+        "hold": 1,
+        "develop": 236
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "develop",
+            "cityId": 594
+          },
+          "score": 8.192322521351038
+        },
+        {
+          "action": {
+            "type": "develop",
+            "cityId": 1128
+          },
+          "score": 8.192322521351038
+        },
+        {
+          "action": {
+            "type": "develop",
+            "cityId": 1135
+          },
+          "score": 8.192322521351038
+        }
+      ]
+    },
+    {
+      "turn": 149,
+      "faction": "马腾",
+      "money": 608,
+      "counts": {
+        "hold": 1,
+        "move": 1,
+        "develop": 194
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 924,
+            "toCityId": 927,
+            "troops": 3
+          },
+          "score": 8.304122577549935
+        },
+        {
+          "action": {
+            "type": "develop",
+            "cityId": 842,
+            "building": "farm"
+          },
+          "score": 8.256662708790829
+        },
+        {
+          "action": {
+            "type": "develop",
+            "cityId": 843,
+            "building": "farm"
+          },
+          "score": 8.256662708790829
+        }
+      ]
+    },
+    {
+      "turn": 170,
+      "faction": "张燕",
+      "money": 839,
+      "counts": {
+        "hold": 1,
+        "move": 13,
+        "develop": 237
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 1057,
+            "toCityId": 1052,
+            "troops": 20,
+            "commanderId": "person-12-1"
+          },
+          "score": 8.510052496597705
+        },
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 1032,
+            "toCityId": 1002,
+            "troops": 45,
+            "commanderId": "person-12-1"
+          },
+          "score": 8.491444994662778
+        },
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 248,
+            "toCityId": 249,
+            "troops": 12,
+            "commanderId": "person-12-1"
+          },
+          "score": 8.45121537686977
+        }
+      ]
+    },
+    {
+      "turn": 172,
+      "faction": "陶谦",
+      "money": 115,
+      "counts": {
+        "hold": 1,
+        "move": 1,
+        "develop": 232
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 636,
+            "toCityId": 632,
+            "troops": 13
+          },
+          "score": 8.40708753707382
+        },
+        {
+          "action": {
+            "type": "develop",
+            "cityId": 169,
+            "building": "farm"
+          },
+          "score": 8.293198396413583
+        },
+        {
+          "action": {
+            "type": "develop",
+            "cityId": 172,
+            "building": "farm"
+          },
+          "score": 8.293198396413583
+        }
+      ]
+    },
+    {
+      "turn": 178,
+      "faction": "孔融",
+      "money": 761,
+      "counts": {
+        "hold": 1,
+        "move": 1,
+        "develop": 198
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 502,
+            "toCityId": 499,
+            "troops": 16,
+            "commanderId": "talent-2"
+          },
+          "score": 8.45698474173664
+        },
+        {
+          "action": {
+            "type": "develop",
+            "cityId": 389,
+            "building": "farm"
+          },
+          "score": 8.252940202223476
+        },
+        {
+          "action": {
+            "type": "develop",
+            "cityId": 394,
+            "building": "farm"
+          },
+          "score": 8.252940202223476
+        }
+      ]
+    },
+    {
+      "turn": 204,
+      "faction": "孔融",
+      "money": 33,
+      "counts": {
+        "hold": 1,
+        "develop": 103
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "develop",
+            "cityId": 406,
+            "building": "farm"
+          },
+          "score": 8.130129239417837
+        },
+        {
+          "action": {
+            "type": "develop",
+            "cityId": 407,
+            "building": "farm"
+          },
+          "score": 8.130129239417837
+        },
+        {
+          "action": {
+            "type": "develop",
+            "cityId": 408,
+            "building": "farm"
+          },
+          "score": 8.130129239417837
+        }
+      ]
+    },
+    {
+      "turn": 206,
+      "faction": "陶谦",
+      "money": 38,
+      "counts": {
+        "hold": 1,
+        "recruit": 144,
+        "move": 17,
+        "develop": 133
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 467,
+            "unitType": "sword",
+            "amount": 4
+          },
+          "score": 8.890208441999187
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 467,
+            "unitType": "spear",
+            "amount": 6
+          },
+          "score": 8.85843389152404
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 184,
+            "unitType": "sword",
+            "amount": 4
+          },
+          "score": 8.836924094492945
+        }
+      ]
+    },
+    {
+      "turn": 212,
+      "faction": "刘繇",
+      "money": 36,
+      "counts": {
+        "hold": 1,
+        "recruit": 84,
+        "move": 27,
+        "develop": 102
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 431,
+            "unitType": "sword",
+            "amount": 4
+          },
+          "score": 8.922973387957061
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 630,
+            "unitType": "sword",
+            "amount": 4
+          },
+          "score": 8.900250830095125
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 431,
+            "unitType": "spear",
+            "amount": 5
+          },
+          "score": 8.841760463612193
+        }
+      ]
+    },
+    {
+      "turn": 229,
+      "faction": "袁绍",
+      "money": 36,
+      "counts": {
+        "hold": 1,
+        "recruit": 88,
+        "develop": 74
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 288,
+            "unitType": "sword",
+            "amount": 4
+          },
+          "score": 8.900250830095125
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 279,
+            "unitType": "sword",
+            "amount": 4
+          },
+          "score": 8.891808580483342
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 338,
+            "unitType": "sword",
+            "amount": 4
+          },
+          "score": 8.88939650916569
+        }
+      ]
+    },
+    {
+      "turn": 248,
+      "faction": "张燕",
+      "money": 22,
+      "counts": {
+        "hold": 1,
+        "move": 30,
+        "develop": 87
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 252,
+            "toCityId": 248,
+            "troops": 7,
+            "commanderId": "person-12-1"
+          },
+          "score": 8.487309173085821
+        },
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 258,
+            "toCityId": 248,
+            "troops": 7,
+            "commanderId": "person-12-1"
+          },
+          "score": 8.487309173085821
+        },
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 1056,
+            "toCityId": 1050,
+            "troops": 22,
+            "commanderId": "person-12-1"
+          },
+          "score": 8.45698474173664
+        }
+      ]
+    },
+    {
+      "turn": 250,
+      "faction": "孙坚",
+      "money": 27,
+      "counts": {
+        "hold": 1,
+        "recruit": 44,
+        "develop": 11
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 719,
+            "unitType": "spear",
+            "amount": 2
+          },
+          "score": 8.776873649145411
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 580,
+            "unitType": "spear",
+            "amount": 2
+          },
+          "score": 8.767526872789508
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 719,
+            "unitType": "sword",
+            "amount": 1
+          },
+          "score": 8.759215232582951
+        }
+      ]
+    },
+    {
+      "turn": 283,
+      "faction": "公孙瓒",
+      "money": 61,
+      "counts": {
+        "hold": 1,
+        "move": 29,
+        "develop": 350
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 289,
+            "toCityId": 285,
+            "troops": 46,
+            "commanderId": "child-union-120-agent-1-187"
+          },
+          "score": 8.563120251458768
+        },
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 223,
+            "toCityId": 220,
+            "troops": 10,
+            "commanderId": "child-union-120-agent-1-187"
+          },
+          "score": 8.549853312743503
+        },
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 228,
+            "toCityId": 220,
+            "troops": 19,
+            "commanderId": "child-union-120-agent-1-187"
+          },
+          "score": 8.549853312743503
+        }
+      ]
+    },
+    {
+      "turn": 298,
+      "faction": "曹操",
+      "money": 1347,
+      "counts": {
+        "hold": 1,
+        "move": 20,
+        "develop": 245
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 322,
+            "toCityId": 205,
+            "troops": 24,
+            "commanderId": "child-union-120-agent-1-223"
+          },
+          "score": 8.621702435089109
+        },
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 947,
+            "toCityId": 942,
+            "troops": 18,
+            "commanderId": "child-union-120-agent-1-223"
+          },
+          "score": 8.5805582775491
+        },
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 333,
+            "toCityId": 328,
+            "troops": 7,
+            "commanderId": "child-union-120-agent-1-223"
+          },
+          "score": 8.563120251458768
+        }
+      ]
+    },
+    {
+      "turn": 301,
+      "faction": "张燕",
+      "money": 29,
+      "counts": {
+        "hold": 1,
+        "recruit": 64,
+        "develop": 88
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 235,
+            "unitType": "sword",
+            "amount": 2
+          },
+          "score": 8.725003755893663
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 235,
+            "unitType": "spear",
+            "amount": 3
+          },
+          "score": 8.70946461329848
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 236,
+            "unitType": "sword",
+            "amount": 2
+          },
+          "score": 8.675392209993374
+        }
+      ]
+    },
+    {
+      "turn": 302,
+      "faction": "陶谦",
+      "money": 33,
+      "counts": {
+        "hold": 1,
+        "recruit": 184,
+        "move": 4,
+        "develop": 133
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 400,
+            "unitType": "sword",
+            "amount": 3
+          },
+          "score": 8.845324711977714
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 494,
+            "unitType": "sword",
+            "amount": 3
+          },
+          "score": 8.819285556054005
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 508,
+            "unitType": "sword",
+            "amount": 3
+          },
+          "score": 8.819285556054005
+        }
+      ]
+    },
+    {
+      "turn": 305,
+      "faction": "公孙瓒",
+      "money": 32,
+      "counts": {
+        "hold": 1,
+        "recruit": 32,
+        "move": 10,
+        "develop": 170
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 359,
+            "unitType": "sword",
+            "amount": 3
+          },
+          "score": 8.814342792270994
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 359,
+            "unitType": "spear",
+            "amount": 4
+          },
+          "score": 8.765823852500235
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 286,
+            "unitType": "sword",
+            "amount": 3
+          },
+          "score": 8.758646373447101
+        }
+      ]
+    },
+    {
+      "turn": 307,
+      "faction": "董卓",
+      "money": 103,
+      "counts": {
+        "hold": 1,
+        "move": 26,
+        "develop": 206
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 326,
+            "toCityId": 334,
+            "troops": 33,
+            "commanderId": "talent-3"
+          },
+          "score": 8.760092918917845
+        },
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 952,
+            "toCityId": 944,
+            "troops": 14,
+            "commanderId": "talent-3"
+          },
+          "score": 8.741346817231411
+        },
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 333,
+            "toCityId": 325,
+            "troops": 5,
+            "commanderId": "talent-3"
+          },
+          "score": 8.563120251458768
+        }
+      ]
+    },
+    {
+      "turn": 314,
+      "faction": "孔融",
+      "money": 33,
+      "counts": {
+        "hold": 1,
+        "recruit": 208,
+        "move": 25,
+        "develop": 105
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 511,
+            "toCityId": 507,
+            "troops": 44,
+            "commanderId": "person-11-1"
+          },
+          "score": 8.881391629690931
+        },
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 510,
+            "toCityId": 507,
+            "troops": 20,
+            "commanderId": "person-11-1"
+          },
+          "score": 8.881391629690931
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 387,
+            "unitType": "sword",
+            "amount": 3
+          },
+          "score": 8.844420185233595
+        }
+      ]
+    },
+    {
+      "turn": 316,
+      "faction": "刘表",
+      "money": 748,
+      "counts": {
+        "hold": 1,
+        "move": 2,
+        "develop": 11
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 557,
+            "toCityId": 562,
+            "troops": 164,
+            "commanderId": "person-1-1"
+          },
+          "score": 8.888422280027669
+        },
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 554,
+            "toCityId": 559,
+            "troops": 8,
+            "commanderId": "person-1-1"
+          },
+          "score": 8.460155291934884
+        },
+        {
+          "action": {
+            "type": "develop",
+            "cityId": 610,
+            "building": "farm"
+          },
+          "score": 8.230640556036448
+        }
+      ]
+    },
+    {
+      "turn": 316,
+      "faction": "士燮",
+      "money": 563,
+      "counts": {
+        "hold": 1,
+        "move": 41,
+        "develop": 380
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 552,
+            "toCityId": 550,
+            "troops": 331
+          },
+          "score": 8.565188901279523
+        },
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 605,
+            "toCityId": 607,
+            "troops": 10
+          },
+          "score": 8.510052496597705
+        },
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 614,
+            "toCityId": 607,
+            "troops": 11
+          },
+          "score": 8.510052496597705
+        }
+      ]
+    },
+    {
+      "turn": 404,
+      "faction": "公孙瓒",
+      "money": 32,
+      "counts": {
+        "hold": 1,
+        "recruit": 8,
+        "develop": 152
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 360,
+            "unitType": "sword",
+            "amount": 3
+          },
+          "score": 8.923926576430544
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 221,
+            "unitType": "sword",
+            "amount": 3
+          },
+          "score": 8.91307225550111
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 360,
+            "unitType": "spear",
+            "amount": 4
+          },
+          "score": 8.875407636659785
+        }
+      ]
+    },
+    {
+      "turn": 425,
+      "faction": "曹操",
+      "money": 25,
+      "counts": {
+        "hold": 1,
+        "recruit": 141,
+        "move": 20,
+        "develop": 49
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 295,
+            "unitType": "sword",
+            "amount": 1
+          },
+          "score": 8.759720440381352
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 381,
+            "unitType": "sword",
+            "amount": 1
+          },
+          "score": 8.748866119451918
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 295,
+            "unitType": "spear",
+            "amount": 1
+          },
+          "score": 8.726505460265143
+        }
+      ]
+    },
+    {
+      "turn": 425,
+      "faction": "陶谦",
+      "money": 38,
+      "counts": {
+        "hold": 1,
+        "recruit": 248,
+        "move": 15,
+        "develop": 103
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 297,
+            "unitType": "sword",
+            "amount": 4
+          },
+          "score": 8.905087959669878
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 402,
+            "unitType": "sword",
+            "amount": 4
+          },
+          "score": 8.895334093549197
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 390,
+            "unitType": "sword",
+            "amount": 4
+          },
+          "score": 8.892017495487424
+        }
+      ]
+    },
+    {
+      "turn": 443,
+      "faction": "孔融",
+      "money": 38,
+      "counts": {
+        "hold": 1,
+        "recruit": 176,
+        "move": 19,
+        "develop": 93
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 507,
+            "unitType": "sword",
+            "amount": 4
+          },
+          "score": 8.874201259895525
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 448,
+            "unitType": "sword",
+            "amount": 4
+          },
+          "score": 8.847175397592967
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 507,
+            "unitType": "spear",
+            "amount": 6
+          },
+          "score": 8.842426709420378
+        }
+      ]
+    },
+    {
+      "turn": 446,
+      "faction": "刘备",
+      "money": 20,
+      "counts": {
+        "hold": 1,
+        "develop": 24
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "develop",
+            "cityId": 200
+          },
+          "score": 8.088626931657442
+        },
+        {
+          "action": {
+            "type": "develop",
+            "cityId": 202
+          },
+          "score": 8.088626931657442
+        },
+        {
+          "action": {
+            "type": "develop",
+            "cityId": 265
+          },
+          "score": 8.088626931657442
+        }
+      ]
+    },
+    {
+      "turn": 452,
+      "faction": "袁绍",
+      "money": 38,
+      "counts": {
+        "hold": 1,
+        "recruit": 12,
+        "develop": 46
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 262,
+            "unitType": "sword",
+            "amount": 4
+          },
+          "score": 8.847175397592967
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 261,
+            "unitType": "sword",
+            "amount": 4
+          },
+          "score": 8.835718058834118
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 262,
+            "unitType": "spear",
+            "amount": 6
+          },
+          "score": 8.81540084711782
+        }
+      ]
+    },
+    {
+      "turn": 454,
+      "faction": "张燕",
+      "money": 26,
+      "counts": {
+        "hold": 1,
+        "recruit": 6,
+        "develop": 107
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 268,
+            "unitType": "spear",
+            "amount": 2
+          },
+          "score": 8.621003046150088
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 268,
+            "unitType": "sword",
+            "amount": 1
+          },
+          "score": 8.60322318540532
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 268,
+            "unitType": "archer",
+            "amount": 1
+          },
+          "score": 8.565615969166714
+        }
+      ]
+    },
+    {
+      "turn": 475,
+      "faction": "刘焉",
+      "money": 41,
+      "counts": {
+        "hold": 1,
+        "recruit": 340,
+        "move": 61,
+        "develop": 303
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 755,
+            "unitType": "sword",
+            "amount": 5
+          },
+          "score": 8.920003792009359
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 830,
+            "unitType": "sword",
+            "amount": 5
+          },
+          "score": 8.920003792009359
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 917,
+            "unitType": "sword",
+            "amount": 5
+          },
+          "score": 8.91909926526524
+        }
+      ]
+    },
+    {
+      "turn": 479,
+      "faction": "董卓",
+      "money": 198,
+      "counts": {
+        "hold": 1,
+        "move": 13,
+        "develop": 54
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 205,
+            "toCityId": 206,
+            "troops": 23,
+            "commanderId": "talent-3"
+          },
+          "score": 8.853489291394425
+        },
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 215,
+            "toCityId": 210,
+            "troops": 16,
+            "commanderId": "talent-3"
+          },
+          "score": 8.635211307509286
+        },
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 206,
+            "toCityId": 209,
+            "troops": 16,
+            "commanderId": "talent-3"
+          },
+          "score": 8.613294655624607
+        }
+      ]
+    },
+    {
+      "turn": 500,
+      "faction": "曹操",
+      "money": 0,
+      "counts": {
+        "hold": 1
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        }
+      ]
+    },
+    {
+      "turn": 500,
+      "faction": "刘备",
+      "money": 0,
+      "counts": {
+        "hold": 1
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        }
+      ]
+    },
+    {
+      "turn": 500,
+      "faction": "袁绍",
+      "money": 37,
+      "counts": {
+        "hold": 1,
+        "recruit": 12,
+        "develop": 46
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 262,
+            "unitType": "sword",
+            "amount": 4
+          },
+          "score": 8.847660483316895
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 261,
+            "unitType": "sword",
+            "amount": 4
+          },
+          "score": 8.836203144558047
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 262,
+            "unitType": "spear",
+            "amount": 5
+          },
+          "score": 8.766479561155204
+        }
+      ]
+    },
+    {
+      "turn": 500,
+      "faction": "公孙瓒",
+      "money": 28,
+      "counts": {
+        "hold": 1,
+        "recruit": 4,
+        "develop": 75
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 270,
+            "unitType": "sword",
+            "amount": 2
+          },
+          "score": 8.842599927087198
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 270,
+            "unitType": "spear",
+            "amount": 2
+          },
+          "score": 8.776535340351838
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 270,
+            "unitType": "archer",
+            "amount": 2
+          },
+          "score": 8.767385494609988
+        }
+      ]
+    },
+    {
+      "turn": 500,
+      "faction": "张燕",
+      "money": 7,
+      "counts": {
+        "hold": 1,
+        "move": 1
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 268,
+            "toCityId": 273,
+            "troops": 39,
+            "commanderId": "person-11-1"
+          },
+          "score": 8.510052496597705
+        }
+      ]
+    },
+    {
+      "turn": 527,
+      "faction": "张鲁",
+      "money": 35,
+      "counts": {
+        "hold": 1,
+        "recruit": 40,
+        "move": 81,
+        "develop": 239
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 305,
+            "unitType": "spear",
+            "amount": 5
+          },
+          "score": 8.879063439623376
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 305,
+            "unitType": "sword",
+            "amount": 3
+          },
+          "score": 8.877917872804503
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 305,
+            "unitType": "archer",
+            "amount": 3
+          },
+          "score": 8.765096224088685
+        }
+      ]
+    },
+    {
+      "turn": 541,
+      "faction": "董卓",
+      "money": 30,
+      "counts": {
+        "hold": 1,
+        "recruit": 28,
+        "develop": 6
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 212,
+            "unitType": "sword",
+            "amount": 2
+          },
+          "score": 8.841787985982624
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 160,
+            "unitType": "sword",
+            "amount": 2
+          },
+          "score": 8.841787985982624
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 212,
+            "unitType": "spear",
+            "amount": 3
+          },
+          "score": 8.826199846941474
+        }
+      ]
+    },
+    {
+      "turn": 601,
+      "faction": "公孙瓒",
+      "money": 54,
+      "counts": {
+        "hold": 1,
+        "recruit": 64,
+        "develop": 282
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 281,
+            "unitType": "sword",
+            "amount": 3
+          },
+          "score": 8.749721857853167
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 282,
+            "unitType": "sword",
+            "amount": 3
+          },
+          "score": 8.749721857853167
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 281,
+            "unitType": "spear",
+            "amount": 4
+          },
+          "score": 8.701202918082409
+        }
+      ]
+    },
+    {
+      "turn": 614,
+      "faction": "孔融",
+      "money": 36,
+      "counts": {
+        "hold": 1,
+        "recruit": 224,
+        "move": 23,
+        "develop": 84
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 431,
+            "unitType": "sword",
+            "amount": 4
+          },
+          "score": 8.88723125213327
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 411,
+            "unitType": "sword",
+            "amount": 4
+          },
+          "score": 8.876979949033249
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 433,
+            "unitType": "sword",
+            "amount": 4
+          },
+          "score": 8.869168202256137
+        }
+      ]
+    },
+    {
+      "turn": 620,
+      "faction": "陶谦",
+      "money": 35,
+      "counts": {
+        "hold": 1,
+        "recruit": 176,
+        "move": 15,
+        "develop": 61
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 435,
+            "unitType": "spear",
+            "amount": 5
+          },
+          "score": 8.923701992635447
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 435,
+            "unitType": "sword",
+            "amount": 3
+          },
+          "score": 8.922556425816573
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 441,
+            "unitType": "spear",
+            "amount": 5
+          },
+          "score": 8.913450689535425
+        }
+      ]
+    },
+    {
+      "turn": 628,
+      "faction": "士燮",
+      "money": 310,
+      "counts": {
+        "hold": 1,
+        "move": 71,
+        "develop": 626
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 440,
+            "toCityId": 432,
+            "troops": 52,
+            "commanderId": "child-union-392-agent-1-399"
+          },
+          "score": 8.77883902060428
+        },
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 644,
+            "toCityId": 419,
+            "troops": 5,
+            "commanderId": "child-union-392-agent-1-399"
+          },
+          "score": 8.589152924955902
+        },
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 422,
+            "toCityId": 419,
+            "troops": 5,
+            "commanderId": "child-union-392-agent-1-399"
+          },
+          "score": 8.57497578062453
+        }
+      ]
+    },
+    {
+      "turn": 638,
+      "faction": "刘备",
+      "money": 38,
+      "counts": {
+        "hold": 1,
+        "recruit": 116,
+        "move": 15,
+        "develop": 30
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 340,
+            "unitType": "sword",
+            "amount": 4
+          },
+          "score": 8.847175397592967
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 341,
+            "unitType": "sword",
+            "amount": 4
+          },
+          "score": 8.84596936193414
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 349,
+            "unitType": "sword",
+            "amount": 4
+          },
+          "score": 8.838733147981184
+        }
+      ]
+    },
+    {
+      "turn": 692,
+      "faction": "张燕",
+      "money": 34,
+      "counts": {
+        "hold": 1,
+        "recruit": 296,
+        "move": 35,
+        "develop": 155
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 229,
+            "unitType": "sword",
+            "amount": 3
+          },
+          "score": 8.81219645717121
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 297,
+            "unitType": "sword",
+            "amount": 3
+          },
+          "score": 8.787864582294546
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 274,
+            "unitType": "sword",
+            "amount": 3
+          },
+          "score": 8.7857540198916
+        }
+      ]
+    },
+    {
+      "turn": 700,
+      "faction": "公孙瓒",
+      "money": 0,
+      "counts": {
+        "hold": 1
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        }
+      ]
+    },
+    {
+      "turn": 701,
+      "faction": "刘繇",
+      "money": 35,
+      "counts": {
+        "hold": 1,
+        "recruit": 272,
+        "move": 18,
+        "develop": 116
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 408,
+            "unitType": "spear",
+            "amount": 5
+          },
+          "score": 8.923701992635447
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 408,
+            "unitType": "sword",
+            "amount": 3
+          },
+          "score": 8.922556425816573
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 406,
+            "unitType": "spear",
+            "amount": 5
+          },
+          "score": 8.914053707364838
+        }
+      ]
+    },
+    {
+      "turn": 701,
+      "faction": "士燮",
+      "money": 26,
+      "counts": {
+        "hold": 1,
+        "recruit": 120,
+        "move": 68,
+        "develop": 168
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 420,
+            "toCityId": 419,
+            "troops": 27,
+            "commanderId": "child-union-392-agent-1-399"
+          },
+          "score": 8.712470292950306
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 420,
+            "unitType": "spear",
+            "amount": 2
+          },
+          "score": 8.6985174960918
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 420,
+            "unitType": "sword",
+            "amount": 1
+          },
+          "score": 8.68073763534703
+        }
+      ]
+    },
+    {
+      "turn": 704,
+      "faction": "孔融",
+      "money": 29,
+      "counts": {
+        "hold": 1,
+        "recruit": 160,
+        "move": 3,
+        "develop": 37
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 352,
+            "unitType": "sword",
+            "amount": 2
+          },
+          "score": 8.836451288170926
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 352,
+            "unitType": "spear",
+            "amount": 3
+          },
+          "score": 8.820912145575742
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 433,
+            "unitType": "sword",
+            "amount": 2
+          },
+          "score": 8.772449769380493
+        }
+      ]
+    },
+    {
+      "turn": 746,
+      "faction": "张燕",
+      "money": 35,
+      "counts": {
+        "hold": 1,
+        "recruit": 200,
+        "move": 11,
+        "develop": 110
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 1055,
+            "unitType": "spear",
+            "amount": 5
+          },
+          "score": 8.923701992635447
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 1055,
+            "unitType": "sword",
+            "amount": 3
+          },
+          "score": 8.922556425816573
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 1015,
+            "unitType": "spear",
+            "amount": 5
+          },
+          "score": 8.912847671706013
+        }
+      ]
+    },
+    {
+      "turn": 785,
+      "faction": "袁绍",
+      "money": 7,
+      "counts": {
+        "hold": 1,
+        "move": 30
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 261,
+            "toCityId": 274,
+            "troops": 40,
+            "commanderId": "talent-11"
+          },
+          "score": 8.734385713114522
+        },
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 1002,
+            "toCityId": 1032,
+            "troops": 17,
+            "commanderId": "talent-11"
+          },
+          "score": 8.625010969178629
+        },
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 1032,
+            "toCityId": 1035,
+            "troops": 7,
+            "commanderId": "talent-11"
+          },
+          "score": 8.601543692132708
+        }
+      ]
+    },
+    {
+      "turn": 820,
+      "faction": "袁术",
+      "money": 24,
+      "counts": {
+        "hold": 1,
+        "recruit": 186,
+        "move": 23,
+        "develop": 93
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 10,
+            "unitType": "sword",
+            "amount": 1
+          },
+          "score": 8.760004619767955
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 117,
+            "unitType": "sword",
+            "amount": 1
+          },
+          "score": 8.749753316667933
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 10,
+            "unitType": "spear",
+            "amount": 1
+          },
+          "score": 8.726718594805096
+        }
+      ]
+    },
+    {
+      "turn": 842,
+      "faction": "公孙瓒",
+      "money": 35,
+      "counts": {
+        "hold": 1,
+        "recruit": 200,
+        "move": 21,
+        "develop": 154
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 953,
+            "unitType": "spear",
+            "amount": 5
+          },
+          "score": 8.834424886611306
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 953,
+            "unitType": "sword",
+            "amount": 3
+          },
+          "score": 8.833279319792432
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 1078,
+            "unitType": "spear",
+            "amount": 5
+          },
+          "score": 8.819545368940615
+        }
+      ]
+    },
+    {
+      "turn": 902,
+      "faction": "公孙瓒",
+      "money": 26,
+      "counts": {
+        "hold": 1,
+        "recruit": 141,
+        "move": 19,
+        "develop": 89
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 1078,
+            "toCityId": 1045,
+            "troops": 12,
+            "commanderId": "child-union-273-agent-1-319"
+          },
+          "score": 8.833630650315975
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 953,
+            "unitType": "spear",
+            "amount": 2
+          },
+          "score": 8.687960875668194
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 953,
+            "unitType": "sword",
+            "amount": 1
+          },
+          "score": 8.670181014923426
+        }
+      ]
+    },
+    {
+      "turn": 917,
+      "faction": "陶谦",
+      "money": 33,
+      "counts": {
+        "hold": 1,
+        "recruit": 124,
+        "move": 2,
+        "develop": 32
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 446,
+            "unitType": "sword",
+            "amount": 3
+          },
+          "score": 8.923442179748838
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 446,
+            "unitType": "spear",
+            "amount": 4
+          },
+          "score": 8.874923239978079
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 507,
+            "unitType": "sword",
+            "amount": 3
+          },
+          "score": 8.829701218423489
+        }
+      ]
+    },
+    {
+      "turn": 941,
+      "faction": "袁绍",
+      "money": 37,
+      "counts": {
+        "hold": 1,
+        "recruit": 196,
+        "move": 15,
+        "develop": 53
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 963,
+            "unitType": "sword",
+            "amount": 4
+          },
+          "score": 8.89973879516431
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 259,
+            "unitType": "sword",
+            "amount": 4
+          },
+          "score": 8.894010125784886
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 1005,
+            "unitType": "sword",
+            "amount": 4
+          },
+          "score": 8.889789000978995
+        }
+      ]
+    },
+    {
+      "turn": 953,
+      "faction": "张燕",
+      "money": 32,
+      "counts": {
+        "hold": 1,
+        "recruit": 176,
+        "move": 7,
+        "develop": 75
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 958,
+            "unitType": "sword",
+            "amount": 3
+          },
+          "score": 8.923926576430544
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 958,
+            "unitType": "spear",
+            "amount": 4
+          },
+          "score": 8.875407636659785
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 954,
+            "unitType": "sword",
+            "amount": 3
+          },
+          "score": 8.84580910865942
+        }
+      ]
+    },
+    {
+      "turn": 1000,
+      "faction": "袁绍",
+      "money": 35,
+      "counts": {
+        "hold": 1,
+        "recruit": 168,
+        "move": 5,
+        "develop": 56
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 275,
+            "unitType": "spear",
+            "amount": 5
+          },
+          "score": 8.923701992635447
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 275,
+            "unitType": "sword",
+            "amount": 3
+          },
+          "score": 8.922556425816573
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 1004,
+            "unitType": "spear",
+            "amount": 5
+          },
+          "score": 8.916164269767783
+        }
+      ]
+    },
+    {
+      "turn": 1001,
+      "faction": "张燕",
+      "money": 29,
+      "counts": {
+        "hold": 1,
+        "recruit": 184,
+        "move": 6,
+        "develop": 46
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 958,
+            "toCityId": 966,
+            "troops": 8,
+            "commanderId": "child-union-273-agent-1-295"
+          },
+          "score": 8.888422280027669
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 298,
+            "unitType": "sword",
+            "amount": 2
+          },
+          "score": 8.84217995755035
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 1027,
+            "unitType": "sword",
+            "amount": 2
+          },
+          "score": 8.830722618791501
+        }
+      ]
+    },
+    {
+      "turn": 1007,
+      "faction": "刘繇",
+      "money": 35,
+      "counts": {
+        "hold": 1,
+        "recruit": 232,
+        "move": 18,
+        "develop": 63
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 412,
+            "unitType": "spear",
+            "amount": 5
+          },
+          "score": 8.923701992635447
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 412,
+            "unitType": "sword",
+            "amount": 3
+          },
+          "score": 8.922556425816573
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 398,
+            "unitType": "spear",
+            "amount": 5
+          },
+          "score": 8.861975395517423
+        }
+      ]
+    },
+    {
+      "turn": 1037,
+      "faction": "公孙瓒",
+      "money": 34,
+      "counts": {
+        "hold": 1,
+        "recruit": 232,
+        "move": 19,
+        "develop": 140
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 954,
+            "unitType": "sword",
+            "amount": 3
+          },
+          "score": 8.844868809218461
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 955,
+            "unitType": "sword",
+            "amount": 3
+          },
+          "score": 8.843361264644928
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 1019,
+            "unitType": "sword",
+            "amount": 3
+          },
+          "score": 8.834014488289027
+        }
+      ]
+    },
+    {
+      "turn": 1055,
+      "faction": "陶谦",
+      "money": 39,
+      "counts": {
+        "hold": 1,
+        "recruit": 144,
+        "move": 13,
+        "develop": 40
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 300,
+            "unitType": "sword",
+            "amount": 4
+          },
+          "score": 8.84671518806001
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 494,
+            "unitType": "sword",
+            "amount": 4
+          },
+          "score": 8.84671518806001
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 473,
+            "unitType": "sword",
+            "amount": 4
+          },
+          "score": 8.842192554339412
+        }
+      ]
+    },
+    {
+      "turn": 1088,
+      "faction": "孔融",
+      "money": 54,
+      "counts": {
+        "hold": 1,
+        "move": 36,
+        "develop": 83
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 431,
+            "toCityId": 630,
+            "troops": 11,
+            "commanderId": "child-union-451-agent-9-503"
+          },
+          "score": 8.91323228260757
+        },
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 446,
+            "toCityId": 438,
+            "troops": 16,
+            "commanderId": "child-union-451-agent-9-503"
+          },
+          "score": 8.860164527746507
+        },
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 169,
+            "toCityId": 630,
+            "troops": 16,
+            "commanderId": "child-union-451-agent-9-503"
+          },
+          "score": 8.856993977548264
+        }
+      ]
+    },
+    {
+      "turn": 1100,
+      "faction": "张燕",
+      "money": 24,
+      "counts": {
+        "hold": 1,
+        "recruit": 81,
+        "move": 1,
+        "develop": 27
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 964,
+            "unitType": "sword",
+            "amount": 1
+          },
+          "score": 8.760004619767955
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 964,
+            "unitType": "spear",
+            "amount": 1
+          },
+          "score": 8.726718594805096
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 964,
+            "unitType": "archer",
+            "amount": 1
+          },
+          "score": 8.72239740352935
+        }
+      ]
+    },
+    {
+      "turn": 1100,
+      "faction": "刘繇",
+      "money": 28,
+      "counts": {
+        "hold": 1,
+        "recruit": 96,
+        "move": 1,
+        "develop": 31
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 187,
+            "unitType": "sword",
+            "amount": 1
+          },
+          "score": 8.755974604240171
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 187,
+            "unitType": "spear",
+            "amount": 1
+          },
+          "score": 8.72294231087249
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 187,
+            "unitType": "archer",
+            "amount": 1
+          },
+          "score": 8.718367388001566
+        }
+      ]
+    },
+    {
+      "turn": 1102,
+      "faction": "孔融",
+      "money": 37,
+      "counts": {
+        "hold": 1,
+        "recruit": 260,
+        "move": 33,
+        "develop": 70
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 431,
+            "toCityId": 630,
+            "troops": 25,
+            "commanderId": "talent-1"
+          },
+          "score": 8.91323228260757
+        },
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 169,
+            "toCityId": 630,
+            "troops": 4,
+            "commanderId": "talent-1"
+          },
+          "score": 8.91323228260757
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 438,
+            "unitType": "sword",
+            "amount": 4
+          },
+          "score": 8.89973879516431
+        }
+      ]
+    },
+    {
+      "turn": 1103,
+      "faction": "公孙瓒",
+      "money": 37,
+      "counts": {
+        "hold": 1,
+        "recruit": 224,
+        "move": 20,
+        "develop": 153
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 956,
+            "unitType": "sword",
+            "amount": 4
+          },
+          "score": 8.89973879516431
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 1082,
+            "unitType": "sword",
+            "amount": 4
+          },
+          "score": 8.879784512164207
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 1002,
+            "unitType": "sword",
+            "amount": 4
+          },
+          "score": 8.843439358511004
+        }
+      ]
+    },
+    {
+      "turn": 1112,
+      "faction": "袁绍",
+      "money": 34,
+      "counts": {
+        "hold": 1,
+        "recruit": 172,
+        "move": 7,
+        "develop": 57
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 1085,
+            "unitType": "sword",
+            "amount": 3
+          },
+          "score": 8.914845536292509
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 1085,
+            "unitType": "spear",
+            "amount": 4
+          },
+          "score": 8.86632659652175
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 959,
+            "unitType": "sword",
+            "amount": 3
+          },
+          "score": 8.818829653294753
+        }
+      ]
+    },
+    {
+      "turn": 1166,
+      "faction": "士燮",
+      "money": 33,
+      "counts": {
+        "hold": 1,
+        "recruit": 180,
+        "move": 75,
+        "develop": 274
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 415,
+            "unitType": "sword",
+            "amount": 3
+          },
+          "score": 8.819285556054005
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 176,
+            "unitType": "sword",
+            "amount": 3
+          },
+          "score": 8.81024028861281
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 411,
+            "unitType": "sword",
+            "amount": 3
+          },
+          "score": 8.806265978092151
+        }
+      ]
+    },
+    {
+      "turn": 1196,
+      "faction": "刘备",
+      "money": 33,
+      "counts": {
+        "hold": 1,
+        "recruit": 288,
+        "move": 31,
+        "develop": 76
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 357,
+            "unitType": "sword",
+            "amount": 3
+          },
+          "score": 8.915301439051762
+        },
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 235,
+            "toCityId": 261,
+            "troops": 60,
+            "commanderId": "child-union-396-agent-5-415"
+          },
+          "score": 8.91323228260757
+        },
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 261,
+            "toCityId": 274,
+            "troops": 34,
+            "commanderId": "child-union-396-agent-5-415"
+          },
+          "score": 8.890488959095686
+        }
+      ]
+    },
+    {
+      "turn": 1198,
+      "faction": "马腾",
+      "money": 16,
+      "counts": {
+        "hold": 1
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        }
+      ]
+    },
+    {
+      "turn": 1200,
+      "faction": "马腾",
+      "money": 36,
+      "counts": {
+        "hold": 1,
+        "recruit": 8,
+        "develop": 2
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 804,
+            "unitType": "sword",
+            "amount": 4
+          },
+          "score": 8.839730268635927
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 799,
+            "unitType": "sword",
+            "amount": 4
+          },
+          "score": 8.837318197318275
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 804,
+            "unitType": "spear",
+            "amount": 5
+          },
+          "score": 8.758517344291059
+        }
+      ]
+    },
+    {
+      "turn": 1200,
+      "faction": "张燕",
+      "money": 19,
+      "counts": {
+        "hold": 1
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        }
+      ]
+    },
+    {
+      "turn": 1201,
+      "faction": "袁绍",
+      "money": 19,
+      "counts": {
+        "hold": 1,
+        "move": 6
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 992,
+            "toCityId": 1032,
+            "troops": 3,
+            "commanderId": "talent-6"
+          },
+          "score": 8.637519920282212
+        },
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 1076,
+            "toCityId": 1069,
+            "troops": 4,
+            "commanderId": "talent-6"
+          },
+          "score": 8.510052496597705
+        },
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 1075,
+            "toCityId": 1069,
+            "troops": 3,
+            "commanderId": "talent-6"
+          },
+          "score": 8.510052496597705
+        }
+      ]
+    },
+    {
+      "turn": 1201,
+      "faction": "公孙瓒",
+      "money": 35,
+      "counts": {
+        "hold": 1,
+        "recruit": 240,
+        "move": 11,
+        "develop": 159
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 248,
+            "toCityId": 1050,
+            "troops": 7
+          },
+          "score": 8.802567415459384
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 1002,
+            "unitType": "spear",
+            "amount": 5
+          },
+          "score": 8.761135369884363
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 1002,
+            "unitType": "sword",
+            "amount": 3
+          },
+          "score": 8.759989803065489
+        }
+      ]
+    },
+    {
+      "turn": 1202,
+      "faction": "刘繇",
+      "money": 36,
+      "counts": {
+        "hold": 1,
+        "recruit": 128,
+        "move": 3,
+        "develop": 37
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 174,
+            "unitType": "sword",
+            "amount": 4
+          },
+          "score": 8.919355280980584
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 398,
+            "unitType": "sword",
+            "amount": 4
+          },
+          "score": 8.894220651800994
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 713,
+            "unitType": "sword",
+            "amount": 4
+          },
+          "score": 8.893316125056876
+        }
+      ]
+    },
+    {
+      "turn": 1217,
+      "faction": "刘备",
+      "money": 35,
+      "counts": {
+        "hold": 1,
+        "recruit": 252,
+        "move": 29,
+        "develop": 70
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 235,
+            "toCityId": 261,
+            "troops": 60,
+            "commanderId": "person-2-0"
+          },
+          "score": 8.91323228260757
+        },
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 261,
+            "toCityId": 274,
+            "troops": 34,
+            "commanderId": "person-2-0"
+          },
+          "score": 8.890488959095686
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 123,
+            "unitType": "spear",
+            "amount": 5
+          },
+          "score": 8.82537961917011
+        }
+      ]
+    },
+    {
+      "turn": 1300,
+      "faction": "袁绍",
+      "money": 28,
+      "counts": {
+        "hold": 1,
+        "recruit": 128,
+        "move": 1,
+        "develop": 35
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 1080,
+            "toCityId": 1079,
+            "troops": 15,
+            "commanderId": "talent-6"
+          },
+          "score": 8.769465969761063
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 1032,
+            "unitType": "sword",
+            "amount": 2
+          },
+          "score": 8.764482459316074
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 266,
+            "unitType": "sword",
+            "amount": 2
+          },
+          "score": 8.738443303392366
+        }
+      ]
+    },
+    {
+      "turn": 1301,
+      "faction": "刘备",
+      "money": 32,
+      "counts": {
+        "hold": 1,
+        "recruit": 224,
+        "move": 31,
+        "develop": 64
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 235,
+            "toCityId": 261,
+            "troops": 60,
+            "commanderId": "person-12-1"
+          },
+          "score": 8.91323228260757
+        },
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 261,
+            "toCityId": 274,
+            "troops": 21,
+            "commanderId": "person-12-1"
+          },
+          "score": 8.890488959095686
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 462,
+            "unitType": "sword",
+            "amount": 3
+          },
+          "score": 8.818865425991593
+        }
+      ]
+    },
+    {
+      "turn": 1301,
+      "faction": "公孙瓒",
+      "money": 39,
+      "counts": {
+        "hold": 1,
+        "recruit": 240,
+        "move": 13,
+        "develop": 162
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 1002,
+            "unitType": "sword",
+            "amount": 4
+          },
+          "score": 8.84671518806001
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 967,
+            "unitType": "sword",
+            "amount": 4
+          },
+          "score": 8.845207643486477
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 1078,
+            "unitType": "sword",
+            "amount": 4
+          },
+          "score": 8.844303116742358
+        }
+      ]
+    },
+    {
+      "turn": 1304,
+      "faction": "张燕",
+      "money": 38,
+      "counts": {
+        "hold": 1,
+        "recruit": 120,
+        "develop": 36
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 1034,
+            "unitType": "sword",
+            "amount": 4
+          },
+          "score": 8.899253709440382
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 1033,
+            "unitType": "sword",
+            "amount": 4
+          },
+          "score": 8.891112968743306
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 1034,
+            "unitType": "spear",
+            "amount": 6
+          },
+          "score": 8.867479158965235
+        }
+      ]
+    },
+    {
+      "turn": 1307,
+      "faction": "刘繇",
+      "money": 39,
+      "counts": {
+        "hold": 1,
+        "recruit": 76,
+        "move": 1,
+        "develop": 19
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 398,
+            "unitType": "sword",
+            "amount": 4
+          },
+          "score": 8.898793499907425
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 430,
+            "unitType": "sword",
+            "amount": 4
+          },
+          "score": 8.892160303783882
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 678,
+            "unitType": "sword",
+            "amount": 4
+          },
+          "score": 8.891858794869176
+        }
+      ]
+    },
+    {
+      "turn": 1400,
+      "faction": "张燕",
+      "money": 16,
+      "counts": {
+        "hold": 1
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        }
+      ]
+    },
+    {
+      "turn": 1403,
+      "faction": "袁绍",
+      "money": 36,
+      "counts": {
+        "hold": 1,
+        "recruit": 96,
+        "develop": 32
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 266,
+            "unitType": "sword",
+            "amount": 4
+          },
+          "score": 8.900250830095125
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 1083,
+            "unitType": "sword",
+            "amount": 4
+          },
+          "score": 8.897537249862767
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 992,
+            "unitType": "sword",
+            "amount": 4
+          },
+          "score": 8.893014616142167
+        }
+      ]
+    },
+    {
+      "turn": 1472,
+      "faction": "张鲁",
+      "money": 33,
+      "counts": {
+        "hold": 1,
+        "recruit": 300,
+        "move": 34,
+        "develop": 97
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 204,
+            "unitType": "sword",
+            "amount": 3
+          },
+          "score": 8.917713510369413
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 946,
+            "unitType": "sword",
+            "amount": 3
+          },
+          "score": 8.913190876648816
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 204,
+            "unitType": "spear",
+            "amount": 4
+          },
+          "score": 8.869194570598655
+        }
+      ]
+    },
+    {
+      "turn": 1501,
+      "faction": "张燕",
+      "money": 28,
+      "counts": {
+        "hold": 1,
+        "recruit": 4,
+        "develop": 1
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 997,
+            "unitType": "sword",
+            "amount": 2
+          },
+          "score": 8.833554659646003
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 997,
+            "unitType": "spear",
+            "amount": 2
+          },
+          "score": 8.767490072910643
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 997,
+            "unitType": "archer",
+            "amount": 2
+          },
+          "score": 8.758340227168793
+        }
+      ]
+    },
+    {
+      "turn": 1502,
+      "faction": "张鲁",
+      "money": 31,
+      "counts": {
+        "hold": 1,
+        "recruit": 216,
+        "move": 22,
+        "develop": 72
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 204,
+            "unitType": "sword",
+            "amount": 2
+          },
+          "score": 8.84142130290314
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 516,
+            "unitType": "sword",
+            "amount": 2
+          },
+          "score": 8.834788106779596
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 204,
+            "unitType": "spear",
+            "amount": 3
+          },
+          "score": 8.825787328477054
+        }
+      ]
+    },
+    {
+      "turn": 1595,
+      "faction": "刘备",
+      "money": 39,
+      "counts": {
+        "hold": 1,
+        "recruit": 228,
+        "move": 25,
+        "develop": 65
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 263,
+            "unitType": "sword",
+            "amount": 4
+          },
+          "score": 8.920611531025243
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 953,
+            "unitType": "sword",
+            "amount": 4
+          },
+          "score": 8.913673017578116
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 351,
+            "unitType": "sword",
+            "amount": 4
+          },
+          "score": 8.894572375101534
+        }
+      ]
+    },
+    {
+      "turn": 1598,
+      "faction": "袁绍",
+      "money": 39,
+      "counts": {
+        "hold": 1,
+        "recruit": 176,
+        "move": 18,
+        "develop": 50
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 971,
+            "unitType": "sword",
+            "amount": 4
+          },
+          "score": 8.898793499907425
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 1006,
+            "unitType": "sword",
+            "amount": 4
+          },
+          "score": 8.894270866186828
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 1122,
+            "unitType": "sword",
+            "amount": 4
+          },
+          "score": 8.893667848357413
+        }
+      ]
+    },
+    {
+      "turn": 1600,
+      "faction": "张燕",
+      "money": 33,
+      "counts": {
+        "hold": 1,
+        "recruit": 36,
+        "develop": 13
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 974,
+            "unitType": "sword",
+            "amount": 3
+          },
+          "score": 8.819285556054005
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 969,
+            "unitType": "sword",
+            "amount": 3
+          },
+          "score": 8.819285556054005
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 974,
+            "unitType": "spear",
+            "amount": 4
+          },
+          "score": 8.770766616283247
+        }
+      ]
+    },
+    {
+      "turn": 1601,
+      "faction": "袁绍",
+      "money": 32,
+      "counts": {
+        "hold": 1,
+        "recruit": 168,
+        "move": 15,
+        "develop": 49
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 971,
+            "unitType": "sword",
+            "amount": 3
+          },
+          "score": 8.819769952735712
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 1006,
+            "unitType": "sword",
+            "amount": 3
+          },
+          "score": 8.815247319015114
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 1122,
+            "unitType": "sword",
+            "amount": 3
+          },
+          "score": 8.8146443011857
+        }
+      ]
+    },
+    {
+      "turn": 1601,
+      "faction": "公孙瓒",
+      "money": 36,
+      "counts": {
+        "hold": 1,
+        "recruit": 300,
+        "move": 22,
+        "develop": 143
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 458,
+            "unitType": "sword",
+            "amount": 4
+          },
+          "score": 8.88723125213327
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 235,
+            "unitType": "sword",
+            "amount": 4
+          },
+          "score": 8.881502582753846
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 977,
+            "unitType": "sword",
+            "amount": 4
+          },
+          "score": 8.84636346475947
+        }
+      ]
+    },
+    {
+      "turn": 1616,
+      "faction": "张鲁",
+      "money": 28,
+      "counts": {
+        "hold": 1,
+        "recruit": 44,
+        "develop": 11
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 296,
+            "unitType": "sword",
+            "amount": 2
+          },
+          "score": 8.842599927087198
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 288,
+            "unitType": "sword",
+            "amount": 2
+          },
+          "score": 8.83536371313424
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 544,
+            "unitType": "sword",
+            "amount": 2
+          },
+          "score": 8.833253150731295
+        }
+      ]
+    },
+    {
+      "turn": 1622,
+      "faction": "孔融",
+      "money": 38,
+      "counts": {
+        "hold": 1,
+        "recruit": 268,
+        "move": 17,
+        "develop": 67
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 633,
+            "unitType": "sword",
+            "amount": 4
+          },
+          "score": 8.899253709440382
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 436,
+            "unitType": "sword",
+            "amount": 4
+          },
+          "score": 8.892319004402133
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 692,
+            "unitType": "sword",
+            "amount": 4
+          },
+          "score": 8.890509950913893
+        }
+      ]
+    },
+    {
+      "turn": 1681,
+      "faction": "刘焉",
+      "money": 2617,
+      "counts": {
+        "hold": 1,
+        "move": 221,
+        "develop": 907
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 464,
+            "toCityId": 461,
+            "troops": 11,
+            "commanderId": "child-union-769-agent-4-803"
+          },
+          "score": 8.522734697390673
+        },
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 460,
+            "toCityId": 458,
+            "troops": 5,
+            "commanderId": "child-union-769-agent-4-803"
+          },
+          "score": 8.482933881244875
+        },
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 220,
+            "toCityId": 221,
+            "troops": 13,
+            "commanderId": "child-union-769-agent-4-803"
+          },
+          "score": 8.477385418397953
+        }
+      ]
+    },
+    {
+      "turn": 1709,
+      "faction": "张燕",
+      "money": 42,
+      "counts": {
+        "hold": 1,
+        "recruit": 40,
+        "move": 1,
+        "develop": 16
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 992,
+            "unitType": "sword",
+            "amount": 5
+          },
+          "score": 8.874968116990232
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 1032,
+            "unitType": "sword",
+            "amount": 5
+          },
+          "score": 8.848928961066523
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 992,
+            "unitType": "spear",
+            "amount": 7
+          },
+          "score": 8.810455067626036
+        }
+      ]
+    },
+    {
+      "turn": 1759,
+      "faction": "袁术",
+      "money": 1262,
+      "counts": {
+        "hold": 1,
+        "move": 32,
+        "develop": 498
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 1020,
+            "toCityId": 1018,
+            "troops": 3,
+            "commanderId": "child-union-120-agent-1-131"
+          },
+          "score": 8.765710681640524
+        },
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 1024,
+            "toCityId": 1019,
+            "troops": 23,
+            "commanderId": "child-union-120-agent-1-131"
+          },
+          "score": 8.510052496597705
+        },
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 1016,
+            "toCityId": 1019,
+            "troops": 59,
+            "commanderId": "child-union-120-agent-1-131"
+          },
+          "score": 8.510052496597705
+        }
+      ]
+    },
+    {
+      "turn": 1781,
+      "faction": "刘备",
+      "money": 35,
+      "counts": {
+        "hold": 1,
+        "recruit": 80,
+        "move": 8,
+        "develop": 28
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 1027,
+            "unitType": "spear",
+            "amount": 5
+          },
+          "score": 8.923701992635447
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 1027,
+            "unitType": "sword",
+            "amount": 3
+          },
+          "score": 8.922556425816573
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 1041,
+            "unitType": "spear",
+            "amount": 5
+          },
+          "score": 8.81050010149942
+        }
+      ]
+    },
+    {
+      "turn": 1796,
+      "faction": "袁绍",
+      "money": 28,
+      "counts": {
+        "hold": 1,
+        "recruit": 164,
+        "move": 5,
+        "develop": 43
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 1022,
+            "unitType": "sword",
+            "amount": 2
+          },
+          "score": 8.842599927087198
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 1022,
+            "unitType": "spear",
+            "amount": 2
+          },
+          "score": 8.776535340351838
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 1022,
+            "unitType": "archer",
+            "amount": 2
+          },
+          "score": 8.767385494609988
+        }
+      ]
+    },
+    {
+      "turn": 1800,
+      "faction": "张燕",
+      "money": 0,
+      "counts": {
+        "hold": 1
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        }
+      ]
+    },
+    {
+      "turn": 1802,
+      "faction": "刘备",
+      "money": 27,
+      "counts": {
+        "hold": 1,
+        "recruit": 76,
+        "move": 6,
+        "develop": 27
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 1027,
+            "unitType": "spear",
+            "amount": 2
+          },
+          "score": 8.776873649145411
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 1027,
+            "unitType": "sword",
+            "amount": 1
+          },
+          "score": 8.759215232582951
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 1027,
+            "unitType": "archer",
+            "amount": 1
+          },
+          "score": 8.721608016344346
+        }
+      ]
+    },
+    {
+      "turn": 1802,
+      "faction": "袁绍",
+      "money": 29,
+      "counts": {
+        "hold": 1,
+        "recruit": 164,
+        "move": 4,
+        "develop": 43
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 1022,
+            "unitType": "sword",
+            "amount": 2
+          },
+          "score": 8.84217995755035
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 1022,
+            "unitType": "spear",
+            "amount": 3
+          },
+          "score": 8.826640814955166
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 1022,
+            "unitType": "archer",
+            "amount": 2
+          },
+          "score": 8.76696552507314
+        }
+      ]
+    },
+    {
+      "turn": 1802,
+      "faction": "袁术",
+      "money": 24,
+      "counts": {
+        "hold": 1,
+        "recruit": 18,
+        "move": 24,
+        "develop": 220
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 1030,
+            "unitType": "sword",
+            "amount": 1
+          },
+          "score": 8.603769684225707
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 1019,
+            "unitType": "sword",
+            "amount": 1
+          },
+          "score": 8.603769684225707
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 1020,
+            "unitType": "sword",
+            "amount": 1
+          },
+          "score": 8.600754595078643
+        }
+      ]
+    },
+    {
+      "turn": 1814,
+      "faction": "刘繇",
+      "money": 174,
+      "counts": {
+        "hold": 1,
+        "move": 53,
+        "develop": 268
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 567,
+            "toCityId": 550,
+            "troops": 23,
+            "commanderId": "talent-9"
+          },
+          "score": 8.855635170320447
+        },
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 402,
+            "toCityId": 410,
+            "troops": 9,
+            "commanderId": "talent-9"
+          },
+          "score": 8.70385461385854
+        },
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 171,
+            "toCityId": 169,
+            "troops": 14,
+            "commanderId": "talent-9"
+          },
+          "score": 8.660159909840695
+        }
+      ]
+    },
+    {
+      "turn": 1823,
+      "faction": "陶谦",
+      "money": 27,
+      "counts": {
+        "hold": 1,
+        "recruit": 36,
+        "move": 1,
+        "develop": 9
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 450,
+            "unitType": "spear",
+            "amount": 2
+          },
+          "score": 8.77084347085128
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 454,
+            "unitType": "spear",
+            "amount": 2
+          },
+          "score": 8.767526872789508
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 450,
+            "unitType": "sword",
+            "amount": 1
+          },
+          "score": 8.75318505428882
+        }
+      ]
+    },
+    {
+      "turn": 1874,
+      "faction": "孔融",
+      "money": 39,
+      "counts": {
+        "hold": 1,
+        "recruit": 116,
+        "move": 16,
+        "develop": 62
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 436,
+            "unitType": "sword",
+            "amount": 4
+          },
+          "score": 8.898793499907425
+        },
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 169,
+            "toCityId": 431,
+            "troops": 33,
+            "commanderId": "talent-4"
+          },
+          "score": 8.896794793694061
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 431,
+            "unitType": "sword",
+            "amount": 4
+          },
+          "score": 8.885773921945571
+        }
+      ]
+    },
+    {
+      "turn": 1892,
+      "faction": "刘焉",
+      "money": 151,
+      "counts": {
+        "hold": 1,
+        "recruit": 244,
+        "move": 253,
+        "develop": 1056
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 337,
+            "unitType": "sword",
+            "amount": 2
+          },
+          "score": 8.753894664264047
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 248,
+            "unitType": "sword",
+            "amount": 2
+          },
+          "score": 8.743402083725696
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 337,
+            "unitType": "spear",
+            "amount": 3
+          },
+          "score": 8.737167925693798
+        }
+      ]
+    },
+    {
+      "turn": 1901,
+      "faction": "孔融",
+      "money": 30,
+      "counts": {
+        "hold": 1,
+        "recruit": 120,
+        "move": 13,
+        "develop": 63
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 433,
+            "unitType": "sword",
+            "amount": 2
+          },
+          "score": 8.716800037548825
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 433,
+            "unitType": "spear",
+            "amount": 3
+          },
+          "score": 8.701211898507676
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 431,
+            "unitType": "sword",
+            "amount": 2
+          },
+          "score": 8.681633434549191
+        }
+      ]
+    },
+    {
+      "turn": 1928,
+      "faction": "士燮",
+      "money": 35,
+      "counts": {
+        "hold": 1,
+        "recruit": 332,
+        "move": 53,
+        "develop": 162
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 441,
+            "unitType": "spear",
+            "amount": 5
+          },
+          "score": 8.923701992635447
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 441,
+            "unitType": "sword",
+            "amount": 3
+          },
+          "score": 8.922556425816573
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 667,
+            "unitType": "spear",
+            "amount": 5
+          },
+          "score": 8.913450689535425
+        }
+      ]
+    },
+    {
+      "turn": 1931,
+      "faction": "刘繇",
+      "money": 39,
+      "counts": {
+        "hold": 1,
+        "recruit": 336,
+        "move": 30,
+        "develop": 105
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 438,
+            "unitType": "sword",
+            "amount": 4
+          },
+          "score": 8.898793499907425
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 651,
+            "unitType": "sword",
+            "amount": 4
+          },
+          "score": 8.896984446419186
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 570,
+            "unitType": "sword",
+            "amount": 4
+          },
+          "score": 8.891255777039762
+        }
+      ]
+    },
+    {
+      "turn": 1945,
+      "faction": "公孙瓒",
+      "money": 1843,
+      "counts": {
+        "hold": 1,
+        "move": 27,
+        "develop": 280
+      },
+      "best": [
+        {
+          "action": {
+            "type": "hold"
+          },
+          "score": 8.924196104964217
+        },
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 284,
+            "toCityId": 274,
+            "troops": 7,
+            "commanderId": "child-union-451-agent-9-463"
+          },
+          "score": 8.487309173085821
+        },
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 278,
+            "toCityId": 274,
+            "troops": 4,
+            "commanderId": "child-union-451-agent-9-463"
+          },
+          "score": 8.487309173085821
+        },
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 244,
+            "toCityId": 239,
+            "troops": 18,
+            "commanderId": "child-union-451-agent-9-463"
+          },
+          "score": 8.466496392331369
+        }
+      ]
+    }
+  ],
+  "factions": [
+    {
+      "name": "曹操",
+      "active": false,
+      "money": 9,
+      "counties": 0,
+      "neighbourRelations": [],
+      "troops": 0,
+      "maxGarrison": 0,
+      "frontiers": 0,
+      "armies": 0,
+      "haltedTroops": 0
+    },
+    {
+      "name": "刘备",
+      "active": false,
+      "money": 23,
+      "counties": 0,
+      "neighbourRelations": [],
+      "troops": 0,
+      "maxGarrison": 0,
+      "frontiers": 0,
+      "armies": 0,
+      "haltedTroops": 0
+    },
+    {
+      "name": "孙坚",
+      "active": false,
+      "money": 29,
+      "counties": 0,
+      "neighbourRelations": [],
+      "troops": 0,
+      "maxGarrison": 0,
+      "frontiers": 0,
+      "armies": 0,
+      "haltedTroops": 0
+    },
+    {
+      "name": "袁绍",
+      "active": false,
+      "money": 21,
+      "counties": 0,
+      "neighbourRelations": [],
+      "troops": 0,
+      "maxGarrison": 0,
+      "frontiers": 0,
+      "armies": 0,
+      "haltedTroops": 0
+    },
+    {
+      "name": "袁术",
+      "active": true,
+      "money": 47,
+      "counties": 235,
+      "neighbourRelations": [
+        {
+          "name": "刘焉",
+          "status": "war",
+          "relation": -70,
+          "trade": false,
+          "truceUntil": 237
+        },
+        {
+          "name": "士燮",
+          "status": "alliance",
+          "relation": 30,
+          "trade": false,
+          "truceUntil": 296
+        },
+        {
+          "name": "公孙瓒",
+          "status": "alliance",
+          "relation": 40,
+          "trade": true,
+          "truceUntil": 438
+        }
+      ],
+      "troops": 2068,
+      "maxGarrison": 72,
+      "frontiers": 45,
+      "armies": 0,
+      "haltedTroops": 0
+    },
+    {
+      "name": "董卓",
+      "active": false,
+      "money": 27,
+      "counties": 0,
+      "neighbourRelations": [],
+      "troops": 0,
+      "maxGarrison": 0,
+      "frontiers": 0,
+      "armies": 0,
+      "haltedTroops": 0
+    },
+    {
+      "name": "刘表",
+      "active": false,
+      "money": 20,
+      "counties": 0,
+      "neighbourRelations": [],
+      "troops": 0,
+      "maxGarrison": 0,
+      "frontiers": 0,
+      "armies": 0,
+      "haltedTroops": 0
+    },
+    {
+      "name": "刘焉",
+      "active": true,
+      "money": 1044,
+      "counties": 487,
+      "neighbourRelations": [
+        {
+          "name": "袁术",
+          "status": "war",
+          "relation": -70,
+          "trade": false,
+          "truceUntil": 237
+        },
+        {
+          "name": "公孙瓒",
+          "status": "alliance",
+          "relation": 40,
+          "trade": true,
+          "truceUntil": 356
+        },
+        {
+          "name": "孔融",
+          "status": "alliance",
+          "relation": 30,
+          "trade": false,
+          "truceUntil": 628
+        },
+        {
+          "name": "刘繇",
+          "status": "alliance",
+          "relation": 40,
+          "trade": true,
+          "truceUntil": 1648
+        }
+      ],
+      "troops": 3604,
+      "maxGarrison": 44,
+      "frontiers": 52,
+      "armies": 0,
+      "haltedTroops": 0
+    },
+    {
+      "name": "马腾",
+      "active": false,
+      "money": 23,
+      "counties": 0,
+      "neighbourRelations": [],
+      "troops": 0,
+      "maxGarrison": 0,
+      "frontiers": 0,
+      "armies": 0,
+      "haltedTroops": 0
+    },
+    {
+      "name": "公孙瓒",
+      "active": true,
+      "money": 54,
+      "counties": 127,
+      "neighbourRelations": [
+        {
+          "name": "刘焉",
+          "status": "alliance",
+          "relation": 40,
+          "trade": true,
+          "truceUntil": 356
+        },
+        {
+          "name": "袁术",
+          "status": "alliance",
+          "relation": 40,
+          "trade": true,
+          "truceUntil": 438
+        }
+      ],
+      "troops": 1130,
+      "maxGarrison": 128,
+      "frontiers": 0,
+      "armies": 1,
+      "haltedTroops": 0
+    },
+    {
+      "name": "孔融",
+      "active": true,
+      "money": 23,
+      "counties": 64,
+      "neighbourRelations": [
+        {
+          "name": "刘繇",
+          "status": "war",
+          "relation": -70,
+          "trade": false,
+          "truceUntil": 122
+        },
+        {
+          "name": "士燮",
+          "status": "war",
+          "relation": -70,
+          "trade": false,
+          "truceUntil": 15
+        },
+        {
+          "name": "刘焉",
+          "status": "alliance",
+          "relation": 30,
+          "trade": false,
+          "truceUntil": 628
+        }
+      ],
+      "troops": 1044,
+      "maxGarrison": 273,
+      "frontiers": 19,
+      "armies": 0,
+      "haltedTroops": 0
+    },
+    {
+      "name": "张燕",
+      "active": false,
+      "money": 32,
+      "counties": 0,
+      "neighbourRelations": [],
+      "troops": 0,
+      "maxGarrison": 0,
+      "frontiers": 0,
+      "armies": 0,
+      "haltedTroops": 0
+    },
+    {
+      "name": "陶谦",
+      "active": false,
+      "money": 0,
+      "counties": 0,
+      "neighbourRelations": [],
+      "troops": 0,
+      "maxGarrison": 0,
+      "frontiers": 0,
+      "armies": 0,
+      "haltedTroops": 0
+    },
+    {
+      "name": "刘繇",
+      "active": true,
+      "money": 73,
+      "counties": 117,
+      "neighbourRelations": [
+        {
+          "name": "孔融",
+          "status": "war",
+          "relation": -70,
+          "trade": false,
+          "truceUntil": 122
+        },
+        {
+          "name": "士燮",
+          "status": "war",
+          "relation": -70,
+          "trade": false,
+          "truceUntil": 153
+        },
+        {
+          "name": "刘焉",
+          "status": "alliance",
+          "relation": 40,
+          "trade": true,
+          "truceUntil": 1648
+        }
+      ],
+      "troops": 1186,
+      "maxGarrison": 123,
+      "frontiers": 54,
+      "armies": 0,
+      "haltedTroops": 0
+    },
+    {
+      "name": "张鲁",
+      "active": false,
+      "money": 28,
+      "counties": 0,
+      "neighbourRelations": [],
+      "troops": 0,
+      "maxGarrison": 0,
+      "frontiers": 0,
+      "armies": 0,
+      "haltedTroops": 0
+    },
+    {
+      "name": "士燮",
+      "active": true,
+      "money": 36,
+      "counties": 154,
+      "neighbourRelations": [
+        {
+          "name": "孔融",
+          "status": "war",
+          "relation": -70,
+          "trade": false,
+          "truceUntil": 15
+        },
+        {
+          "name": "刘繇",
+          "status": "war",
+          "relation": -70,
+          "trade": false,
+          "truceUntil": 153
+        },
+        {
+          "name": "袁术",
+          "status": "alliance",
+          "relation": 30,
+          "trade": false,
+          "truceUntil": 296
+        }
+      ],
+      "troops": 1474,
+      "maxGarrison": 318,
+      "frontiers": 48,
+      "armies": 0,
+      "haltedTroops": 0
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+# Shared support terraces
+
+Evidence: 高要 / 廣信 are only .067 compact world units apart, yet their original center heights differ by .104. Their required support footprints including a terrain-cell margin overlap. Averaging only the overlap gives each town a tilted support surface. Resolve connected overlapping support footprints into one terrace at the deterministic mean original site height. Preserve coordinates, widths, river protection and smooth outer influence. Isolated towns are unchanged. Sorting and union-find make grouping independent of city array order.
+
+A synthetic two-town test failed before implementation, then passed: the complete joined support region remains at .21, reversing town order produces identical output, distant terrain stays unchanged. Eleven focused tests and frontend TypeScript/build passed. Full-map 384-resolution diagnostic: tall foundations (>30% of width) 39 → 7; 高要 1.667 → .0907. Remaining worst 上雒 .737 and 漢安 .729 occur where river protection prevents complete grading; not yet resolved. Tightened full-map regression to fewer than ten tall sites and 高要 < .12.
+
+Browser tab 35, existing turn-22 save: 高要 at 17.9× visibly sits on a shallow support next to 廣信, with surrounding mountain ridges retained. No broad flattening of the surrounding mountains observed. However nearby farmland ribbons visibly climb steep slopes; that is a separate remaining visual defect needing slope-aware placement, not evidence of final scene quality. No gameplay turns advanced.

@@ -1,0 +1,58 @@
+{
+  "seed": 190,
+  "episodes": 100,
+  "policy": {
+    "version": 1,
+    "algorithm": "Linear Q-learning / self-play",
+    "weights": [
+      10.083678623926543,
+      0.0712553485036505,
+      0.5830041789109588,
+      0.15357106643508203,
+      -0.011201171507030276,
+      0.03263992580665893,
+      0.13708104348360295,
+      0.27596945191281336,
+      1.2530773677297153,
+      -0.628692912584466,
+      0.14081607183771871,
+      1.3650710731211975
+    ],
+    "episodes": 500,
+    "trainedAt": "2026-10-08T01:18:31.569Z",
+    "evaluation": {
+      "games": 24,
+      "horizon": 60,
+      "winRate": 0,
+      "baselineWinRate": 0,
+      "meanCounties": 28.291666666666668,
+      "unresolvedRate": 1,
+      "bySeat": [
+        {
+          "seat": 0,
+          "games": 6,
+          "wins": 0,
+          "unresolved": 6
+        },
+        {
+          "seat": 1,
+          "games": 6,
+          "wins": 0,
+          "unresolved": 6
+        },
+        {
+          "seat": 2,
+          "games": 6,
+          "wins": 0,
+          "unresolved": 6
+        },
+        {
+          "seat": 3,
+          "games": 6,
+          "wins": 0,
+          "unresolved": 6
+        }
+      ]
+    }
+  }
+}

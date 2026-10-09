@@ -1,11 +1,16 @@
 import type { PrismaClient } from '@prisma/client';
 import { runAgent } from '../agents/runner.js';
+import { loadPolicy } from '../agents/training.js';
+import { chooseLearned } from '../agents/learning.js';
 import { generateBattle } from '../domain/generate.js';
 import { resolveTurn } from '../domain/resolveTurn.js';
-import type { BattleState, DomainEvent } from '../domain/types.js';
+import type { AgentAction, BattleState, DomainEvent } from '../domain/types.js';
+import { validateAction } from '../domain/rules.js';
 import { battleEventBus } from '../realtime/eventBus.js';
+import {expandRoster} from '../domain/rosterExpansion.js';
 
 export interface CreateBattleInput {
+  playerAgentId?: string;
   title: string;
   columns: number;
   rows: number;
@@ -34,14 +39,19 @@ export class BattleService {
 
   async create(ownerId: string, input: CreateBattleInput) {
     const seed = `${input.title}-${Date.now().toString(36)}`;
-    const state = generateBattle(seed, input.columns, input.rows, input.agentCount, input.maxTurns);
+    const state = generateBattle(seed, input.columns, input.rows, input.agentCount, 0);
+    if(input.playerAgentId){
+      if(!state.agents.some(agent=>agent.id===input.playerAgentId))throw new Error('INVALID_PLAYER_FACTION');
+      state.playerAgentId=input.playerAgentId;
+    }
+    state.policy = await loadPolicy();
     return this.prisma.battle.create({
       data: {
         title: input.title,
         seed,
         status: state.status,
         currentTurn: state.turn,
-        maxTurns: input.maxTurns,
+        maxTurns: 0,
         columns: input.columns,
         rows: input.rows,
         version: state.version,
@@ -67,23 +77,36 @@ export class BattleService {
       include: { agents: true, turns: { orderBy: { number: 'desc' }, take: 1 } },
     });
     if (!battle) throw new Error('BATTLE_NOT_FOUND');
-    return { ...battle, state: parseState(battle.turns[0]!.stateJson) };
+    const {turns,...detail}=battle;
+    const state=parseState(turns[0]!.stateJson);
+    if(state.status==='active')expandRoster(state);
+    return { ...detail, state };
   }
 
-  async executeTurn(ownerId: string, battleId: string, expectedVersion: number) {
+  async executeTurn(ownerId: string, battleId: string, expectedVersion: number, order?:AgentAction) {
     const current = await this.get(ownerId, battleId);
     if (current.version !== expectedVersion) throw new Error('VERSION_CONFLICT');
+    if(order) {
+      if(current.state.playerAgentId && order.agentId!==current.state.playerAgentId) throw new Error('INVALID_PLAYER_FACTION');
+      const validation=validateAction(current.state,order.agentId,order.action);
+      if(!validation.ok) throw new Error(`INVALID_COMMAND_${validation.code}`);
+    }
+    const player=order?.agentId??current.state.playerAgentId;
+    // Local parsed copy only: first-turn offers must already respect player consent.
+    if(player)current.state.playerAgentId=player;
 
     const decisions = await Promise.all(
       current.state.agents
         .filter((agent) => agent.active)
-        .map(async (agent) => ({ agentId: agent.id, ...(await runAgent(current.state, agent)) })),
+        .map(async (agent) => agent.id===player ? {agentId:agent.id,action:order?.action??{type:'hold' as const}} : ({ agentId: agent.id, ...(await runAgent(current.state, agent,
+          current.state.policy ? (state, candidate) => chooseLearned(state, candidate, state.policy!) : undefined)) })),
     );
     const result = resolveTurn(
       current.state,
       decisions.map((decision) => ({ agentId: decision.agentId, action: decision.action })),
       expectedVersion,
     );
+    if(player) result.state.playerAgentId=player;
 
     await this.prisma.$transaction(async (transaction) => {
       const updated = await transaction.battle.updateMany({

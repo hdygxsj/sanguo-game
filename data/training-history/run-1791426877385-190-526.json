@@ -1,0 +1,138 @@
+{
+  "seed": 190,
+  "episodes": 16,
+  "policy": {
+    "version": 2,
+    "algorithm": "Linear n-step Q-learning / self-play (8-step)",
+    "weights": [
+      7.216131519027474,
+      0.37431706290373945,
+      0.3494258499683357,
+      0.0036512945748415036,
+      -0.20710973512920808,
+      0.13226215280539932,
+      0.1550085006836057,
+      0.19949473540112392,
+      1.0318138301289526,
+      -0.9497891096704331,
+      -0.007044765686499729,
+      1.0591483649661282,
+      -0.07982972356203599,
+      0.000517734722202845,
+      -0.013691354693610592,
+      -0.14057498540917995,
+      -0.052787992269294245,
+      -0.02474670086765477,
+      -0.04920124489321295
+    ],
+    "episodes": 526,
+    "trainedAt": "2026-10-08T02:34:20.845Z",
+    "evaluation": {
+      "games": 16,
+      "horizon": 120,
+      "factions": 16,
+      "winRate": 0,
+      "baselineWinRate": 0,
+      "meanCounties": 17.0625,
+      "unresolvedRate": 1,
+      "bySeat": [
+        {
+          "seat": 0,
+          "games": 1,
+          "wins": 0,
+          "unresolved": 1
+        },
+        {
+          "seat": 1,
+          "games": 1,
+          "wins": 0,
+          "unresolved": 1
+        },
+        {
+          "seat": 2,
+          "games": 1,
+          "wins": 0,
+          "unresolved": 1
+        },
+        {
+          "seat": 3,
+          "games": 1,
+          "wins": 0,
+          "unresolved": 1
+        },
+        {
+          "seat": 4,
+          "games": 1,
+          "wins": 0,
+          "unresolved": 1
+        },
+        {
+          "seat": 5,
+          "games": 1,
+          "wins": 0,
+          "unresolved": 1
+        },
+        {
+          "seat": 6,
+          "games": 1,
+          "wins": 0,
+          "unresolved": 1
+        },
+        {
+          "seat": 7,
+          "games": 1,
+          "wins": 0,
+          "unresolved": 1
+        },
+        {
+          "seat": 8,
+          "games": 1,
+          "wins": 0,
+          "unresolved": 1
+        },
+        {
+          "seat": 9,
+          "games": 1,
+          "wins": 0,
+          "unresolved": 1
+        },
+        {
+          "seat": 10,
+          "games": 1,
+          "wins": 0,
+          "unresolved": 1
+        },
+        {
+          "seat": 11,
+          "games": 1,
+          "wins": 0,
+          "unresolved": 1
+        },
+        {
+          "seat": 12,
+          "games": 1,
+          "wins": 0,
+          "unresolved": 1
+        },
+        {
+          "seat": 13,
+          "games": 1,
+          "wins": 0,
+          "unresolved": 1
+        },
+        {
+          "seat": 14,
+          "games": 1,
+          "wins": 0,
+          "unresolved": 1
+        },
+        {
+          "seat": 15,
+          "games": 1,
+          "wins": 0,
+          "unresolved": 1
+        }
+      ]
+    }
+  }
+}

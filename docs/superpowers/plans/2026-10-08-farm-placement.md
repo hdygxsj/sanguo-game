@@ -1,0 +1,7 @@
+# Slope-aware cultivated plots
+
+Observed in turn-22 高要 close view: farm strips extend vertically over mountain shoulders. Replace the fixed south-of-city anchor with deterministic nearby candidate plots at radii .12/.18/.24, twelve directions each. Reject plots overlapping town footprints, crossing water/coast or containing sampled slopes greater than .45. Preserve county position, terrain/resource identity, income and icon. If no nearby flat land exists, omit only the decorative plot, not its gameplay resource.
+
+Implemented chooseFarmAnchor; new test first failed for missing function, then passed for relocating to flat ground, rejecting an all-cliff surface and water, stable results and unmodified input. Integration test now uses generateBattle rather than raw historicGeography (the latter contains no assigned farm resources, so the old farm test actually checked rivers only). Fixture farm-placement has 366 farm counties and retains 319 visible plots; geometry creation plus a rivers-only comparison took about 340 ms locally. Added guard retaining over 250 plots for that fixture.
+
+Frontend TypeScript/build passed with pre-existing chunk-size warning. Browser tab 36, unchanged turn-22 save, 高要 at 17.9×: formerly vertical strips are gone, visible surviving farm plots occupy gentler ground below the towns, and resource label remains 农田 / 资源产地. This improves placement but is not final realistic agricultural artwork. Other scene details remain stylized. Full-map slope suitability is sampled, not an exact continuous collision guarantee.

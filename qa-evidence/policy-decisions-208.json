@@ -1,0 +1,807 @@
+{
+  "archive": "data/training-history/run-1791462133090-208-574.json",
+  "horizon": 120,
+  "environment": "current runtime; incumbent supplies trajectory",
+  "tally": {
+    "incumbent": {
+      "attack": 774,
+      "recruit": 320,
+      "diplomacy": 118,
+      "hold": 16,
+      "develop:farm": 271,
+      "move": 142,
+      "appoint-governor": 53,
+      "appoint-court": 23,
+      "buy-equipment": 18,
+      "form-union": 8,
+      "recruit-character": 135,
+      "recruit-captive": 13,
+      "equip-equipment": 18,
+      "develop:market": 7,
+      "recall-army": 3,
+      "reward-character": 1
+    },
+    "candidate": {
+      "attack": 727,
+      "move": 499,
+      "diplomacy": 118,
+      "develop:farm": 271,
+      "appoint-governor": 53,
+      "appoint-court": 23,
+      "buy-equipment": 18,
+      "form-union": 8,
+      "recruit-character": 135,
+      "develop": 18,
+      "recruit-captive": 13,
+      "equip-equipment": 18,
+      "recruit": 8,
+      "develop:market": 7,
+      "recall-army": 3,
+      "reward-character": 1
+    }
+  },
+  "switches": {
+    "recruit -> move": 294,
+    "hold -> move": 16,
+    "attack -> move": 47,
+    "recruit -> develop": 18
+  },
+  "samples": [
+    {
+      "turn": 0,
+      "faction": "刘备",
+      "old": {
+        "type": "recruit",
+        "cityId": 458,
+        "unitType": "sword",
+        "amount": 15
+      },
+      "next": {
+        "type": "move",
+        "fromCityId": 463,
+        "toCityId": 458,
+        "troops": 4,
+        "commanderId": "person-2-1"
+      },
+      "oldBest": [
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 458,
+            "unitType": "sword",
+            "amount": 15
+          },
+          "old": 9.480156774466632,
+          "candidate": 4.788634554280111
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 459,
+            "unitType": "sword",
+            "amount": 15
+          },
+          "old": 9.314876571483188,
+          "candidate": 5.227343390336765
+        }
+      ],
+      "candidateBest": [
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 463,
+            "toCityId": 458,
+            "troops": 4,
+            "commanderId": "person-2-1"
+          },
+          "old": 8.510052496597705,
+          "candidate": 8.553657503212149
+        },
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 464,
+            "toCityId": 458,
+            "troops": 4,
+            "commanderId": "person-2-1"
+          },
+          "old": 8.510052496597705,
+          "candidate": 8.553657503212149
+        }
+      ]
+    },
+    {
+      "turn": 0,
+      "faction": "袁绍",
+      "old": {
+        "type": "recruit",
+        "cityId": 297,
+        "unitType": "sword",
+        "amount": 15
+      },
+      "next": {
+        "type": "move",
+        "fromCityId": 301,
+        "toCityId": 297,
+        "troops": 4,
+        "commanderId": "person-4-1"
+      },
+      "oldBest": [
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 297,
+            "unitType": "sword",
+            "amount": 15
+          },
+          "old": 9.457837497960595,
+          "candidate": 4.794547556446313
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 298,
+            "unitType": "sword",
+            "amount": 15
+          },
+          "old": 9.314876571483188,
+          "candidate": 5.227343390336765
+        }
+      ],
+      "candidateBest": [
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 301,
+            "toCityId": 297,
+            "troops": 4,
+            "commanderId": "person-4-1"
+          },
+          "old": 8.487309173085821,
+          "candidate": 8.496498917162265
+        },
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 303,
+            "toCityId": 297,
+            "troops": 4,
+            "commanderId": "person-4-1"
+          },
+          "old": 8.487309173085821,
+          "candidate": 8.496498917162265
+        }
+      ]
+    },
+    {
+      "turn": 0,
+      "faction": "袁术",
+      "old": {
+        "type": "recruit",
+        "cityId": 513,
+        "unitType": "sword",
+        "amount": 15
+      },
+      "next": {
+        "type": "move",
+        "fromCityId": 525,
+        "toCityId": 513,
+        "troops": 4,
+        "commanderId": "person-5-1"
+      },
+      "oldBest": [
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 513,
+            "unitType": "sword",
+            "amount": 15
+          },
+          "old": 9.480156774466632,
+          "candidate": 4.788634554280111
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 514,
+            "unitType": "sword",
+            "amount": 15
+          },
+          "old": 9.314876571483188,
+          "candidate": 5.227343390336765
+        }
+      ],
+      "candidateBest": [
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 525,
+            "toCityId": 513,
+            "troops": 4,
+            "commanderId": "person-5-1"
+          },
+          "old": 8.510052496597705,
+          "candidate": 8.553657503212149
+        },
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 526,
+            "toCityId": 513,
+            "troops": 4,
+            "commanderId": "person-5-1"
+          },
+          "old": 8.510052496597705,
+          "candidate": 8.553657503212149
+        }
+      ]
+    },
+    {
+      "turn": 0,
+      "faction": "董卓",
+      "old": {
+        "type": "recruit",
+        "cityId": 0,
+        "unitType": "sword",
+        "amount": 15
+      },
+      "next": {
+        "type": "move",
+        "fromCityId": 5,
+        "toCityId": 0,
+        "troops": 4,
+        "commanderId": "person-6-1"
+      },
+      "oldBest": [
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 0,
+            "unitType": "sword",
+            "amount": 15
+          },
+          "old": 9.519215508352193,
+          "candidate": 4.778286800489256
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 1,
+            "unitType": "sword",
+            "amount": 15
+          },
+          "old": 9.314876571483188,
+          "candidate": 5.227343390336765
+        }
+      ],
+      "candidateBest": [
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 5,
+            "toCityId": 0,
+            "troops": 4,
+            "commanderId": "person-6-1"
+          },
+          "old": 8.549853312743503,
+          "candidate": 8.653685028799442
+        },
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 8,
+            "toCityId": 0,
+            "troops": 4,
+            "commanderId": "person-6-1"
+          },
+          "old": 8.549853312743503,
+          "candidate": 8.653685028799442
+        }
+      ]
+    },
+    {
+      "turn": 0,
+      "faction": "刘表",
+      "old": {
+        "type": "recruit",
+        "cityId": 550,
+        "unitType": "sword",
+        "amount": 15
+      },
+      "next": {
+        "type": "move",
+        "fromCityId": 555,
+        "toCityId": 550,
+        "troops": 4,
+        "commanderId": "person-7-1"
+      },
+      "oldBest": [
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 550,
+            "unitType": "sword",
+            "amount": 15
+          },
+          "old": 9.480156774466632,
+          "candidate": 4.788634554280111
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 551,
+            "unitType": "sword",
+            "amount": 15
+          },
+          "old": 9.314876571483188,
+          "candidate": 5.227343390336765
+        }
+      ],
+      "candidateBest": [
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 555,
+            "toCityId": 550,
+            "troops": 4,
+            "commanderId": "person-7-1"
+          },
+          "old": 8.510052496597705,
+          "candidate": 8.553657503212149
+        },
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 557,
+            "toCityId": 550,
+            "troops": 4,
+            "commanderId": "person-7-1"
+          },
+          "old": 8.510052496597705,
+          "candidate": 8.553657503212149
+        }
+      ]
+    },
+    {
+      "turn": 1,
+      "faction": "曹操",
+      "old": {
+        "type": "recruit",
+        "cityId": 322,
+        "unitType": "sword",
+        "amount": 18
+      },
+      "next": {
+        "type": "move",
+        "fromCityId": 326,
+        "toCityId": 322,
+        "troops": 4,
+        "commanderId": "person-1-0"
+      },
+      "oldBest": [
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 322,
+            "unitType": "sword",
+            "amount": 18
+          },
+          "old": 9.464298189764708,
+          "candidate": 5.658659127680326
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 323,
+            "unitType": "sword",
+            "amount": 25
+          },
+          "old": 9.317846479007095,
+          "candidate": 5.02129172898757
+        }
+      ],
+      "candidateBest": [
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 326,
+            "toCityId": 322,
+            "troops": 4,
+            "commanderId": "person-1-0"
+          },
+          "old": 8.510052496597705,
+          "candidate": 8.553657503212149
+        },
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 327,
+            "toCityId": 322,
+            "troops": 4,
+            "commanderId": "person-1-0"
+          },
+          "old": 8.510052496597705,
+          "candidate": 8.553657503212149
+        }
+      ]
+    },
+    {
+      "turn": 1,
+      "faction": "孙坚",
+      "old": {
+        "type": "recruit",
+        "cityId": 617,
+        "unitType": "sword",
+        "amount": 16
+      },
+      "next": {
+        "type": "move",
+        "fromCityId": 621,
+        "toCityId": 617,
+        "troops": 4,
+        "commanderId": "person-3-0"
+      },
+      "oldBest": [
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 617,
+            "unitType": "sword",
+            "amount": 16
+          },
+          "old": 9.516793999289384,
+          "candidate": 4.900242424648637
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 618,
+            "unitType": "sword",
+            "amount": 16
+          },
+          "old": 9.314264115908616,
+          "candidate": 5.269835450317499
+        }
+      ],
+      "candidateBest": [
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 621,
+            "toCityId": 617,
+            "troops": 4,
+            "commanderId": "person-3-0"
+          },
+          "old": 8.549853312743503,
+          "candidate": 8.653685028799442
+        },
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 622,
+            "toCityId": 617,
+            "troops": 4,
+            "commanderId": "person-3-0"
+          },
+          "old": 8.549853312743503,
+          "candidate": 8.653685028799442
+        }
+      ]
+    },
+    {
+      "turn": 1,
+      "faction": "孔融",
+      "old": {
+        "type": "recruit",
+        "cityId": 476,
+        "unitType": "sword",
+        "amount": 18
+      },
+      "next": {
+        "type": "move",
+        "fromCityId": 481,
+        "toCityId": 476,
+        "troops": 4,
+        "commanderId": "person-11-0"
+      },
+      "oldBest": [
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 476,
+            "unitType": "sword",
+            "amount": 18
+          },
+          "old": 9.493101194036702,
+          "candidate": 5.202906234151415
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 477,
+            "unitType": "sword",
+            "amount": 19
+          },
+          "old": 9.31630479262719,
+          "candidate": 5.128253658711591
+        }
+      ],
+      "candidateBest": [
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 481,
+            "toCityId": 476,
+            "troops": 4,
+            "commanderId": "person-11-0"
+          },
+          "old": 8.53279582010959,
+          "candidate": 8.61081608926203
+        },
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 483,
+            "toCityId": 476,
+            "troops": 4,
+            "commanderId": "person-11-0"
+          },
+          "old": 8.53279582010959,
+          "candidate": 8.61081608926203
+        }
+      ]
+    },
+    {
+      "turn": 1,
+      "faction": "陶谦",
+      "old": {
+        "type": "recruit",
+        "cityId": 431,
+        "unitType": "sword",
+        "amount": 17
+      },
+      "next": {
+        "type": "move",
+        "fromCityId": 436,
+        "toCityId": 431,
+        "troops": 4,
+        "commanderId": "person-13-0"
+      },
+      "oldBest": [
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 431,
+            "unitType": "sword",
+            "amount": 17
+          },
+          "old": 9.5104070570665,
+          "candidate": 5.159174358189943
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 432,
+            "unitType": "sword",
+            "amount": 17
+          },
+          "old": 9.31511338763869,
+          "candidate": 5.210913127144216
+        }
+      ],
+      "candidateBest": [
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 436,
+            "toCityId": 431,
+            "troops": 4,
+            "commanderId": "person-13-0"
+          },
+          "old": 8.549853312743503,
+          "candidate": 8.653685028799442
+        },
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 438,
+            "toCityId": 431,
+            "troops": 4,
+            "commanderId": "person-13-0"
+          },
+          "old": 8.549853312743503,
+          "candidate": 8.653685028799442
+        }
+      ]
+    },
+    {
+      "turn": 1,
+      "faction": "刘繇",
+      "old": {
+        "type": "recruit",
+        "cityId": 644,
+        "unitType": "sword",
+        "amount": 17
+      },
+      "next": {
+        "type": "move",
+        "fromCityId": 648,
+        "toCityId": 644,
+        "troops": 4,
+        "commanderId": "person-14-0"
+      },
+      "oldBest": [
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 644,
+            "unitType": "sword",
+            "amount": 17
+          },
+          "old": 9.494399576894885,
+          "candidate": 5.112824659946712
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 645,
+            "unitType": "sword",
+            "amount": 17
+          },
+          "old": 9.3158453648466,
+          "candidate": 5.160128677276333
+        }
+      ],
+      "candidateBest": [
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 648,
+            "toCityId": 644,
+            "troops": 4,
+            "commanderId": "person-14-0"
+          },
+          "old": 8.53279582010959,
+          "candidate": 8.61081608926203
+        },
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 649,
+            "toCityId": 644,
+            "troops": 4,
+            "commanderId": "person-14-0"
+          },
+          "old": 8.53279582010959,
+          "candidate": 8.61081608926203
+        }
+      ]
+    },
+    {
+      "turn": 2,
+      "faction": "刘表",
+      "old": {
+        "type": "recruit",
+        "cityId": 550,
+        "unitType": "sword",
+        "amount": 13
+      },
+      "next": {
+        "type": "move",
+        "fromCityId": 555,
+        "toCityId": 550,
+        "troops": 4,
+        "commanderId": "person-7-0"
+      },
+      "oldBest": [
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 550,
+            "unitType": "sword",
+            "amount": 13
+          },
+          "old": 9.474751568883233,
+          "candidate": 5.056200853326374
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 551,
+            "unitType": "sword",
+            "amount": 13
+          },
+          "old": 9.31369249070568,
+          "candidate": 5.3094947062995175
+        }
+      ],
+      "candidateBest": [
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 555,
+            "toCityId": 550,
+            "troops": 4,
+            "commanderId": "person-7-0"
+          },
+          "old": 8.510052496597705,
+          "candidate": 8.553657503212149
+        },
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 557,
+            "toCityId": 550,
+            "troops": 4,
+            "commanderId": "person-7-0"
+          },
+          "old": 8.510052496597705,
+          "candidate": 8.553657503212149
+        }
+      ]
+    },
+    {
+      "turn": 2,
+      "faction": "马腾",
+      "old": {
+        "type": "recruit",
+        "cityId": 896,
+        "unitType": "sword",
+        "amount": 13
+      },
+      "next": {
+        "type": "move",
+        "fromCityId": 900,
+        "toCityId": 896,
+        "troops": 4,
+        "commanderId": "person-9-0"
+      },
+      "oldBest": [
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 896,
+            "unitType": "sword",
+            "amount": 13
+          },
+          "old": 9.469095369485359,
+          "candidate": 5.325831642893708
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 897,
+            "unitType": "sword",
+            "amount": 13
+          },
+          "old": 9.31286043394311,
+          "candidate": 5.367222658057126
+        }
+      ],
+      "candidateBest": [
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 900,
+            "toCityId": 896,
+            "troops": 4,
+            "commanderId": "person-9-0"
+          },
+          "old": 8.510052496597705,
+          "candidate": 8.553657503212149
+        },
+        {
+          "action": {
+            "type": "move",
+            "fromCityId": 901,
+            "toCityId": 896,
+            "troops": 4,
+            "commanderId": "person-9-0"
+          },
+          "old": 8.510052496597705,
+          "candidate": 8.553657503212149
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,356 @@
+{
+  "seed": 206,
+  "episodes": 32,
+  "horizon": 600,
+  "evaluationHorizon": 500,
+  "curriculum": {
+    "episodes": 11,
+    "resolved": 11,
+    "wins": 4
+  },
+  "policy": {
+    "version": 4,
+    "algorithm": "Linear n-step Q-learning / self-play (24-step, gamma 0.98)",
+    "weights": [
+      24.442400660567607,
+      -0.7990394469662834,
+      5.038241198177323,
+      1.8447251098475763,
+      -0.6853200174904706,
+      -0.7892094278713726,
+      3.648508934625111,
+      2.4412644030291166,
+      10.952737176045463,
+      -5.83929682890018,
+      2.1750836571473857,
+      -0.04374767398676906,
+      0.04026510509774441,
+      0.22719185884992704,
+      3.8266133276900733,
+      0.3611667276286298,
+      -4.858950795676265,
+      -2.58700945453575,
+      0.12640835467002026,
+      1.6136456393026941,
+      2.648987028740856,
+      -0.3270430644250644,
+      -1.017043954760967
+    ],
+    "episodes": 574,
+    "trainedAt": "2026-10-08T09:43:12.566Z",
+    "evaluation": {
+      "games": 16,
+      "horizon": 500,
+      "factions": 16,
+      "winRate": 0,
+      "baselineWinRate": 0,
+      "meanCounties": 143.8125,
+      "unresolvedRate": 1,
+      "bySeat": [
+        {
+          "seat": 0,
+          "faction": "曹操",
+          "games": 1,
+          "wins": 0,
+          "unresolved": 1,
+          "meanCounties": 151,
+          "survivalRate": 1
+        },
+        {
+          "seat": 1,
+          "faction": "刘备",
+          "games": 1,
+          "wins": 0,
+          "unresolved": 1,
+          "meanCounties": 148,
+          "survivalRate": 1
+        },
+        {
+          "seat": 2,
+          "faction": "孙坚",
+          "games": 1,
+          "wins": 0,
+          "unresolved": 1,
+          "meanCounties": 103,
+          "survivalRate": 1
+        },
+        {
+          "seat": 3,
+          "faction": "袁绍",
+          "games": 1,
+          "wins": 0,
+          "unresolved": 1,
+          "meanCounties": 109,
+          "survivalRate": 1
+        },
+        {
+          "seat": 4,
+          "faction": "袁术",
+          "games": 1,
+          "wins": 0,
+          "unresolved": 1,
+          "meanCounties": 188,
+          "survivalRate": 1
+        },
+        {
+          "seat": 5,
+          "faction": "董卓",
+          "games": 1,
+          "wins": 0,
+          "unresolved": 1,
+          "meanCounties": 162,
+          "survivalRate": 1
+        },
+        {
+          "seat": 6,
+          "faction": "刘表",
+          "games": 1,
+          "wins": 0,
+          "unresolved": 1,
+          "meanCounties": 161,
+          "survivalRate": 1
+        },
+        {
+          "seat": 7,
+          "faction": "刘焉",
+          "games": 1,
+          "wins": 0,
+          "unresolved": 1,
+          "meanCounties": 153,
+          "survivalRate": 1
+        },
+        {
+          "seat": 8,
+          "faction": "马腾",
+          "games": 1,
+          "wins": 0,
+          "unresolved": 1,
+          "meanCounties": 176,
+          "survivalRate": 1
+        },
+        {
+          "seat": 9,
+          "faction": "公孙瓒",
+          "games": 1,
+          "wins": 0,
+          "unresolved": 1,
+          "meanCounties": 131,
+          "survivalRate": 1
+        },
+        {
+          "seat": 10,
+          "faction": "孔融",
+          "games": 1,
+          "wins": 0,
+          "unresolved": 1,
+          "meanCounties": 127,
+          "survivalRate": 1
+        },
+        {
+          "seat": 11,
+          "faction": "张燕",
+          "games": 1,
+          "wins": 0,
+          "unresolved": 1,
+          "meanCounties": 147,
+          "survivalRate": 1
+        },
+        {
+          "seat": 12,
+          "faction": "陶谦",
+          "games": 1,
+          "wins": 0,
+          "unresolved": 1,
+          "meanCounties": 117,
+          "survivalRate": 1
+        },
+        {
+          "seat": 13,
+          "faction": "刘繇",
+          "games": 1,
+          "wins": 0,
+          "unresolved": 1,
+          "meanCounties": 131,
+          "survivalRate": 1
+        },
+        {
+          "seat": 14,
+          "faction": "张鲁",
+          "games": 1,
+          "wins": 0,
+          "unresolved": 1,
+          "meanCounties": 161,
+          "survivalRate": 1
+        },
+        {
+          "seat": 15,
+          "faction": "士燮",
+          "games": 1,
+          "wins": 0,
+          "unresolved": 1,
+          "meanCounties": 136,
+          "survivalRate": 1
+        }
+      ]
+    }
+  },
+  "incumbentEvaluation": {
+    "games": 16,
+    "horizon": 500,
+    "factions": 16,
+    "winRate": 0,
+    "baselineWinRate": 0,
+    "meanCounties": 157.75,
+    "unresolvedRate": 1,
+    "bySeat": [
+      {
+        "seat": 0,
+        "faction": "曹操",
+        "games": 1,
+        "wins": 0,
+        "unresolved": 1,
+        "meanCounties": 157,
+        "survivalRate": 1
+      },
+      {
+        "seat": 1,
+        "faction": "刘备",
+        "games": 1,
+        "wins": 0,
+        "unresolved": 1,
+        "meanCounties": 157,
+        "survivalRate": 1
+      },
+      {
+        "seat": 2,
+        "faction": "孙坚",
+        "games": 1,
+        "wins": 0,
+        "unresolved": 1,
+        "meanCounties": 119,
+        "survivalRate": 1
+      },
+      {
+        "seat": 3,
+        "faction": "袁绍",
+        "games": 1,
+        "wins": 0,
+        "unresolved": 1,
+        "meanCounties": 148,
+        "survivalRate": 1
+      },
+      {
+        "seat": 4,
+        "faction": "袁术",
+        "games": 1,
+        "wins": 0,
+        "unresolved": 1,
+        "meanCounties": 208,
+        "survivalRate": 1
+      },
+      {
+        "seat": 5,
+        "faction": "董卓",
+        "games": 1,
+        "wins": 0,
+        "unresolved": 1,
+        "meanCounties": 208,
+        "survivalRate": 1
+      },
+      {
+        "seat": 6,
+        "faction": "刘表",
+        "games": 1,
+        "wins": 0,
+        "unresolved": 1,
+        "meanCounties": 206,
+        "survivalRate": 1
+      },
+      {
+        "seat": 7,
+        "faction": "刘焉",
+        "games": 1,
+        "wins": 0,
+        "unresolved": 1,
+        "meanCounties": 128,
+        "survivalRate": 1
+      },
+      {
+        "seat": 8,
+        "faction": "马腾",
+        "games": 1,
+        "wins": 0,
+        "unresolved": 1,
+        "meanCounties": 226,
+        "survivalRate": 1
+      },
+      {
+        "seat": 9,
+        "faction": "公孙瓒",
+        "games": 1,
+        "wins": 0,
+        "unresolved": 1,
+        "meanCounties": 96,
+        "survivalRate": 1
+      },
+      {
+        "seat": 10,
+        "faction": "孔融",
+        "games": 1,
+        "wins": 0,
+        "unresolved": 1,
+        "meanCounties": 177,
+        "survivalRate": 1
+      },
+      {
+        "seat": 11,
+        "faction": "张燕",
+        "games": 1,
+        "wins": 0,
+        "unresolved": 1,
+        "meanCounties": 189,
+        "survivalRate": 1
+      },
+      {
+        "seat": 12,
+        "faction": "陶谦",
+        "games": 1,
+        "wins": 0,
+        "unresolved": 1,
+        "meanCounties": 119,
+        "survivalRate": 1
+      },
+      {
+        "seat": 13,
+        "faction": "刘繇",
+        "games": 1,
+        "wins": 0,
+        "unresolved": 1,
+        "meanCounties": 47,
+        "survivalRate": 1
+      },
+      {
+        "seat": 14,
+        "faction": "张鲁",
+        "games": 1,
+        "wins": 0,
+        "unresolved": 1,
+        "meanCounties": 184,
+        "survivalRate": 1
+      },
+      {
+        "seat": 15,
+        "faction": "士燮",
+        "games": 1,
+        "wins": 0,
+        "unresolved": 1,
+        "meanCounties": 155,
+        "survivalRate": 1
+      }
+    ]
+  },
+  "promotion": {
+    "promoted": false,
+    "reason": "territorial-regression"
+  }
+}

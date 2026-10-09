@@ -1,0 +1,9 @@
+# Paired faction evaluation
+
+Goal: strengthen evidence for the requested opportunity to win across major factions, without inventing horizon victories or changing live game rules.
+
+Current evaluator gives each of 16 seats one different world seed. Candidate/incumbent comparisons are paired, but faction differences are confounded with seed and one result cannot establish opportunity. Use a pure schedule with one world seed per block of 16 seats; default training evaluation uses 48 games, three complete blocks. Expose each block/seat result in archived evaluations alongside aggregate faction statistics. Keep explicit 16-game evaluation available for controlled comparisons. Existing running experiment retains its loaded implementation and budgets.
+
+Inline TDD steps: test complete equal-seat blocks and repeated-seed identity; implement schedule; integrate evaluator and training/CLI configurable evaluation game count; verify API tests and typecheck. No model promotion or balanced-win claim follows merely from changing the evaluator. Three worlds remain a small initial sample, not statistical proof that every faction can win.
+
+Implemented and verified: schedule tests first failed (16 distinct worlds in a block, no partial-block rejection), then passed. Actual evaluator integration checks both learned/rule trials for each seat and preserves unresolved results at a one-turn test horizon. All 188 API tests, API typecheck and build passed. Reports carry `protocol: paired-world-seat-v2` and per-trial seed, seat, policy type, turns, status, winner, counties and survival. CLI optional fifth argument after episodes/seed/horizon/evaluationHorizon is evaluationGames (default 48, multiple of 16, maximum 512). Candidate and incumbent are freshly re-evaluated using the identical schedule; historical cached scores are not reused. No long evaluation using v2 has yet established balance.

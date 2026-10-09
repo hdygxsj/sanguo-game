@@ -1,0 +1,7 @@
+# Ma faction portrait increment
+
+Add original adult portraits for Ma Teng, Ma Chao and literary-fiction Ma Yunlu, retaining the established parchment / painterly-realism style. Differentiate mature frontier lord, young cavalry commander and adult woman warrior. No historical authenticity claim or copied game artwork. Use the built-in imagegen skill; save original PNG masters, JPEG quality 80 derivatives without crop or resize, and complete prompts.
+
+Steps: verify existing characters/missing mappings; generate and inspect three separate images; add failing name-to-image test rows; copy assets and add name mappings; run full tests/build and byte-identical HTTP checks; update portrait count. Preserve minor gating and missing-art fallback. No gameplay/save changes. User requested autonomous execution, so no review-question pause.
+
+Completed: full generation prompts retained in `assets/portraits/ma-prompts.md`, original PNGs in that directory and JPEG derivatives in the public portrait directory. All three visually reviewed, no missing headgear, text or watermark. Three new mapping tests observed failing then passing. Full suite 262 tests (173 API, 89 web) and build passed, existing large-chunk warning remains. HTTP 200 byte-identical checks: Ma Teng 538684 bytes, Ma Chao 532109 bytes, Ma Yunlu 489169 bytes. Total 24 portraits; not all requested character artwork is complete. Browser personnel-panel visual inspection was not performed in this increment.

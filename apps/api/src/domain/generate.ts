@@ -1,4 +1,8 @@
 import type { AgentState, BattleState, CityState, Strategy, Terrain, Weather } from './types.js';
+import { historicGeography } from './hanGeography.js';
+import { HISTORICAL_FACTIONS } from './factions.js';
+import {createCharacters} from './characters.js';
+import {expandRoster} from './rosterExpansion.js';
 
 const AGENT_COLORS = ['#7257ff', '#e05472', '#e7ac4a', '#42b9a8', '#4d89e8', '#a765d1'];
 const STRATEGIES: Strategy[] = ['expansion', 'defensive', 'economic', 'balanced'];
@@ -55,12 +59,31 @@ export function generateBattle(
   columns = 7,
   rows = 5,
   agentCount = 4,
-  maxTurns = 30,
+  maxTurns = 0,
+  historical = true,
 ): BattleState {
   if (columns < 3 || rows < 3) throw new Error('MAP_TOO_SMALL');
-  if (agentCount < 2 || agentCount > 6) throw new Error('INVALID_AGENT_COUNT');
+  if (!Number.isInteger(agentCount) || agentCount < 2 || agentCount > (historical?HISTORICAL_FACTIONS.length:6)) throw new Error('INVALID_AGENT_COUNT');
 
   const random = mulberry32(hashSeed(seed));
+  if (historical) {
+    const { cities, map } = historicGeography(random,'campaign');
+    const agents: AgentState[] = Array.from({ length: agentCount }, (_, index) => ({
+      id: `agent-${index + 1}`, name: HISTORICAL_FACTIONS[index]!.name,
+      color: HISTORICAL_FACTIONS[index]!.color, strategy: HISTORICAL_FACTIONS[index]!.strategy, active: true,
+    }));
+    agents.forEach((agent, index) => {
+      const group=map.commanderies.find(c=>c.name===HISTORICAL_FACTIONS[index]!.commandery);
+      if(!group) throw new Error('FACTION_CAPITAL_NOT_FOUND');
+      for(const id of group.countyIds) {const county=cities[id]!;if(county.terrain!=='blocked'){county.owner=agent.id;county.troops=6;county.level=1;county.defenseMultiplier=1.12;}}
+      const city = cities[group.seatId]!;
+      agent.startingCityId=city.id;
+      city.owner = agent.id; city.troops = 36; city.level = 2;city.terrain='plain';
+      city.defenseMultiplier = 1.24;
+    });
+    return expandRoster({ characters:createCharacters(agents),diplomacy:{},diplomaticOffers:[],seed, version: 0, turn: 0, maxTurns, columns, rows, status: 'active', winner: null,
+      agents, cities, map:{...map,note:`${map.note} 势力开局为汉末群雄游戏剧本，起始郡与边界不代表同一年份的考订史实。`}, resources: Object.fromEntries(agents.map(agent => [agent.id, 80])) });
+  }
   const agents: AgentState[] = Array.from({ length: agentCount }, (_, index) => ({
     id: `agent-${index + 1}`,
     name: `Agent ${String.fromCharCode(65 + index)}`,
@@ -102,6 +125,7 @@ export function generateBattle(
       .sort((left, right) => Math.abs(left.id - preferred) - Math.abs(right.id - preferred))[0];
     if (!start) throw new Error('NO_STARTING_CITY');
     start.owner = agent.id;
+    agent.startingCityId=start.id;
     start.troops = 20;
     start.level = 2;
     start.defenseMultiplier = 1.24;

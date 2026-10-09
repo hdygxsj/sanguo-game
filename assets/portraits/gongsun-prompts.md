@@ -1,0 +1,17 @@
+# 公孙瓒阵营原创立绘
+
+## 公孙瓒 / gongsun-zan-v1 and 田楷 / tian-kai-v1
+
+Two separate built-in image_gen calls. Original PNGs retained, JPEG quality-80 derivatives in the web public directory, no crop/resize. Both inspected for single adult subject, complete headwear, matte period-inspired clothes, no unwanted text. Each full prompt is the shared prefix followed by its individual subject paragraph below.
+
+Shared prefix: Use case: historical-scene. Asset type: original Three Kingdoms grand-strategy personnel portrait. One adult Chinese man only. Waist-up three-quarter portrait, entire head/headwear with margin, hands outside frame. Painterly realism, natural skin and matte fabric/metal textures, subtle ink-wash edges, soft side daylight, muted earth palette. Warm pale parchment backdrop with faint distant ink mountains. Vertical 1024x1536. Original artistic interpretation, not a verified likeness or existing game portrait. No text, border, logo, watermark, other people, weapons in frame, anime, neon, plastic skin, Qing hairstyle, fantasy armor or modern clothing.
+
+Gongsun Zan subject: Subject: Gongsun Zan (公孙瓒), northern cavalry lord around 45, broad forehead, strong cheekbones, short dense dark moustache and beard, narrowed watchful eyes and a proud stern expression. Dark hair wrapped in a plain black Han military headcloth. Weathered pale grey lamellar armor, dark leather fastenings, ivory inner cross-collar robe and a modest grey wool shoulder mantle. Strong experienced frontier commander, restrained practical silhouette, no crown or extravagant helmet.
+
+Tian Kai subject: Subject: Tian Kai (田楷), mature provincial commander around 42, lean elongated face, slightly prominent nose, fine short moustache and neatly trimmed pointed beard, thoughtful measured eyes, composed expression. Dark hair bound beneath a simple black late-Han cloth cap. Muted deep indigo cross-collar robe and restrained dark-brown leather-reinforced lamellar vest, modest bronze belt ornament. Practical civil-military officer, less heavily armored than a cavalry lord, no crown or helmet.
+
+## 赵云 / zhao-yun-v1
+
+Built-in image_gen original, 1024×1536 PNG master in this directory, JPEG quality-80 derivative in apps/web/public/images/portraits. No crop/resize. Generated image inspected: one adult officer, complete head, restrained muted armor, no text/watermark or extra people.
+
+Use case: historical-scene. Asset type: original Three Kingdoms grand-strategy personnel portrait. Subject: Zhao Yun (赵云), adult Chinese cavalry officer around 30, one man only. Calm alert eyes, clean-shaven long oval face, straight brows, strong but refined features, composed protective bearing. Dark hair tied under a restrained late-Han martial headcloth. Practical light steel-grey lamellar armor over a muted ivory cross-collar tunic, weathered leather ties and modest pale blue-grey shoulder cloth. No fantastical helmet, dragon motifs or oversized shoulder plates. Waist-up three-quarter composition, full head and headwear with margin, hands outside frame. Painterly realism with natural skin and matte metal, subtle ink-wash edges, soft natural side light. Pale warm parchment background with very faint distant Chinese ink mountains. Vertical 1024x1536. Original artistic interpretation, not existing game art or an authenticated historical likeness. No text, border, logo, watermark, weapons in frame, extra people, anime, neon, polished plastic skin, Qing hairstyle or modern clothing.

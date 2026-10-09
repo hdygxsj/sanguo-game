@@ -3,6 +3,36 @@ import { generateBattle } from './generate.js';
 import { resolveTurn } from './resolveTurn.js';
 
 describe('resolveTurn', () => {
+  it('never declares a winner just because the legacy turn limit was reached', () => {
+    const state = generateBattle('unlimited', 5, 4, 2, 5);
+    state.turn = 500;
+    const result = resolveTurn(state, [], state.version);
+    expect(result.state.status).toBe('active');
+    expect(result.state.winner).toBeNull();
+    expect(result.events.some(e => e.type === 'victory')).toBe(false);
+  });
+
+  it('still awards victory when only one faction survives', () => {
+    const state = generateBattle('victory', 5, 4, 2, 0);
+    state.cities.forEach(c => { if (c.owner) c.owner = state.agents[0]!.id; });
+    const result = resolveTurn(state, [], 0);
+    expect(result.state.winner).toBe(state.agents[0]!.id);
+    expect(result.state.status).toBe('completed');
+  });
+
+  it('charges maintenance and unpaid soldiers desert without negative treasury', () => {
+    const state = generateBattle('upkeep', 5, 4, 2, 0);
+    const id = state.agents[0]!.id;
+    const city = state.cities.find(c => c.owner === id)!;
+    city.troops = 200;
+    state.resources[id] = 0;
+    const result = resolveTurn(state, [], 0);
+    expect(result.state.resources[id]).toBe(0);
+    expect(result.state.cities[city.id]!.troops).toBeLessThan(200);
+    expect(result.events.some(e => e.type === 'upkeep' && e.agentId === id)).toBe(true);
+    expect(result.events.some(e => e.type === 'desertion' && e.agentId === id)).toBe(true);
+    expect(state.cities[city.id]!.troops).toBe(200);
+  });
   it('advances the version and emits ordered turn events', () => {
     const state = generateBattle('resolve-hold', 5, 4, 2);
     const result = resolveTurn(

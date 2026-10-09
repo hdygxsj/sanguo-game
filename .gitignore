@@ -9,3 +9,10 @@ playwright-report/
 test-results/
 *.tsbuildinfo
 .DS_Store
+.env.*
+!.env.example
+*.db-wal
+*.db-shm
+*.blend1
+*.blend2
+data/training-runtime/

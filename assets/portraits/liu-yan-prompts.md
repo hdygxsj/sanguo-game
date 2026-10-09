@@ -1,0 +1,21 @@
+# 刘焉原创立绘
+
+## 赵韪 / zhao-wei-v1
+
+Built-in image_gen original, 1024×1536 PNG master and quality-80 JPEG web derivative, no crop/resize. Visually inspected: mature officer with headcloth and worn armor, whole head in frame, no text or extra people.
+
+Use case: historical-scene. Asset type: original Three Kingdoms grand-strategy personnel portrait. One adult Chinese man only: Zhao Wei (赵韪), an original artistic interpretation as a mature provincial military officer around 46. Broad angular face, short coarse black beard with a few grey hairs, heavy brows, wary penetrating eyes, sun-worn skin and a reserved calculating expression. Dark hair tied under a practical late-Han black headcloth. Worn dark iron lamellar vest with simple leather fastenings over an ochre-brown cross-collar robe, muted olive shoulder cloth. No imperial regalia or oversized fantasy armor. Waist-up three-quarter portrait; entire head and headwear inside frame with margin, hands out of frame. Painterly realism, natural skin, matte weathered material detail, subtle ink-wash edges, soft side daylight, warm pale parchment background with faint distant ink mountains. Vertical 1024x1536. Distinct original face, not an existing game portrait or authenticated historical likeness. No text, logo, watermark, border, extra people, weapons, anime, neon, plastic skin, Qing hairstyle or modern clothing.
+
+## 吴苋 / wu-xian-v1
+
+Built-in image_gen original, 1024×1536 PNG master and quality-80 JPEG web derivative, no crop/resize. Visually inspected: adult woman, restrained clothing, complete head/hair ornament, no text or other people.
+
+Use case: historical-scene. Asset type: original Three Kingdoms grand-strategy personnel portrait. One adult Chinese woman only: Wu Xian (吴苋), an artistic interpretation around age 32, thoughtful self-possessed noblewoman with a gently square oval face, natural expressive eyes, restrained closed-mouth expression and mature dignified bearing. Dark hair in a neat late-Han updo with a modest bronze hairpin, no imperial crown. Fully clothed layered Han-style cross-collar silk robe in muted pale sage and warm ivory, fine woven border, modest neckline. Waist-up three-quarter portrait, entire head and hair ornaments in frame with margin, hands outside frame. Painterly realism with natural skin and silk texture, subtle Chinese ink-wash edges, soft side daylight. Warm pale parchment background, faint distant ink mountains. Vertical 1024x1536. Original standalone game artwork, not an existing game's portrait, not a verified historical likeness. No text, watermark, border, other people, weapons, seductive pose, cleavage, glamorous modern makeup, anime, neon, plastic skin, Qing hairstyle, fantasy jewelry or oversized ornaments.
+
+## 刘焉 / liu-yan-v1
+
+Built-in image_gen original, artistic interpretation rather than authenticated likeness or an existing game's asset. Master `liu-yan-v1.png`; web derivative `apps/web/public/images/portraits/liu-yan-v1.jpg`, JPEG quality 80, no crop/resize. Inspected generated artwork: adult elderly official, complete headgear, no unwanted text or extra people, muted parchment/ink palette.
+
+## Full prompt
+
+Use case: historical-scene. Asset type: original Three Kingdoms grand-strategy personnel portrait. One adult Chinese character only. Waist-up three-quarter framing, head and headgear entirely in frame with margin, hands out of frame. Painterly realism, naturally textured skin and fabric, subtle Chinese ink-wash edges, soft natural side light, matte muted earth palette, warm pale parchment background and faint distant ink mountains. Vertical 1024x1536. Original artistic interpretation, not a reproduction of an existing game portrait. No text, border, watermark, anime, neon, plastic skin, Qing hairstyle, oversized fantasy armor, extra people or weapons in frame. Subject: Liu Yan (刘焉), senior late-Han provincial lord, around 60 years old, long narrow face, thoughtful hooded eyes, slightly furrowed brow, elegant long grey beard and moustache. Restrained tall black Han official cap, layered cross-collar muted plum-brown silk robe with subtle woven geometric border and aged ivory inner collar. Calm calculating dignity, no crown, no imperial dragon emblems. Distinguished elderly scholar-governor rather than armored warrior.

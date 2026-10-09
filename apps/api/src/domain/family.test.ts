@@ -1,0 +1,11 @@
+import {expect,it} from 'vitest';
+import {generateBattle} from './generate.js';
+import {validateFamily,resolveFamily} from './family.js';
+import {resolveTurn} from './resolveTurn.js';
+const action={type:'form-union' as const,personId:'person-1-0',partnerId:'person-1-2',kind:'spouse' as const};
+function scenario(){const s=generateBattle('family',7,5,2,0);for(const p of s.characters!)p.ageYears=30;s.resources['agent-1']=100;return s;}
+it('persists a paid union without duplicating households',()=>{const s=scenario();expect(validateFamily(s,'agent-1',action).ok).toBe(true);resolveFamily(s,'agent-1',action,()=>{});expect(s.resources['agent-1']).toBe(60);expect(s.unions).toHaveLength(1);expect(validateFamily(s,'agent-1',action).ok).toBe(false);});
+it('requires adult age, funds and free loyal participants',()=>{for(const change of ['minor','unknown-age','money','captive','loyalty']){const s=scenario(),p=s.characters![2]!;if(change==='minor')p.ageYears=17;if(change==='unknown-age')delete p.ageYears;if(change==='money')s.resources['agent-1']=0;if(change==='captive')p.capturedBy='agent-2';if(change==='loyalty')p.loyalty=20;expect(validateFamily(s,'agent-1',action).ok).toBe(false);}});
+it('rejects recorded close kin and same-clan matches',()=>{for(const kind of ['parent','sibling','clan']){const s=scenario();if(kind==='parent')s.characters![2]!.parentIds=[action.personId];if(kind==='sibling'){s.characters![0]!.parentIds=['ancestor'];s.characters![2]!.parentIds=['ancestor'];}if(kind==='clan')s.characters![2]!.name='曹氏';expect(validateFamily(s,'agent-1',action).ok).toBe(false);}});
+it('resolves through the turn pipeline without mutating the previous snapshot',()=>{const s=scenario();const result=resolveTurn(s,[{agentId:'agent-1',action}],s.version);expect(result.state.unions).toHaveLength(1);expect(result.events.some(e=>e.type==='family')).toBe(true);expect(s.unions).toBeUndefined();});
+it('charges concubine cost and forbids joining another household',()=>{const s=scenario(),a={...action,kind:'concubine' as const};expect(validateFamily(s,'agent-1',a).ok).toBe(true);resolveFamily(s,'agent-1',a,()=>{});expect(s.resources['agent-1']).toBe(40);expect(validateFamily(s,'agent-1',{...action,personId:'person-1-1'}).ok).toBe(false);});

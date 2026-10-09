@@ -15,30 +15,32 @@ GLB_PATH = PROJECT_ROOT / "apps" / "web" / "public" / "models" / "agent-arena" /
 
 PALETTE = {
     "Cedar beams": (0.16, 0.045, 0.022, 1.0),
-    "Glazed slate jade": (0.025, 0.16, 0.18, 1.0),
-    "Ivory plaster": (0.72, 0.56, 0.30, 1.0),
+    "Glazed slate jade": (0.105, 0.125, 0.13, 1.0),
+    "Ivory plaster": (0.55, 0.48, 0.36, 1.0),
     "Pine foliage": (0.025, 0.16, 0.075, 1.0),
     "Recessed doorways": (0.012, 0.022, 0.026, 1.0),
-    "Roof tile edges": (0.02, 0.26, 0.30, 1.0),
-    "Sunlit foliage": (0.29, 0.50, 0.12, 1.0),
+    "Roof tile edges": (0.19, 0.21, 0.205, 1.0),
+    "Sunlit foliage": (0.20, 0.30, 0.12, 1.0),
     "Weathered limestone": (0.30, 0.34, 0.30, 1.0),
-    "Imperial amber glaze": (0.95, 0.48, 0.035, 1.0),
-    "Mountain moss": (0.25, 0.38, 0.13, 1.0),
+    "Dressed wall stone": (0.37, 0.39, 0.345, 1.0),
+    "Imperial amber glaze": (0.38, 0.28, 0.13, 1.0),
+    "Mountain moss": (0.20, 0.27, 0.13, 1.0),
     "Mountain slate": (0.12, 0.19, 0.24, 1.0),
 }
 
 MATERIAL_PROPERTIES = {
     "Cedar beams": {"roughness": 0.58},
-    "Glazed slate jade": {"roughness": 0.27, "metallic": 0.14},
+    "Glazed slate jade": {"roughness": 0.78},
     "Ivory plaster": {"roughness": 0.86},
     "Pine foliage": {"roughness": 0.78},
-    "Recessed doorways": {"roughness": 0.38, "metallic": 0.16},
-    "Roof tile edges": {"roughness": 0.23, "metallic": 0.28},
+    "Recessed doorways": {"roughness": 0.85},
+    "Roof tile edges": {"roughness": 0.73},
     "Sunlit foliage": {"roughness": 0.72},
     "Weathered limestone": {"roughness": 0.92},
-    "Imperial amber glaze": {"roughness": 0.22, "metallic": 0.18, "emission": 0.08},
+    "Dressed wall stone": {"roughness": 0.94},
+    "Imperial amber glaze": {"roughness": 0.7},
     "Mountain moss": {"roughness": 0.94},
-    "Mountain slate": {"roughness": 0.74, "metallic": 0.12},
+    "Mountain slate": {"roughness": 0.92},
 }
 
 PALETTE_MATS: dict[str, bpy.types.Material] = {}
@@ -204,14 +206,50 @@ def banner(prefix, location, height, color_material, root, direction=1):
 
 def roof_mesh(name, location, size, height, material, root):
     sx, sy = size
-    lift = height * 0.14
-    vertices = [
-        (-sx / 2, -sy / 2, lift), (sx / 2, -sy / 2, lift), (sx / 2, sy / 2, lift), (-sx / 2, sy / 2, lift),
-        (-sx * 0.27, 0, height), (sx * 0.27, 0, height),
-        (-sx / 2 + 0.08, -sy / 2 + 0.07, 0), (sx / 2 - 0.08, -sy / 2 + 0.07, 0),
-        (sx / 2 - 0.08, sy / 2 - 0.07, 0), (-sx / 2 + 0.08, sy / 2 - 0.07, 0),
-    ]
-    faces = [(0, 1, 5, 4), (1, 2, 5), (2, 3, 4, 5), (3, 0, 4), (6, 9, 8, 7), (0, 6, 7, 1), (1, 7, 8, 2), (2, 8, 9, 3), (3, 9, 6, 0)]
+    segments = 8
+    vertices, faces = [], []
+    # Nested rectangular contours form a continuous swept hip, not a pyramid.
+    for row in range(segments):
+        t = row / segments
+        half_x, half_y = sx * (0.5 - 0.23 * t), sy * 0.5 * (1 - t)
+        roof_z = roof_profile(t) * height
+        vertices.extend((cx * half_x, cy * half_y, roof_z)
+                        for cx, cy in ((-1, -1), (1, -1), (1, 1), (-1, 1)))
+        if row:
+            for corner in range(4):
+                a = (row - 1) * 4 + corner
+                b = (row - 1) * 4 + (corner + 1) % 4
+                faces.append((a, b, b + 4, a + 4))
+    ridge = len(vertices)
+    vertices.extend(((-sx * 0.27, 0, height), (sx * 0.27, 0, height)))
+    last = (segments - 1) * 4
+    faces.extend(((last, last + 1, ridge + 1, ridge),
+                  (last + 1, last + 2, ridge + 1),
+                  (last + 2, last + 3, ridge, ridge + 1),
+                  (last + 3, last, ridge), (3, 2, 1, 0)))
+    obj = mesh_object(name, vertices, faces, material, root, location)
+    return obj
+
+
+def roof_profile(t):
+    return t ** 1.5 + 0.14 * (1 - t) ** 8
+
+
+def curved_tile_rib(name, location, size, height, factor, side, material, root):
+    sx, sy = size
+    vertices, faces = [], []
+    width = min(0.012, sx * 0.014)
+    for row in range(9):
+        t = row / 8
+        x = factor * sx * (0.5 - 0.23 * t)
+        y = side * sy * 0.5 * (1 - t)
+        z = height * roof_profile(t) + 0.002
+        vertices.extend(((x - width, y, z), (x, y, z + width), (x + width, y, z)))
+        if row:
+            for col in range(2):
+                a = (row - 1) * 3 + col
+                face = (a, a + 1, a + 4, a + 3)
+                faces.append(face if side == -1 else tuple(reversed(face)))
     return mesh_object(name, vertices, faces, material, root, location)
 
 
@@ -227,12 +265,9 @@ def hip_roof(name, location, size, height, material, edge_material, root, ribs=7
     beam_between(f"{name}-ridge", (x - sx * 0.3, y, z + height + 0.02), (x + sx * 0.3, y, z + height + 0.02), 0.045, edge_material, root, bevel=0.008)
     for index in range(ribs):
         factor = -1 + 2 * index / max(1, ribs - 1)
-        start_x = x + factor * sx * 0.46
-        ridge_x = x + max(-sx * 0.27, min(sx * 0.27, factor * sx * 0.32))
         for side in (-1, 1):
-            beam_between(f"{name}-rib-{side}-{index}", (start_x, y + side * sy * 0.47, edge_height + 0.025), (ridge_x, y, z + height + 0.025), 0.018, edge_material, root)
-    for index, (cx, cy) in enumerate(((-1, -1), (1, -1), (-1, 1), (1, 1))):
-        cone(f"{name}-corner-{index}", (x + cx * sx * 0.51, y + cy * sy * 0.51, edge_height + 0.07), 0.045, 0.015, 0.17, edge_material, root, vertices=7, rotation=(cy * 0.48, cx * 0.48, 0))
+            curved_tile_rib(f"{name}-rib-{side}-{index}", location, size, height,
+                            factor, side, edge_material, root)
 
 
 def lantern(prefix, location, scale, root, glow_material=None):
@@ -331,8 +366,8 @@ def hall(prefix, center, width, depth, wall_height, root, roof_material="Glazed 
         box(f"{prefix}-door-{story}", (x, door_y, current_z + wall_height * 0.34), (level_width * 0.2, 0.045, wall_height * 0.62), dark, root, bevel=0.006)
         for side in (-1, 1):
             lattice_window(f"{prefix}-window-{story}-{side}", (x + side * level_width * 0.28, door_y - front * 0.008, current_z + wall_height * 0.56), level_width * 0.18, wall_height * 0.36, wood, dark, root)
-        bracket_set(f"{prefix}-bracket-front-{story}", (x, y + front * level_depth * 0.49, current_z + wall_height - 0.03), level_width * 0.92, 0.11, wood, root)
-        bracket_set(f"{prefix}-bracket-back-{story}", (x, y - front * level_depth * 0.49, current_z + wall_height - 0.03), level_width * 0.92, 0.11, wood, root)
+        bracket_set(f"{prefix}-bracket-front-{story}", (x, y + front * level_depth * 0.49, current_z + wall_height - 0.10), level_width * 0.92, 0.11, wood, root)
+        bracket_set(f"{prefix}-bracket-back-{story}", (x, y - front * level_depth * 0.49, current_z + wall_height - 0.10), level_width * 0.92, 0.11, wood, root)
         hip_roof(f"{prefix}-roof-{story}", (x, y, current_z + wall_height), (level_width + 0.38, level_depth + 0.38), wall_height * 0.46, roof_mat, edge, root, ribs=max(5, int(level_width / 0.18)))
         current_z += wall_height * 1.27
     stair_run(f"{prefix}-stairs", (x, y + front * (depth / 2 + 0.18), z), width * 0.42, 0.36, 0.15, 4, stone, root, facing=front)
@@ -358,6 +393,22 @@ def watch_tower(prefix, location, root, scale=1.0, roof_material="Glazed slate j
         level_z += height * 1.35
 
 
+def masonry_courses(length, height, gap=0):
+    blocks = []
+    rows = max(3, round(height / 0.11))
+    course = height / rows
+    spans = [(-length / 2, length / 2)] if not gap else [(-length / 2, -gap / 2), (gap / 2, length / 2)]
+    for row in range(rows):
+        for left, right in spans:
+            x = left - (0.14 if row % 2 else 0)
+            while x < right:
+                a, b = max(left, x), min(right, x + 0.28)
+                if b - a > 0.014:
+                    blocks.append(((a + b) / 2, (row + .5) * course, b - a - .008, course - .006))
+                x += .28
+    return blocks
+
+
 def crenellated_wall(prefix, start, end, height, root, gate=False):
     stone = PALETTE_MATS["Weathered limestone"]
     dark = PALETTE_MATS["Recessed doorways"]
@@ -367,6 +418,9 @@ def crenellated_wall(prefix, start, end, height, root, gate=False):
     length = direction.length
     midpoint = (start_vector + end_vector) / 2
     rotation = -math.atan2(direction.x, direction.y)
+    unit = direction.normalized()
+    normal = Vector((-unit.y, unit.x, 0))
+    gap = min(0.48, length * 0.28) if gate else 0
     if gate:
         gap = min(0.48, length * 0.28)
         unit = direction.normalized()
@@ -380,6 +434,16 @@ def crenellated_wall(prefix, start, end, height, root, gate=False):
         box(f"{prefix}-gate-lintel", (midpoint.x, midpoint.y, height * 0.86), (gap + 0.18, 0.18, height * 0.22), stone, root, bevel=0.012)
     else:
         obj = box(f"{prefix}-body", (midpoint.x, midpoint.y, height / 2), (0.14, length, height), stone, root, bevel=0.015)
+        obj.rotation_euler[2] = rotation
+    for index, (along, z, width, course_height) in enumerate(masonry_courses(length, height, gap)):
+        for side in (-1, 1):
+            center = midpoint + unit * along + normal * (.073 * side)
+            obj = box(f"{prefix}-ashlar-{index}-{side}", (center.x, center.y, z),
+                      (.008, width, course_height), PALETTE_MATS['Dressed wall stone'], root)
+            obj.rotation_euler[2] = rotation
+    for side, a, b in (("left", -length / 2, -gap / 2), ("right", gap / 2, length / 2)) if gate else (("full", -length / 2, length / 2),):
+        center = midpoint + unit * ((a + b) / 2)
+        obj = box(f"{prefix}-coping-{side}", (center.x, center.y, height), (.17, b - a, .025), stone, root, bevel=.004)
         obj.rotation_euler[2] = rotation
     count = max(3, int(length / 0.22))
     for index in range(count + 1):
@@ -558,16 +622,22 @@ def main() -> None:
     clear_scene()
     PALETTE_MATS = make_materials()
     roots = {name: root_object(name) for name in ("village-a", "village-b", "fort", "citadel", "stronghold", "imperial", "mountain", "grove")}
-    build_village_a(roots["village-a"])
-    build_village_b(roots["village-b"])
-    build_fort(roots["fort"], "fort", 1)
-    build_fort(roots["citadel"], "citadel", 2)
-    build_fort(roots["stronghold"], "stronghold", 3)
-    build_fort(roots["imperial"], "imperial", 4, imperial=True)
-    build_mountain(roots["mountain"])
-    build_grove(roots["grove"])
-    for root in roots.values():
+    builders = {
+        "village-a": build_village_a,
+        "village-b": build_village_b,
+        "fort": lambda root: build_fort(root, "fort", 1),
+        "citadel": lambda root: build_fort(root, "citadel", 2),
+        "stronghold": lambda root: build_fort(root, "stronghold", 3),
+        "imperial": lambda root: build_fort(root, "imperial", 4, imperial=True),
+        "mountain": build_mountain,
+        "grove": build_grove,
+    }
+    # Batch each asset immediately: avoid thousands of objects slowing every
+    # subsequent Blender operator through dependency-graph updates.
+    for name, root in roots.items():
+        builders[name](root)
         consolidate_root_by_material(root)
+        print(f"ARENA_ASSET_READY {name}", flush=True)
     remove_unused_data()
     scene = bpy.context.scene
     scene.unit_settings.system = "METRIC"

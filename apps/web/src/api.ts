@@ -1,4 +1,5 @@
-import type { BattleDetail, BattleState, BattleSummary, CreateBattleInput, DomainEvent, User } from './types';
+import type { BattleDetail, BattleState, BattleSummary, CreateBattleInput, DomainEvent, User, PlayerOrder } from './types';
+import {simplifyPresentation} from './simplified';
 
 export class ApiError extends Error {
   constructor(public readonly status: number, public readonly code: string, message: string) {
@@ -16,9 +17,10 @@ async function request<T>(path: string, init?: RequestInit): Promise<T> {
   });
   const payload = (await response.json().catch(() => ({}))) as { error?: { code?: string; message?: string } };
   if (!response.ok) {
+    if(payload.error?.code==='NO_ROAD_ROUTE')throw new ApiError(response.status,'NO_ROAD_ROUTE','无法到达：道路可能受陡坡或外交边界阻挡，请选择其他目标。');
     throw new ApiError(response.status, payload.error?.code ?? 'REQUEST_FAILED', payload.error?.message ?? '请求失败');
   }
-  return payload as T;
+  return simplifyPresentation(payload) as T;
 }
 
 export const api = {
@@ -28,6 +30,6 @@ export const api = {
   listBattles: () => request<{ battles: BattleSummary[] }>('/api/battles'),
   createBattle: (input: CreateBattleInput) => request<{ battle: BattleSummary }>('/api/battles', { method: 'POST', body: JSON.stringify(input) }),
   getBattle: (id: string) => request<{ battle: BattleDetail }>(`/api/battles/${id}`),
-  executeTurn: (id: string, expectedVersion: number) => request<{ state: BattleState; events: DomainEvent[] }>(`/api/battles/${id}/turns`, { method: 'POST', body: JSON.stringify({ expectedVersion }) }),
+  executeTurn: (id: string, expectedVersion: number, order?:PlayerOrder) => request<{ state: BattleState; events: DomainEvent[] }>(`/api/battles/${id}/turns`, { method: 'POST', body: JSON.stringify({ expectedVersion,order }) }),
   replay: (id: string, turn: number) => request<{ snapshot: BattleState; events: DomainEvent[] }>(`/api/battles/${id}/replay?turn=${turn}`),
 };

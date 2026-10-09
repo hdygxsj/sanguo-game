@@ -1,0 +1,703 @@
+{
+  "archive": "data/training-history/run-1791466153679-208-574.json",
+  "horizon": 120,
+  "environment": "current runtime; incumbent supplies trajectory",
+  "tally": {
+    "incumbent": {
+      "attack": 774,
+      "recruit": 320,
+      "diplomacy": 118,
+      "hold": 16,
+      "develop:farm": 271,
+      "move": 142,
+      "appoint-governor": 53,
+      "appoint-court": 23,
+      "buy-equipment": 18,
+      "form-union": 8,
+      "recruit-character": 135,
+      "recruit-captive": 13,
+      "equip-equipment": 18,
+      "develop:market": 7,
+      "recall-army": 3,
+      "reward-character": 1
+    },
+    "candidate": {
+      "attack": 723,
+      "develop": 88,
+      "diplomacy": 118,
+      "develop:farm": 285,
+      "move": 164,
+      "appoint-governor": 53,
+      "appoint-court": 23,
+      "buy-equipment": 18,
+      "form-union": 8,
+      "recruit-character": 135,
+      "recruit": 263,
+      "recruit-captive": 13,
+      "equip-equipment": 18,
+      "develop:market": 7,
+      "recall-army": 3,
+      "reward-character": 1
+    }
+  },
+  "switches": {
+    "recruit -> develop": 71,
+    "hold -> develop": 14,
+    "attack -> develop": 3,
+    "hold -> move": 2,
+    "recruit -> develop:farm": 14,
+    "recruit -> move": 19,
+    "attack -> recruit": 47,
+    "attack -> move": 1
+  },
+  "samples": [
+    {
+      "turn": 0,
+      "faction": "刘备",
+      "old": {
+        "type": "recruit",
+        "cityId": 458,
+        "unitType": "sword",
+        "amount": 15
+      },
+      "next": {
+        "type": "develop",
+        "cityId": 458
+      },
+      "oldBest": [
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 458,
+            "unitType": "sword",
+            "amount": 15
+          },
+          "old": 9.480156774466632,
+          "candidate": 12.24518384251851
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 459,
+            "unitType": "sword",
+            "amount": 15
+          },
+          "old": 9.314876571483188,
+          "candidate": 12.777636709300033
+        }
+      ],
+      "candidateBest": [
+        {
+          "action": {
+            "type": "develop",
+            "cityId": 458
+          },
+          "old": 8.226570538174443,
+          "candidate": 14.487994231854033
+        },
+        {
+          "action": {
+            "type": "develop",
+            "cityId": 459
+          },
+          "old": 8.130193361319455,
+          "candidate": 14.438198076327168
+        }
+      ]
+    },
+    {
+      "turn": 0,
+      "faction": "袁绍",
+      "old": {
+        "type": "recruit",
+        "cityId": 297,
+        "unitType": "sword",
+        "amount": 15
+      },
+      "next": {
+        "type": "develop",
+        "cityId": 297
+      },
+      "oldBest": [
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 297,
+            "unitType": "sword",
+            "amount": 15
+          },
+          "old": 9.457837497960595,
+          "candidate": 12.239243381713212
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 298,
+            "unitType": "sword",
+            "amount": 15
+          },
+          "old": 9.314876571483188,
+          "candidate": 12.777636709300033
+        }
+      ],
+      "candidateBest": [
+        {
+          "action": {
+            "type": "develop",
+            "cityId": 297
+          },
+          "old": 8.226570538174443,
+          "candidate": 14.487994231854033
+        },
+        {
+          "action": {
+            "type": "develop",
+            "cityId": 298
+          },
+          "old": 8.130193361319455,
+          "candidate": 14.438198076327168
+        }
+      ]
+    },
+    {
+      "turn": 0,
+      "faction": "袁术",
+      "old": {
+        "type": "recruit",
+        "cityId": 513,
+        "unitType": "sword",
+        "amount": 15
+      },
+      "next": {
+        "type": "develop",
+        "cityId": 513
+      },
+      "oldBest": [
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 513,
+            "unitType": "sword",
+            "amount": 15
+          },
+          "old": 9.480156774466632,
+          "candidate": 12.24518384251851
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 514,
+            "unitType": "sword",
+            "amount": 15
+          },
+          "old": 9.314876571483188,
+          "candidate": 12.777636709300033
+        }
+      ],
+      "candidateBest": [
+        {
+          "action": {
+            "type": "develop",
+            "cityId": 513
+          },
+          "old": 8.226570538174443,
+          "candidate": 14.487994231854033
+        },
+        {
+          "action": {
+            "type": "develop",
+            "cityId": 514
+          },
+          "old": 8.130193361319455,
+          "candidate": 14.438198076327168
+        }
+      ]
+    },
+    {
+      "turn": 0,
+      "faction": "董卓",
+      "old": {
+        "type": "recruit",
+        "cityId": 0,
+        "unitType": "sword",
+        "amount": 15
+      },
+      "next": {
+        "type": "develop",
+        "cityId": 0
+      },
+      "oldBest": [
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 0,
+            "unitType": "sword",
+            "amount": 15
+          },
+          "old": 9.519215508352193,
+          "candidate": 12.255579648927784
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 1,
+            "unitType": "sword",
+            "amount": 15
+          },
+          "old": 9.314876571483188,
+          "candidate": 12.777636709300033
+        }
+      ],
+      "candidateBest": [
+        {
+          "action": {
+            "type": "develop",
+            "cityId": 0
+          },
+          "old": 8.226570538174443,
+          "candidate": 14.487994231854033
+        },
+        {
+          "action": {
+            "type": "develop",
+            "cityId": 1
+          },
+          "old": 8.130193361319455,
+          "candidate": 14.438198076327168
+        }
+      ]
+    },
+    {
+      "turn": 0,
+      "faction": "刘表",
+      "old": {
+        "type": "recruit",
+        "cityId": 550,
+        "unitType": "sword",
+        "amount": 15
+      },
+      "next": {
+        "type": "develop",
+        "cityId": 550
+      },
+      "oldBest": [
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 550,
+            "unitType": "sword",
+            "amount": 15
+          },
+          "old": 9.480156774466632,
+          "candidate": 12.24518384251851
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 551,
+            "unitType": "sword",
+            "amount": 15
+          },
+          "old": 9.314876571483188,
+          "candidate": 12.777636709300033
+        }
+      ],
+      "candidateBest": [
+        {
+          "action": {
+            "type": "develop",
+            "cityId": 550
+          },
+          "old": 8.226570538174443,
+          "candidate": 14.487994231854033
+        },
+        {
+          "action": {
+            "type": "develop",
+            "cityId": 551
+          },
+          "old": 8.130193361319455,
+          "candidate": 14.438198076327168
+        }
+      ]
+    },
+    {
+      "turn": 1,
+      "faction": "曹操",
+      "old": {
+        "type": "recruit",
+        "cityId": 322,
+        "unitType": "sword",
+        "amount": 18
+      },
+      "next": {
+        "type": "develop",
+        "cityId": 322
+      },
+      "oldBest": [
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 322,
+            "unitType": "sword",
+            "amount": 18
+          },
+          "old": 9.464298189764708,
+          "candidate": 13.312317303588264
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 323,
+            "unitType": "sword",
+            "amount": 25
+          },
+          "old": 9.317846479007095,
+          "candidate": 12.562696830657229
+        }
+      ],
+      "candidateBest": [
+        {
+          "action": {
+            "type": "develop",
+            "cityId": 322
+          },
+          "old": 8.225337280395822,
+          "candidate": 14.470284461420944
+        },
+        {
+          "action": {
+            "type": "develop",
+            "cityId": 323
+          },
+          "old": 8.128960103540834,
+          "candidate": 14.42048830589408
+        }
+      ]
+    },
+    {
+      "turn": 1,
+      "faction": "孙坚",
+      "old": {
+        "type": "recruit",
+        "cityId": 617,
+        "unitType": "sword",
+        "amount": 16
+      },
+      "next": {
+        "type": "develop",
+        "cityId": 617
+      },
+      "oldBest": [
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 617,
+            "unitType": "sword",
+            "amount": 16
+          },
+          "old": 9.516793999289384,
+          "candidate": 12.414711859288488
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 618,
+            "unitType": "sword",
+            "amount": 16
+          },
+          "old": 9.314264115908616,
+          "candidate": 12.821961701177013
+        }
+      ],
+      "candidateBest": [
+        {
+          "action": {
+            "type": "develop",
+            "cityId": 617
+          },
+          "old": 8.225337280395822,
+          "candidate": 14.470284461420944
+        },
+        {
+          "action": {
+            "type": "develop",
+            "cityId": 618
+          },
+          "old": 8.128960103540834,
+          "candidate": 14.42048830589408
+        }
+      ]
+    },
+    {
+      "turn": 1,
+      "faction": "孔融",
+      "old": {
+        "type": "recruit",
+        "cityId": 476,
+        "unitType": "sword",
+        "amount": 18
+      },
+      "next": {
+        "type": "develop",
+        "cityId": 476
+      },
+      "oldBest": [
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 476,
+            "unitType": "sword",
+            "amount": 18
+          },
+          "old": 9.493101194036702,
+          "candidate": 12.849013638793748
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 477,
+            "unitType": "sword",
+            "amount": 19
+          },
+          "old": 9.31630479262719,
+          "candidate": 12.67427265607763
+        }
+      ],
+      "candidateBest": [
+        {
+          "action": {
+            "type": "develop",
+            "cityId": 476
+          },
+          "old": 8.225337280395822,
+          "candidate": 14.470284461420944
+        },
+        {
+          "action": {
+            "type": "develop",
+            "cityId": 477
+          },
+          "old": 8.128960103540834,
+          "candidate": 14.42048830589408
+        }
+      ]
+    },
+    {
+      "turn": 1,
+      "faction": "陶谦",
+      "old": {
+        "type": "recruit",
+        "cityId": 431,
+        "unitType": "sword",
+        "amount": 17
+      },
+      "next": {
+        "type": "develop",
+        "cityId": 431
+      },
+      "oldBest": [
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 431,
+            "unitType": "sword",
+            "amount": 17
+          },
+          "old": 9.5104070570665,
+          "candidate": 12.812476744487299
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 432,
+            "unitType": "sword",
+            "amount": 17
+          },
+          "old": 9.31511338763869,
+          "candidate": 12.760497712440934
+        }
+      ],
+      "candidateBest": [
+        {
+          "action": {
+            "type": "develop",
+            "cityId": 431
+          },
+          "old": 8.225337280395822,
+          "candidate": 14.470284461420944
+        },
+        {
+          "action": {
+            "type": "develop",
+            "cityId": 432
+          },
+          "old": 8.128960103540834,
+          "candidate": 14.42048830589408
+        }
+      ]
+    },
+    {
+      "turn": 1,
+      "faction": "刘繇",
+      "old": {
+        "type": "recruit",
+        "cityId": 644,
+        "unitType": "sword",
+        "amount": 17
+      },
+      "next": {
+        "type": "develop",
+        "cityId": 644
+      },
+      "oldBest": [
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 644,
+            "unitType": "sword",
+            "amount": 17
+          },
+          "old": 9.494399576894885,
+          "candidate": 12.755046317682472
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 645,
+            "unitType": "sword",
+            "amount": 17
+          },
+          "old": 9.3158453648466,
+          "candidate": 12.707522631240082
+        }
+      ],
+      "candidateBest": [
+        {
+          "action": {
+            "type": "develop",
+            "cityId": 644
+          },
+          "old": 8.225337280395822,
+          "candidate": 14.470284461420944
+        },
+        {
+          "action": {
+            "type": "develop",
+            "cityId": 645
+          },
+          "old": 8.128960103540834,
+          "candidate": 14.42048830589408
+        }
+      ]
+    },
+    {
+      "turn": 2,
+      "faction": "刘表",
+      "old": {
+        "type": "recruit",
+        "cityId": 550,
+        "unitType": "sword",
+        "amount": 13
+      },
+      "next": {
+        "type": "develop",
+        "cityId": 550
+      },
+      "oldBest": [
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 550,
+            "unitType": "sword",
+            "amount": 13
+          },
+          "old": 9.474751568883233,
+          "candidate": 12.598762336609363
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 551,
+            "unitType": "sword",
+            "amount": 13
+          },
+          "old": 9.31369249070568,
+          "candidate": 12.863331693595532
+        }
+      ],
+      "candidateBest": [
+        {
+          "action": {
+            "type": "develop",
+            "cityId": 550
+          },
+          "old": 8.22414380512619,
+          "candidate": 14.45314597390505
+        },
+        {
+          "action": {
+            "type": "develop",
+            "cityId": 551
+          },
+          "old": 8.127766628271202,
+          "candidate": 14.403349818378187
+        }
+      ]
+    },
+    {
+      "turn": 2,
+      "faction": "马腾",
+      "old": {
+        "type": "recruit",
+        "cityId": 896,
+        "unitType": "sword",
+        "amount": 13
+      },
+      "next": {
+        "type": "develop",
+        "cityId": 896
+      },
+      "oldBest": [
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 896,
+            "unitType": "sword",
+            "amount": 13
+          },
+          "old": 9.469095369485359,
+          "candidate": 12.965133016305135
+        },
+        {
+          "action": {
+            "type": "recruit",
+            "cityId": 897,
+            "unitType": "sword",
+            "amount": 13
+          },
+          "old": 9.31286043394311,
+          "candidate": 12.923549790668043
+        }
+      ],
+      "candidateBest": [
+        {
+          "action": {
+            "type": "develop",
+            "cityId": 896
+          },
+          "old": 8.22414380512619,
+          "candidate": 14.45314597390505
+        },
+        {
+          "action": {
+            "type": "develop",
+            "cityId": 897
+          },
+          "old": 8.127766628271202,
+          "candidate": 14.403349818378187
+        }
+      ]
+    }
+  ]
+}

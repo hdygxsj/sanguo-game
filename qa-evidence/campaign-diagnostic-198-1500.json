@@ -1,0 +1,666 @@
+{
+  "seed": "diagnostic-198",
+  "checkpointEpisodes": 542,
+  "turn": 1500,
+  "status": "active",
+  "winner": null,
+  "tally": {
+    "attack": 9843,
+    "recruit": 5213,
+    "diplomacy:peace": 126,
+    "develop:farm": 1238,
+    "hold": 3234,
+    "move": 1882,
+    "diplomacy:trade": 39,
+    "appoint-governor": 842,
+    "buy-equipment": 26,
+    "diplomacy:alliance": 51,
+    "recruit-captive": 283,
+    "equip-equipment": 30,
+    "develop:market": 312,
+    "form-union": 12,
+    "diplomacy:war": 28,
+    "reward-character": 506
+  },
+  "events": {
+    "turn-start": 1500,
+    "march": 11719,
+    "recruit": 5213,
+    "diplomacy": 257,
+    "personnel": 26101,
+    "income": 23664,
+    "upkeep": 23664,
+    "turn-end": 1500,
+    "develop": 3099,
+    "attack": 9836,
+    "capture": 9533,
+    "arrival": 11379,
+    "hold": 3234,
+    "trade-income": 23421,
+    "invalid-action": 12,
+    "family": 675,
+    "equipment": 56,
+    "captive": 438,
+    "field-battle": 35,
+    "desertion": 34
+  },
+  "combat": {
+    "captures": 9533,
+    "recapturedWithin10Turns": 2781
+  },
+  "factions": [
+    {
+      "name": "曹操",
+      "active": true,
+      "money": 14,
+      "counties": 11,
+      "neighbourRelations": [
+        {
+          "name": "刘表",
+          "status": "alliance",
+          "relation": 30,
+          "trade": false,
+          "truceUntil": 298
+        },
+        {
+          "name": "刘繇",
+          "status": "alliance",
+          "relation": 30,
+          "trade": false,
+          "truceUntil": 451
+        },
+        {
+          "name": "袁绍",
+          "status": "war",
+          "relation": -70,
+          "trade": false,
+          "truceUntil": 24
+        },
+        {
+          "name": "刘备",
+          "status": "war",
+          "relation": -70,
+          "trade": false,
+          "truceUntil": 26
+        },
+        {
+          "name": "陶谦",
+          "status": "war",
+          "relation": -70,
+          "trade": false,
+          "truceUntil": 434
+        }
+      ],
+      "troops": 310,
+      "maxGarrison": 66,
+      "frontiers": 8,
+      "armies": 0,
+      "haltedTroops": 0
+    },
+    {
+      "name": "刘备",
+      "active": true,
+      "money": 1525,
+      "counties": 48,
+      "neighbourRelations": [
+        {
+          "name": "陶谦",
+          "status": "war",
+          "relation": -70,
+          "trade": false,
+          "truceUntil": 78
+        },
+        {
+          "name": "袁绍",
+          "status": "war",
+          "relation": -70,
+          "trade": false,
+          "truceUntil": 113
+        },
+        {
+          "name": "曹操",
+          "status": "war",
+          "relation": -70,
+          "trade": false,
+          "truceUntil": 26
+        }
+      ],
+      "troops": 818,
+      "maxGarrison": 62,
+      "frontiers": 30,
+      "armies": 0,
+      "haltedTroops": 0
+    },
+    {
+      "name": "孙坚",
+      "active": true,
+      "money": 29751,
+      "counties": 62,
+      "neighbourRelations": [
+        {
+          "name": "刘表",
+          "status": "war",
+          "relation": -70,
+          "trade": false,
+          "truceUntil": 44
+        },
+        {
+          "name": "刘繇",
+          "status": "alliance",
+          "relation": 40,
+          "trade": true,
+          "truceUntil": 708
+        }
+      ],
+      "troops": 475,
+      "maxGarrison": 75,
+      "frontiers": 2,
+      "armies": 1,
+      "haltedTroops": 14
+    },
+    {
+      "name": "袁绍",
+      "active": true,
+      "money": 1641,
+      "counties": 64,
+      "neighbourRelations": [
+        {
+          "name": "曹操",
+          "status": "war",
+          "relation": -70,
+          "trade": false,
+          "truceUntil": 24
+        },
+        {
+          "name": "刘备",
+          "status": "war",
+          "relation": -70,
+          "trade": false,
+          "truceUntil": 113
+        },
+        {
+          "name": "刘繇",
+          "status": "peace",
+          "relation": 10,
+          "trade": false,
+          "truceUntil": 66
+        },
+        {
+          "name": "董卓",
+          "status": "alliance",
+          "relation": 30,
+          "trade": false,
+          "truceUntil": 386
+        },
+        {
+          "name": "张燕",
+          "status": "alliance",
+          "relation": 30,
+          "trade": false,
+          "truceUntil": 641
+        },
+        {
+          "name": "陶谦",
+          "status": "war",
+          "relation": -70,
+          "trade": false,
+          "truceUntil": 59
+        },
+        {
+          "name": "公孙瓒",
+          "status": "alliance",
+          "relation": 30,
+          "trade": false,
+          "truceUntil": 664
+        },
+        {
+          "name": "袁术",
+          "status": "alliance",
+          "relation": 30,
+          "trade": false,
+          "truceUntil": 489
+        },
+        {
+          "name": "马腾",
+          "status": "alliance",
+          "relation": 30,
+          "trade": false,
+          "truceUntil": 561
+        }
+      ],
+      "troops": 843,
+      "maxGarrison": 77,
+      "frontiers": 29,
+      "armies": 1,
+      "haltedTroops": 0
+    },
+    {
+      "name": "袁术",
+      "active": true,
+      "money": 33645,
+      "counties": 78,
+      "neighbourRelations": [
+        {
+          "name": "董卓",
+          "status": "war",
+          "relation": -70,
+          "trade": false,
+          "truceUntil": 26
+        },
+        {
+          "name": "马腾",
+          "status": "war",
+          "relation": -70,
+          "trade": false,
+          "truceUntil": 64
+        },
+        {
+          "name": "袁绍",
+          "status": "alliance",
+          "relation": 30,
+          "trade": false,
+          "truceUntil": 489
+        },
+        {
+          "name": "张燕",
+          "status": "alliance",
+          "relation": 30,
+          "trade": false,
+          "truceUntil": 717
+        }
+      ],
+      "troops": 587,
+      "maxGarrison": 35,
+      "frontiers": 54,
+      "armies": 0,
+      "haltedTroops": 0
+    },
+    {
+      "name": "董卓",
+      "active": true,
+      "money": 9498,
+      "counties": 40,
+      "neighbourRelations": [
+        {
+          "name": "马腾",
+          "status": "war",
+          "relation": -70,
+          "trade": false,
+          "truceUntil": 8
+        },
+        {
+          "name": "袁术",
+          "status": "war",
+          "relation": -70,
+          "trade": false,
+          "truceUntil": 26
+        },
+        {
+          "name": "刘繇",
+          "status": "war",
+          "relation": -70,
+          "trade": false,
+          "truceUntil": 111
+        },
+        {
+          "name": "袁绍",
+          "status": "alliance",
+          "relation": 30,
+          "trade": false,
+          "truceUntil": 386
+        }
+      ],
+      "troops": 550,
+      "maxGarrison": 70,
+      "frontiers": 32,
+      "armies": 0,
+      "haltedTroops": 0
+    },
+    {
+      "name": "刘表",
+      "active": true,
+      "money": 22657,
+      "counties": 10,
+      "neighbourRelations": [
+        {
+          "name": "刘繇",
+          "status": "war",
+          "relation": -70,
+          "trade": false,
+          "truceUntil": 174
+        },
+        {
+          "name": "孙坚",
+          "status": "war",
+          "relation": -70,
+          "trade": false,
+          "truceUntil": 44
+        },
+        {
+          "name": "曹操",
+          "status": "alliance",
+          "relation": 30,
+          "trade": false,
+          "truceUntil": 298
+        }
+      ],
+      "troops": 150,
+      "maxGarrison": 60,
+      "frontiers": 6,
+      "armies": 0,
+      "haltedTroops": 0
+    },
+    {
+      "name": "刘焉",
+      "active": true,
+      "money": 117189,
+      "counties": 109,
+      "neighbourRelations": [
+        {
+          "name": "马腾",
+          "status": "peace",
+          "relation": 10,
+          "trade": false,
+          "truceUntil": 126
+        }
+      ],
+      "troops": 543,
+      "maxGarrison": 33,
+      "frontiers": 0,
+      "armies": 0,
+      "haltedTroops": 0
+    },
+    {
+      "name": "马腾",
+      "active": true,
+      "money": 24168,
+      "counties": 187,
+      "neighbourRelations": [
+        {
+          "name": "董卓",
+          "status": "war",
+          "relation": -70,
+          "trade": false,
+          "truceUntil": 8
+        },
+        {
+          "name": "袁术",
+          "status": "war",
+          "relation": -70,
+          "trade": false,
+          "truceUntil": 64
+        },
+        {
+          "name": "袁绍",
+          "status": "alliance",
+          "relation": 30,
+          "trade": false,
+          "truceUntil": 561
+        },
+        {
+          "name": "张鲁",
+          "status": "peace",
+          "relation": 10,
+          "trade": false,
+          "truceUntil": 77
+        },
+        {
+          "name": "刘繇",
+          "status": "alliance",
+          "relation": 30,
+          "trade": false,
+          "truceUntil": 646
+        },
+        {
+          "name": "刘焉",
+          "status": "peace",
+          "relation": 10,
+          "trade": false,
+          "truceUntil": 126
+        },
+        {
+          "name": "张燕",
+          "status": "alliance",
+          "relation": 30,
+          "trade": false,
+          "truceUntil": 578
+        }
+      ],
+      "troops": 1107,
+      "maxGarrison": 44,
+      "frontiers": 61,
+      "armies": 0,
+      "haltedTroops": 0
+    },
+    {
+      "name": "公孙瓒",
+      "active": true,
+      "money": 27215,
+      "counties": 73,
+      "neighbourRelations": [
+        {
+          "name": "张燕",
+          "status": "war",
+          "relation": -70,
+          "trade": false,
+          "truceUntil": 79
+        },
+        {
+          "name": "袁绍",
+          "status": "alliance",
+          "relation": 30,
+          "trade": false,
+          "truceUntil": 664
+        }
+      ],
+      "troops": 321,
+      "maxGarrison": 65,
+      "frontiers": 25,
+      "armies": 0,
+      "haltedTroops": 0
+    },
+    {
+      "name": "孔融",
+      "active": false,
+      "money": 0,
+      "counties": 0,
+      "neighbourRelations": [],
+      "troops": 0,
+      "maxGarrison": 0,
+      "frontiers": 0,
+      "armies": 0,
+      "haltedTroops": 0
+    },
+    {
+      "name": "张燕",
+      "active": true,
+      "money": 51447,
+      "counties": 118,
+      "neighbourRelations": [
+        {
+          "name": "袁绍",
+          "status": "alliance",
+          "relation": 30,
+          "trade": false,
+          "truceUntil": 641
+        },
+        {
+          "name": "公孙瓒",
+          "status": "war",
+          "relation": -70,
+          "trade": false,
+          "truceUntil": 79
+        },
+        {
+          "name": "袁术",
+          "status": "alliance",
+          "relation": 30,
+          "trade": false,
+          "truceUntil": 717
+        },
+        {
+          "name": "马腾",
+          "status": "alliance",
+          "relation": 30,
+          "trade": false,
+          "truceUntil": 578
+        }
+      ],
+      "troops": 559,
+      "maxGarrison": 36,
+      "frontiers": 27,
+      "armies": 0,
+      "haltedTroops": 0
+    },
+    {
+      "name": "陶谦",
+      "active": true,
+      "money": 30248,
+      "counties": 150,
+      "neighbourRelations": [
+        {
+          "name": "刘备",
+          "status": "war",
+          "relation": -70,
+          "trade": false,
+          "truceUntil": 78
+        },
+        {
+          "name": "袁绍",
+          "status": "war",
+          "relation": -70,
+          "trade": false,
+          "truceUntil": 59
+        },
+        {
+          "name": "刘繇",
+          "status": "peace",
+          "relation": 10,
+          "trade": false,
+          "truceUntil": 181
+        },
+        {
+          "name": "曹操",
+          "status": "war",
+          "relation": -70,
+          "trade": false,
+          "truceUntil": 434
+        }
+      ],
+      "troops": 1391,
+      "maxGarrison": 112,
+      "frontiers": 11,
+      "armies": 0,
+      "haltedTroops": 0
+    },
+    {
+      "name": "刘繇",
+      "active": true,
+      "money": 86293,
+      "counties": 85,
+      "neighbourRelations": [
+        {
+          "name": "刘表",
+          "status": "war",
+          "relation": -70,
+          "trade": false,
+          "truceUntil": 174
+        },
+        {
+          "name": "马腾",
+          "status": "alliance",
+          "relation": 30,
+          "trade": false,
+          "truceUntil": 646
+        },
+        {
+          "name": "董卓",
+          "status": "war",
+          "relation": -70,
+          "trade": false,
+          "truceUntil": 111
+        },
+        {
+          "name": "孙坚",
+          "status": "alliance",
+          "relation": 40,
+          "trade": true,
+          "truceUntil": 708
+        },
+        {
+          "name": "曹操",
+          "status": "alliance",
+          "relation": 30,
+          "trade": false,
+          "truceUntil": 451
+        },
+        {
+          "name": "袁绍",
+          "status": "peace",
+          "relation": 10,
+          "trade": false,
+          "truceUntil": 66
+        },
+        {
+          "name": "陶谦",
+          "status": "peace",
+          "relation": 10,
+          "trade": false,
+          "truceUntil": 181
+        },
+        {
+          "name": "士燮",
+          "status": "war",
+          "relation": -70,
+          "trade": false,
+          "truceUntil": 125
+        }
+      ],
+      "troops": 677,
+      "maxGarrison": 86,
+      "frontiers": 11,
+      "armies": 0,
+      "haltedTroops": 0
+    },
+    {
+      "name": "张鲁",
+      "active": true,
+      "money": 24745,
+      "counties": 40,
+      "neighbourRelations": [
+        {
+          "name": "马腾",
+          "status": "peace",
+          "relation": 10,
+          "trade": false,
+          "truceUntil": 77
+        }
+      ],
+      "troops": 344,
+      "maxGarrison": 96,
+      "frontiers": 0,
+      "armies": 0,
+      "haltedTroops": 0
+    },
+    {
+      "name": "士燮",
+      "active": true,
+      "money": 117623,
+      "counties": 109,
+      "neighbourRelations": [
+        {
+          "name": "刘繇",
+          "status": "war",
+          "relation": -70,
+          "trade": false,
+          "truceUntil": 125
+        }
+      ],
+      "troops": 785,
+      "maxGarrison": 83,
+      "frontiers": 4,
+      "armies": 0,
+      "haltedTroops": 0
+    }
+  ]
+}

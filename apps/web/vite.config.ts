@@ -3,6 +3,9 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
+  // Open lobby tabs still reference earlier hashed lazy chunks after a rebuild.
+  // Retain them so entering a battle does not request a deleted module.
+  build: {emptyOutDir:false},
   test: {
     environment: 'jsdom',
     setupFiles: ['./src/test/setup.ts'],
